@@ -1,0 +1,196 @@
+Enthalpias of formation for gas phase species (kJ/mol) from webbook.nist.gov
+C           717.0d0  1
+C10                  0
+C2          838.0d0  1
+C2H         477.0d0  1
+C2H2        227.0d0  1
+C2H3        299.0d0  1
+C2H4         52.0d0  1
+C2H5        119.0d0  1
+C2H5OH     -234.0d0  1
+C2H6        -84.0d0  1
+C2H6CO     -219.0d0  1
+C2N                  0
+CCO         287.0d0  1
+C2S                  0
+C3          820.0d0  1
+C3H                  0
+C3H2                 0
+C3H3        339.0d0  1
+C3H3N       173.0d0  1
+C3H4        185.0d0  1
+C3N                  0
+C3O                  0
+C3P                  0
+C3S                  0
+C4          971.0d0  1
+C4H                  0
+C4H2        464.0d0  1
+C4H3                 0
+C4H4        295.0d0  1
+C4N                  0
+C4P                  0
+C4S                  0
+C5          979.0d0  1
+C5H                  0
+C5H2                 0 
+C5H3                 0
+C5H4                 0
+C5N                  0
+C6                   0
+C6H                  0
+C6H2                 0
+C6H3                 0
+C6H4        440.0d0  0 (benzyne)
+C6H6         83.0d0  0 (benzene)
+C7                   0
+C7H                  0
+C7H2                 0
+C7H3                 0
+C7H4                 0
+C7N                  0
+C8                   0
+C8H                  0
+C8H2                 0
+C8H3                 0
+C8H4                 0
+C9                   0
+C9H                  0
+C9H2                 0
+C9H3                 0
+C9H4                 0
+C9N                  0
+CCl         502.0d0  1
+CCP                  0
+CH          594.0d0  1
+CH2         386.0d0  1
+C2H2N                0
+C2H2O       -87.0d0  1
+CH3N         70.0d0  1
+CH2NH2               0
+CH2OH        -9.0d0  1 (+17.0d0 for methoxy radical)
+CH2PH                0
+CH3         146.0d0  1
+CH3C3N               0
+CH3C4H               0
+CH3C5N               0
+CH3C6H               0
+CH3C7N               0
+C2H4O      -170.0d0  1 (-53.0d0 for ethylene oxide, H4C2O)
+C2H3N        74.0d0  1
+CH3NH                0
+CH3OCH3    -184.0d0  1
+CH4O       -205.0d0  1
+CH4         -75.0d0  1
+CH5N        -24.0d0  1
+CHNH                 0
+Cl          121.0d0  1
+ClO         101.0d0  1
+CN          435.0d0  1
+CO         -111.0d0  1
+CO2        -394.0d0  1
+CP          450.0d0  1
+CS          280.0d0  1
+Fe          415.0d0  1
+FeH                  0
+H           218.0d0  1
+H2            0.0d0  1
+H2C3N                0
+H2C3O                0
+H2C5N                0
+H2C7N                0
+H2C9N                0
+H2CN                 0
+H2CO       -116.0d0  1
+H2CS        118.0d0  1
+H2O        -242.0d0  1
+H2O2       -136.0d0  1
+H2S         -21.0d0  1
+H2S2                 0
+H2SiO                0
+H3C5N                0
+H3C7N                0
+H3C9N                0
+H4C3N                0
+H5C3N        51.0d0  1
+HC2NC       354.0d0  1
+HC2O                 0
+HC3N        354.0d0  1
+HC3O                 0
+HC5N                 0
+HC7N                 0
+HC9N                 0
+HCCN                 0
+HCCP                 0
+HCl         -92.0d0  1
+HCN         135.0d0  1
+HCNC2       354.0d0  1
+HCO          43.0d0  1
+HCOOCH3    -337.0d0  1 (-433.0d0 for acetic acid)
+CH2O2      -379.0d0  1
+HCP         150.0d0  1
+HCS         300.0d0  1
+HCSi                 0
+He            0.0d0  1 ????
+HNC         135.0d0  1 ?
+HNC3        354.0d0  1
+HNCO       -102.0d0  1
+HNO         100.0d0  1
+HNSi                 0
+HPO                  0
+HS          139.0d0  1
+HS2                  0
+Mg          147.0d0  1
+MgH         169.0d0  1
+MgH2                 0
+N           473.0d0  1
+N2            0.0d0  1 ??????
+N2H2        213.0d0  1 ?
+N2O          82.0d0  1
+Na          108.0d0  1
+NaH         124.0d0  1
+NaOH       -198.0d0  1
+NH          377.0d0  1
+NH2         190.0d0  1
+NH2CHO     -186.0d0  1
+NH2CN       215.0d0  1 ?
+NH2OH                0
+NH3         -46.0d0  1
+NO           90.0d0  1
+NO2          33.0d0  1
+NS          264.0d0  1
+O           249.0d0  1
+O2            0.0d0  1
+O2H           2.0d0  1
+O3          143.0d0  1
+OCN                  0
+OCS        -139.0d0  1
+OH           39.0d0  1
+P           317.0d0  1 (-17.0d0 solid)
+PH          254.0d0  1
+PH2         126.0d0  1
+PN          105.0d0  1
+PO          -24.0d0  1
+S           277.0d0  1
+S2          129.0d0  1
+Si          450.0d0  1
+SiC         720.0d0  1
+SiC2        615.0d0  1
+SiC2H                0
+SiC2H2               0
+SiC3                 0
+SiC3H                0
+SiC4                 0
+SiCH2                0
+SiCH3                0
+SiH         377.0d0  1
+SiH2                 0
+SiH3                 0
+SiH4         34.0d0  1
+SiN         372.0d0  1
+SiNC                 0
+SiO        -100.0d0  1
+SiO2       -305.0d0  1 (-905.0d0 solid)
+SiS         106.0d0  1
+SO            5.0d0  1
+SO2        -297.0d0  1

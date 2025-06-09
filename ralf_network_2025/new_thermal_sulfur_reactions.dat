@@ -1,0 +1,14 @@
+ 5331 gH2S      gO                  gHS       gOH                                     1.00e+00  0.00      0.0
+ 5331 gH2S      gO                  HS        OH                                      1.00e+00  0.00      0.0
+ 5331 gHS       gHO2                gSO       gH2O                                    1.00e+00  0.00      0.0
+ 5331 gHS       gHO2                SO        H2O                                     1.00e+00  0.00      0.0
+ 5331 gHS       gCO                 gOCS      gH                                      1.00e+00  0.00      0.0
+ 5331 gHS       gCO                 OCS       H                                       1.00e+00  0.00      0.0
+ 5331 gH2S      gOCS                gCS2      gH2O                                    1.00e+00  0.00      0.0
+ 5331 gH2S      gOCS                CS2       H2O                                     1.00e+00  0.00      0.0
+ 5331 gOCS      gOCS                gCO2      gSO2                                    1.00e+00  0.00      0.0
+ 5331 gOCS      gOCS                CO2       SO2                                     1.00e+00  0.00      0.0
+ 5878 gH        gH2CS               H2        HCS                                     1.00e+00  0.00   1200.0
+ 5879 gH        gH2CS               gH2       gHCS                                    1.00e+00  0.00   1200.0
+ 5886 gH        gCH3SH              CH2SH     H2                                      1.00e+00  0.00    800.0
+ 5887 gH        gCH3SH              gCH2SH    gH2                                     1.00e+00  0.00    800.0

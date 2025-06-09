@@ -1,0 +1,1538 @@
+ 4436 gC10      CRP                 gC9       gC                                      1.30e-14  0.00      0.0
+ 4437 gC2       CRP                 gC        gC                                      3.08e-15  0.00      0.0
+ 4438 gC2H      CRP                 gC2       gH                                      6.50e-14  0.00      0.0
+ 4439 gC2H2     CRP                 gC2H      gH                                      6.70e-14  0.00      0.0
+ 4440 gC2H3     CRP                 gC2H2     gH                                      1.95e-14  0.00      0.0
+ 4441 gC2H4     CRP                 gC2H2     gH2                                     4.81e-14  0.00      0.0
+ 4442 gC2H5     CRP                 gC2H4     gH                                      1.95e-14  0.00      0.0
+ 4443 gC2H6     CRP                 gC2H4     gH2                                     3.90e-14  0.00      0.0
+ 4444 gC2H6CO   CRP                 gC2H2O    gCH4                                    1.95e-14  0.00      0.0
+ 4445 gC2N      CRP                 gC        gCN                                     1.30e-14  0.00      0.0
+ 4446 gCCO      CRP                 gCO       gC                                      9.75e-15  0.00      0.0
+ 4447 gCCO      CRP                 gC2       gO                                      9.75e-15  0.00      0.0
+ 4448 gC2S      CRP                 gCS       gC                                      1.95e-14  0.00      0.0
+ 4449 gC3       CRP                 gC2       gC                                      1.46e-14  0.00      0.0
+ 4450 gC3H      CRP                 gC3       gH                                      1.30e-13  0.00      0.0
+ 4451 gC3H2     CRP                 gC3H      gH                                      1.30e-13  0.00      0.0
+ 4452 gC3H3     CRP                 gC3H2     gH                                      1.30e-13  0.00      0.0
+ 4453 gC3H3N    CRP                 gC2H3     gCN                                     1.95e-14  0.00      0.0
+ 4454 gC3H4     CRP                 gC3H3     gH                                      4.26e-14  0.00      0.0
+ 4455 gC3N      CRP                 gC2       gCN                                     2.28e-14  0.00      0.0
+ 4456 gC3O      CRP                 gC2       gCO                                     8.58e-14  0.00      0.0
+ 4457 gC3P      CRP                 gCCP      gC                                      1.95e-14  0.00      0.0
+ 4458 gC3S      CRP                 gC2       gCS                                     1.95e-14  0.00      0.0
+ 4459 gC4       CRP                 gC3       gC                                      1.30e-14  0.00      0.0
+ 4460 gC4H      CRP                 gC4       gH                                      6.50e-14  0.00      0.0
+ 4461 gC4H2     CRP                 gC2H      gC2H                                    2.25e-14  0.00      0.0
+ 4462 gC4H2     CRP                 gC4H      gH                                      2.25e-14  0.00      0.0
+ 4463 gC4H3     CRP                 gC4H2     gH                                      1.30e-13  0.00      0.0
+ 4464 gC4H4     CRP                 gC4H2     gH2                                     9.75e-14  0.00      0.0
+ 4465 gC4N      CRP                 gC3       gCN                                     1.30e-14  0.00      0.0
+ 4466 gC4P      CRP                 gC3P      gC                                      1.95e-14  0.00      0.0
+ 4467 gC4S      CRP                 gC3       gCS                                     1.95e-14  0.00      0.0
+ 4468 gC5       CRP                 gC4       gC                                      1.30e-14  0.00      0.0
+ 4469 gC5H      CRP                 gC5       gH                                      6.50e-14  0.00      0.0
+ 4470 gC5H2     CRP                 gC5H      gH                                      2.28e-14  0.00      0.0
+ 4471 gC5H3     CRP                 gC5H2     gH                                      1.30e-13  0.00      0.0
+ 4472 gC5H4     CRP                 gC5H2     gH2                                     9.75e-14  0.00      0.0
+ 4473 gC5N      CRP                 gC4       gCN                                     2.28e-14  0.00      0.0
+ 4474 gC6       CRP                 gC5       gC                                      1.30e-14  0.00      0.0
+ 4475 gC6H      CRP                 gC6       gH                                      6.50e-14  0.00      0.0
+ 4476 gC6H2     CRP                 gC6H      gH                                      2.28e-14  0.00      0.0
+ 4477 gC6H3     CRP                 gC6H2     gH                                      1.30e-13  0.00      0.0
+ 4478 gC6H4     CRP                 gC6H2     gH2                                     9.75e-14  0.00      0.0
+ 4479 gC6H6     CRP                 gC6H4     gH2                                     3.90e-14  0.00      0.0
+ 4480 gC7       CRP                 gC6       gC                                      1.30e-14  0.00      0.0
+ 4481 gC7H      CRP                 gC7       gH                                      6.50e-14  0.00      0.0
+ 4482 gC7H2     CRP                 gC7H      gH                                      2.28e-14  0.00      0.0
+ 4483 gC7H3     CRP                 gC7H2     gH                                      1.30e-13  0.00      0.0
+ 4484 gC7H4     CRP                 gC7H2     gH2                                     9.75e-14  0.00      0.0
+ 4485 gC7N      CRP                 gC6       gCN                                     2.28e-14  0.00      0.0
+ 4486 gC8       CRP                 gC7       gC                                      1.30e-14  0.00      0.0
+ 4487 gC8H      CRP                 gC8       gH                                      6.50e-14  0.00      0.0
+ 4488 gC8H2     CRP                 gC8H      gH                                      2.28e-14  0.00      0.0
+ 4489 gC8H3     CRP                 gC8H2     gH                                      1.30e-13  0.00      0.0
+ 4490 gC8H4     CRP                 gC8H2     gH2                                     9.75e-14  0.00      0.0
+ 4491 gC9       CRP                 gC8       gC                                      1.30e-14  0.00      0.0
+ 4492 gC9H      CRP                 gC9       gH                                      6.50e-14  0.00      0.0
+ 4493 gC9H2     CRP                 gC9H      gH                                      2.28e-14  0.00      0.0
+ 4494 gC9H3     CRP                 gC9H2     gH                                      1.30e-13  0.00      0.0
+ 4495 gC9H4     CRP                 gC9H2     gH2                                     9.75e-14  0.00      0.0
+ 4496 gC9N      CRP                 gC8       gCN                                     2.28e-14  0.00      0.0
+ 4497 gCCl      CRP                 gC        gCl                                     6.50e-15  0.00      0.0
+ 4498 gCCP      CRP                 gC2       gP                                      9.75e-15  0.00      0.0
+ 4499 gCCP      CRP                 gCP       gC                                      9.75e-15  0.00      0.0
+ 4500 gCH       CRP                 gC        gH                                      9.49e-15  0.00      0.0
+ 4501 gC2H2N    CRP                 gCH2      gCN                                     6.50e-14  0.00      0.0
+ 4502 gC2H2O    CRP                 gCH2      gCO                                     1.19e-14  0.00      0.0
+ 4503 gCH3N     CRP                 gHCN      gH2                                     6.47e-14  0.00      0.0
+ 4504 gCH2NH2   CRP                 gCH2      gNH2                                    1.24e-13  0.00      0.0
+ 4505 gCH2OH    CRP                 gCH2      gOH                                     3.90e-14  0.00      0.0
+ 4506 gCH2PH    CRP                 gHCP      gH2                                     1.95e-14  0.00      0.0
+ 4507 gCH3      CRP                 gCH2      gH                                      6.50e-15  0.00      0.0
+ 4508 gCH3C3N   CRP                 gCH3      gC3N                                    1.95e-14  0.00      0.0
+ 4509 gCH3C4H   CRP                 gCH3      gC4H                                    1.95e-14  0.00      0.0
+ 4510 gCH3C5N   CRP                 gCH3      gC5N                                    1.95e-14  0.00      0.0
+ 4511 gCH3C6H   CRP                 gCH3      gC6H                                    1.95e-14  0.00      0.0
+ 4512 gCH3C7N   CRP                 gCH3      gC7N                                    1.95e-14  0.00      0.0
+ 4513 gC2H4O    CRP                 gCH3      gHCO                                    6.83e-15  0.00      0.0
+ 4514 gC2H4O    CRP                 gCH4      gCO                                     6.83e-15  0.00      0.0
+ 4515 gC2H3N    CRP                 gCH3      gCN                                     6.19e-14  0.00      0.0
+ 4516 gCH3NH    CRP                 gCH3N     gH                                      1.24e-13  0.00      0.0
+ 4517 gCH3OCH3  CRP                 gH2CO     gCH4                                    2.24e-14  0.00      0.0
+ 4518 gCH4O     CRP                 gCH3      gOH                                     1.95e-14  0.00      0.0
+ 4519 gCH4O     CRP                 gH2CO     gH2                                     4.12e-14  0.00      0.0
+ 4520 gCH4      CRP                 gCH2      gH2                                     3.04e-14  0.00      0.0
+ 4521 gCH5N     CRP                 gHCN      gH2       gH        gH                  1.83e-14  0.00      0.0
+ 4522 gCHNH     CRP                 gCH       gNH                                     1.30e-14  0.00      0.0
+ 4523 gClO      CRP                 gCl       gO                                      6.50e-15  0.00      0.0
+ 4524 gCN       CRP                 gC        gN                                      1.38e-13  0.00      0.0
+ 4525 gCO       CRP                 gC        gO                                      6.50e-17  0.00      0.0
+ 4526 gCO2      CRP                 gCO       gO                                      2.22e-14  0.00      0.0
+ 4527 gCP       CRP                 gC        gP                                      6.50e-15  0.00      0.0
+ 4528 gCS       CRP                 gC        gS                                      6.50e-15  0.00      0.0
+ 4529 gFeH      CRP                 gFe       gH                                      1.30e-14  0.00      0.0
+ 4530 gH2C3N    CRP                 gC2H2     gCN                                     3.90e-14  0.00      0.0
+ 4531 gH2C3O    CRP                 gC2H2     gCO                                     2.34e-14  0.00      0.0
+ 4532 gH2C5N    CRP                 gC4H2     gCN                                     3.90e-14  0.00      0.0
+ 4533 gH2C7N    CRP                 gC6H2     gCN                                     3.90e-14  0.00      0.0
+ 4534 gH2C9N    CRP                 gC8H2     gCN                                     3.90e-14  0.00      0.0
+ 4535 gH2CN     CRP                 gCH       gNH                                     1.30e-14  0.00      0.0
+ 4536 gH2CO     CRP                 gCO       gH2                                     3.46e-14  0.00      0.0
+ 4537 gH2CS     CRP                 gH2       gCS                                     1.95e-14  0.00      0.0
+ 4538 gH2O      CRP                 gOH       gH                                      1.26e-14  0.00      0.0
+ 4539 gH2O2     CRP                 gOH       gOH                                     1.95e-14  0.00      0.0
+ 4540 gH2S      CRP                 gH2       gS                                      6.70e-14  0.00      0.0
+ 4541 gH2S2     CRP                 gHS       gHS                                     1.95e-14  0.00      0.0
+ 4542 gH2SiO    CRP                 gSiO      gH2                                     1.95e-14  0.00      0.0
+ 4543 gH3C5N    CRP                 gC2H3     gC3N                                    3.90e-14  0.00      0.0
+ 4544 gH3C7N    CRP                 gC2H3     gC5N                                    3.90e-14  0.00      0.0
+ 4545 gH3C9N    CRP                 gC2H3     gC7N                                    3.90e-14  0.00      0.0
+ 4546 gH4C3N    CRP                 gC2H4     gCN                                     3.90e-14  0.00      0.0
+ 4547 gH5C3N    CRP                 gC2H5     gCN                                     3.90e-14  0.00      0.0
+ 4548 gHC2NC    CRP                 gC2H      gCN                                     4.49e-14  0.00      0.0
+ 4549 gHC2O     CRP                 gCO       gCH                                     1.95e-14  0.00      0.0
+ 4550 gHC3N     CRP                 gC2H      gCN                                     2.24e-14  0.00      0.0
+ 4551 gHC3O     CRP                 gCO       gC2H                                    1.95e-14  0.00      0.0
+ 4552 gHC5N     CRP                 gC4H      gCN                                     2.28e-14  0.00      0.0
+ 4553 gHC7N     CRP                 gC6H      gCN                                     2.28e-14  0.00      0.0
+ 4554 gHC9N     CRP                 gC8H      gCN                                     2.28e-14  0.00      0.0
+ 4555 gHCCN     CRP                 gC2N      gH                                      1.30e-13  0.00      0.0
+ 4556 gHCCP     CRP                 gCCP      gH                                      1.95e-14  0.00      0.0
+ 4557 gHCl      CRP                 gH        gCl                                     7.93e-15  0.00      0.0
+ 4558 gHCN      CRP                 gCN       gH                                      4.06e-14  0.00      0.0
+ 4559 gHCNC2    CRP                 gC2H      gCN                                     4.49e-14  0.00      0.0
+ 4560 gHCO      CRP                 gCO       gH                                      5.47e-15  0.00      0.0
+ 4561 gHCOOCH3  CRP                 gHCO      gCH2OH                                  1.95e-14  0.00      0.0
+ 4562 gCH2O2    CRP                 gHCO      gOH                                     3.24e-15  0.00      0.0
+ 4563 gHCP      CRP                 gCP       gH                                      1.95e-14  0.00      0.0
+ 4564 gHCSi     CRP                 gCH       gSi                                     1.95e-14  0.00      0.0
+ 4565 gHNC      CRP                 gCN       gH                                      3.90e-14  0.00      0.0
+ 4566 gHNC3     CRP                 gC2H      gCN                                     4.49e-14  0.00      0.0
+ 4567 gHNCO     CRP                 gNH       gCO                                     7.80e-14  0.00      0.0
+ 4568 gHNSi     CRP                 gSiN      gH                                      1.95e-14  0.00      0.0
+ 4569 gHPO      CRP                 gPO       gH                                      1.95e-14  0.00      0.0
+ 4570 gHS       CRP                 gH        gS                                      6.50e-15  0.00      0.0
+ 4571 gHS2      CRP                 gHS       gS                                      1.95e-14  0.00      0.0
+ 4572 gMgH      CRP                 gMg       gH                                      6.50e-15  0.00      0.0
+ 4573 gMgH2     CRP                 gMgH      gH                                      3.90e-14  0.00      0.0
+ 4574 gN2       CRP                 gN        gN                                      6.50e-17  0.00      0.0
+ 4575 gN2H2     CRP                 gNH2      gN                                      2.60e-15  0.00      0.0
+ 4576 gN2O      CRP                 gNO       gN                                      1.95e-14  0.00      0.0
+ 4577 gNaH      CRP                 gNa       gH                                      6.50e-15  0.00      0.0
+ 4578 gNaOH     CRP                 gNa       gOH                                     1.95e-14  0.00      0.0
+ 4579 gNH       CRP                 gN        gH                                      6.50e-15  0.00      0.0
+ 4580 gNH2      CRP                 gNH       gH                                      1.04e-15  0.00      0.0
+ 4581 gNH2CHO   CRP                 gNH2      gHCO                                    3.90e-14  0.00      0.0
+ 4582 gNH2CN    CRP                 gNH2      gCN                                     1.24e-13  0.00      0.0
+ 4583 gNH2OH    CRP                 gNH2      gOH                                     3.90e-14  0.00      0.0
+ 4584 gNH3      CRP                 gNH2      gH                                      1.72e-14  0.00      0.0
+ 4585 gNH3      CRP                 gNH       gH2                                     7.02e-15  0.00      0.0
+ 4586 gNO       CRP                 gN        gO                                      6.27e-15  0.00      0.0
+ 4587 gNO2      CRP                 gNO       gO                                      1.95e-14  0.00      0.0
+ 4588 gNS       CRP                 gN        gS                                      6.50e-15  0.00      0.0
+ 4589 gO2       CRP                 gO        gO                                      9.75e-15  0.00      0.0
+ 4590 gO2H      CRP                 gO2       gH                                      9.75e-15  0.00      0.0
+ 4591 gO2H      CRP                 gO        gOH                                     9.75e-15  0.00      0.0
+ 4592 gO3       CRP                 gO2       gO                                      1.95e-14  0.00      0.0
+ 4593 gOCN      CRP                 gCN       gO                                      1.95e-14  0.00      0.0
+ 4594 gOCS      CRP                 gCO       gS                                      6.96e-14  0.00      0.0
+ 4595 gOH       CRP                 gO        gH                                      6.63e-15  0.00      0.0
+ 4596 gPH       CRP                 gP        gH                                      6.50e-15  0.00      0.0
+ 4597 gPH2      CRP                 gPH       gH                                      1.95e-14  0.00      0.0
+ 4598 gPN       CRP                 gP        gN                                      6.50e-15  0.00      0.0
+ 4599 gPO       CRP                 gP        gO                                      6.50e-15  0.00      0.0
+ 4600 gS2       CRP                 gS        gS                                      6.50e-15  0.00      0.0
+ 4601 gSiC      CRP                 gSi       gC                                      6.50e-15  0.00      0.0
+ 4602 gSiC2     CRP                 gSiC      gC                                      1.95e-14  0.00      0.0
+ 4603 gSiC2H    CRP                 gSiC2     gH                                      1.95e-14  0.00      0.0
+ 4604 gSiC2H2   CRP                 gSiC2     gH2                                     1.95e-14  0.00      0.0
+ 4605 gSiC3     CRP                 gSiC2     gC                                      1.95e-14  0.00      0.0
+ 4606 gSiC3H    CRP                 gSiC3     gH                                      1.95e-14  0.00      0.0
+ 4607 gSiC4     CRP                 gSiC2     gC2                                     1.95e-14  0.00      0.0
+ 4608 gSiCH2    CRP                 gSiC      gH2                                     1.95e-14  0.00      0.0
+ 4609 gSiCH3    CRP                 gSiCH2    gH                                      1.95e-14  0.00      0.0
+ 4610 gSiH      CRP                 gSi       gH                                      6.50e-15  0.00      0.0
+ 4611 gSiH2     CRP                 gSiH      gH                                      1.95e-14  0.00      0.0
+ 4612 gSiH3     CRP                 gSiH2     gH                                      1.95e-14  0.00      0.0
+ 4613 gSiH4     CRP                 gSiH2     gH2                                     1.95e-14  0.00      0.0
+ 4614 gSiN      CRP                 gSi       gN                                      6.50e-15  0.00      0.0
+ 4615 gSiNC     CRP                 gSi       gCN                                     1.95e-14  0.00      0.0
+ 4616 gSiO      CRP                 gSi       gO                                      6.50e-15  0.00      0.0
+ 4617 gSiO2     CRP                 gSiO      gO                                      1.95e-14  0.00      0.0
+ 4618 gSiS      CRP                 gSi       gS                                      6.50e-15  0.00      0.0
+ 4619 gSO       CRP                 gS        gO                                      6.50e-15  0.00      0.0
+ 4620 gSO2      CRP                 gSO       gO                                      2.44e-14  0.00      0.0
+ 4621 gC2H2     CRP                 gC2H      gH                                      9.23e-15  0.00      0.0
+ 4622 gC2H2     CRP                 gC2       gH        gH                            5.41e-15  0.00      0.0
+ 4623 gC2H2     CRP                 gCH       gCH                                     2.43e-15  0.00      0.0
+ 4624 gC2H4     CRP                 gC2H2     gH        gH                            8.06e-15  0.00      0.0
+ 4625 gC2H4     CRP                 gC2H2     gH2                                     7.32e-16  0.00      0.0
+ 4626 gC2H4     CRP                 gC2H3     gH                                      1.34e-15  0.00      0.0
+ 4627 gC2H5OH   CRP                 gC2H5     gOH                                     8.91e-15  0.00      0.0
+ 4628 gC2H5OH   CRP                 gC2H2O    gH2       gH2                           8.91e-15  0.00      0.0
+ 4629 gC2H5OH   CRP                 gCH4      gH2CO                                   8.91e-15  0.00      0.0
+ 4630 gC2H5OH   CRP                 gC2H4O    gH2                                     8.91e-15  0.00      0.0
+ 4631 gC3H4     CRP                 gC3H2     gH2                                     3.80e-15  0.00      0.0
+ 4632 gC3H4     CRP                 gC3H3     gH                                      6.51e-14  0.00      0.0
+ 4633 gC4H2     CRP                 gC4       gH2                                     7.28e-15  0.00      0.0
+ 4634 gC4H2     CRP                 gC4H      gH                                      7.28e-15  0.00      0.0
+ 4635 gCH2      CRP                 gC        gH2                                     7.85e-16  0.00      0.0
+ 4636 gCH2      CRP                 gCH       gH                                      1.64e-15  0.00      0.0
+ 4637 gCH2      CRP                 gC        gH        gH                            4.08e-15  0.00      0.0
+ 4638 gC2H2O    CRP                 gC2       gH2O                                    5.29e-15  0.00      0.0
+ 4639 gC2H2O    CRP                 gCH2      gCO                                     5.29e-15  0.00      0.0
+ 4640 gC2H2O    CRP                 gC2H2     gO                                      5.29e-15  0.00      0.0
+ 4641 gCH3      CRP                 gC        gH2       gH                            1.95e-15  0.00      0.0
+ 4642 gCH3      CRP                 gCH       gH        gH                            1.04e-15  0.00      0.0
+ 4643 gCH3      CRP                 gCH       gH2                                     9.10e-16  0.00      0.0
+ 4644 gCH3      CRP                 gCH2      gH                                      2.60e-15  0.00      0.0
+ 4645 gC2H4O    CRP                 gCH3      gHCO                                    4.85e-15  0.00      0.0
+ 4646 gC2H4O    CRP                 gC2H2O    gH        gH                            4.85e-15  0.00      0.0
+ 4647 gC2H4O    CRP                 gC2H2O    gH2                                     4.85e-15  0.00      0.0
+ 4648 gC2H3N    CRP                 gCH3      gCN                                     6.47e-15  0.00      0.0
+ 4649 gC2H3N    CRP                 gC2H2N    gH                                      6.47e-15  0.00      0.0
+ 4650 gC2H3N    CRP                 gC2N      gH2       gH                            6.47e-15  0.00      0.0
+ 4651 gC2H3N    CRP                 gCH2      gHCN                                    9.71e-15  0.00      0.0
+ 4652 gCH3OCH3  CRP                 gCH4O     gCH2                                    3.64e-15  0.00      0.0
+ 4653 gCH3OCH3  CRP                 gCH3      gCH3      gO                            3.64e-15  0.00      0.0
+ 4654 gCH3OCH3  CRP                 gH2CO     gCH4                                    7.28e-15  0.00      0.0
+ 4655 gCH4O     CRP                 gH2CO     gH        gH                            4.29e-16  0.00      0.0
+ 4656 gCH4O     CRP                 gHCO      gH        gH        gH                  4.29e-16  0.00      0.0
+ 4657 gCH4O     CRP                 gCO       gH2       gH        gH                  4.29e-16  0.00      0.0
+ 4658 gCH4O     CRP                 gCH3      gOH                                     9.36e-15  0.00      0.0
+ 4659 gCH4O     CRP                 gH2CO     gH2                                     9.36e-15  0.00      0.0
+ 4660 gCH5N     CRP                 gCH3      gNH2                                    6.58e-15  0.00      0.0
+ 4661 gCH5N     CRP                 gCH3N     gH2                                     6.58e-15  0.00      0.0
+ 4662 gCO       CRP                 gO        gC                                      3.90e-17  0.00      0.0
+ 4663 gH2S      CRP                 gS        gH        gH                            1.11e-14  0.00      0.0
+ 4664 gH2S      CRP                 gHS       gH                                      1.11e-14  0.00      0.0
+ 4665 gHCO      CRP                 gCO       gH                                      1.52e-14  0.00      0.0
+ 4666 gCH2O2    CRP                 gCO2      gH        gH                            8.45e-15  0.00      0.0
+ 4667 gHCS      CRP                 gCS       gH                                      1.95e-14  0.00      0.0
+ 4668 gHNO      CRP                 gNO       gH                                      1.30e-14  0.00      0.0
+ 4669 gNH2      CRP                 gNH       gH                                      2.82e-15  0.00      0.0
+ 4670 gNH2      CRP                 gN        gH        gH                            5.63e-15  0.00      0.0
+ 4671 gNH3      CRP                 gNH2      gH                                      3.74e-15  0.00      0.0
+ 4672 gNH3      CRP                 gNH       gH        gH                            3.74e-15  0.00      0.0
+ 4673 gNO       CRP                 gN        gO                                      6.42e-15  0.00      0.0
+ 4674 gO2       CRP                 gO        gO                                      1.52e-15  0.00      0.0
+ 4675 gOCS      CRP                 gCS       gO                                      6.24e-15  0.00      0.0
+ 4676 gOCS      CRP                 gCO       gS                                      1.25e-14  0.00      0.0
+ 4677 gC10      PHOTON              gC9       gC                                      1.00e-09  0.00      1.7
+ 4678 gC2       PHOTON              gC        gC                                      4.70e-11  0.00      2.6
+ 4679 gC2H      PHOTON              gC2       gH                                      1.00e-09  0.00      1.7
+ 4680 gC2H2     PHOTON              gC2H      gH                                      1.81e-09  0.00      1.7
+ 4681 gC2H3     PHOTON              gC2H2     gH                                      1.00e-09  0.00      1.7
+ 4682 gC2H4     PHOTON              gC2H2     gH2                                     1.62e-09  0.00      1.6
+ 4683 gC2H5     PHOTON              gC2H4     gH                                      1.00e-09  0.00      1.7
+ 4684 gC2H5OH   PHOTON              gC2H4     gH2O                                    1.38e-09  0.00      1.7
+ 4685 gC2H6     PHOTON              gC2H4     gH2                                     1.00e-09  0.00      1.7
+ 4686 gC2H6CO   PHOTON              gC2H2O    gCH4                                    1.00e-09  0.00      1.7
+ 4687 gC2N      PHOTON              gC2       gN                                      1.00e-10  0.00      1.7
+ 4688 gC2N      PHOTON              gCN       gC                                      1.00e-09  0.00      1.7
+ 4689 gCCO      PHOTON              gCO       gC                                      5.00e-10  0.00      1.7
+ 4690 gCCO      PHOTON              gC2       gO                                      5.00e-10  0.00      1.7
+ 4691 gC2S      PHOTON              gC2       gS                                      1.00e-10  0.00      2.0
+ 4692 gC3       PHOTON              gC2       gC                                      2.60e-10  0.00      2.3
+ 4693 gC3H      PHOTON              gC3       gH                                      1.00e-09  0.00      1.7
+ 4694 gC3H2     PHOTON              gC3       gH2                                     1.00e-09  0.00      1.7
+ 4695 gC3H2     PHOTON              gC3H      gH                                      1.00e-09  0.00      1.7
+ 4696 gC3H3     PHOTON              gC3H2     gH                                      1.00e-09  0.00      1.7
+ 4697 gC3H3     PHOTON              gC3H      gH2                                     1.00e-09  0.00      1.7
+ 4698 gC3H3N    PHOTON              gC2H3     gCN                                     1.00e-10  0.00      1.7
+ 4699 gC3H4     PHOTON              gC3H2     gH2                                     2.25e-10  0.00      1.7
+ 4700 gC3H4     PHOTON              gC3H3     gH                                      1.84e-09  0.00      1.7
+ 4701 gC3N      PHOTON              gC2       gCN                                     5.00e-10  0.00      1.8
+ 4702 gC3O      PHOTON              gC2       gCO                                     4.52e-09  0.00      1.6
+ 4703 gC3P      PHOTON              gCCP      gC                                      1.00e-09  0.00      1.7
+ 4704 gC3S      PHOTON              gC2       gCS                                     1.00e-10  0.00      2.0
+ 4705 gC4       PHOTON              gC2       gC2                                     2.00e-10  0.00      2.3
+ 4706 gC4       PHOTON              gC3       gC                                      2.00e-10  0.00      2.3
+ 4707 gC4H      PHOTON              gC2H      gC2                                     1.00e-09  0.00      1.7
+ 4708 gC4H      PHOTON              gC4       gH                                      1.00e-09  0.00      1.7
+ 4709 gC4H2     PHOTON              gC2H      gC2H                                    1.13e-09  0.00      1.6
+ 4710 gC4H2     PHOTON              gC4H      gH                                      1.13e-09  0.00      1.6
+ 4711 gC4H3     PHOTON              gC4H2     gH                                      1.00e-09  0.00      1.7
+ 4712 gC4H4     PHOTON              gC3H4     gC                                      1.13e-09  0.00      1.6
+ 4713 gC4N      PHOTON              gC3       gCN                                     5.00e-10  0.00      1.7
+ 4714 gC4P      PHOTON              gC3P      gC                                      1.00e-09  0.00      1.7
+ 4715 gC4S      PHOTON              gC3       gCS                                     1.00e-10  0.00      2.0
+ 4716 gC5       PHOTON              gC3       gC2                                     1.00e-11  0.00      1.7
+ 4717 gC5H      PHOTON              gC2H      gC3                                     1.00e-11  0.00      1.7
+ 4718 gC5H      PHOTON              gC3H      gC2                                     1.00e-11  0.00      1.7
+ 4719 gC5H      PHOTON              gC5       gH                                      1.00e-11  0.00      1.7
+ 4720 gC5H2     PHOTON              gC3H      gC2H                                    1.00e-11  0.00      1.7
+ 4721 gC5H2     PHOTON              gC5H      gH                                      1.00e-11  0.00      1.7
+ 4722 gC5H3     PHOTON              gC5H2     gH                                      1.00e-09  0.00      1.7
+ 4723 gC5H4     PHOTON              gC5H2     gH2                                     1.00e-09  0.00      1.7
+ 4724 gC5N      PHOTON              gC4       gCN                                     5.00e-10  0.00      1.7
+ 4725 gC6       PHOTON              gC5       gC                                      1.00e-09  0.00      1.7
+ 4726 gC6H      PHOTON              gC3H      gC3                                     5.00e-12  0.00      1.7
+ 4727 gC6H      PHOTON              gC2H      gC4                                     5.00e-12  0.00      1.7
+ 4728 gC6H2     PHOTON              gC6H      gH                                      1.00e-09  0.00      1.7
+ 4729 gC6H3     PHOTON              gC6H2     gH                                      1.00e-09  0.00      1.7
+ 4730 gC6H4     PHOTON              gC6H2     gH2                                     1.00e-09  0.00      1.7
+ 4731 gC6H6     PHOTON              gC6H4     gH2                                     1.00e-09  0.00      1.7
+ 4732 gC7       PHOTON              gC6       gC                                      1.00e-09  0.00      1.7
+ 4733 gC7H      PHOTON              gC7       gH                                      1.00e-09  0.00      1.7
+ 4734 gC7H2     PHOTON              gC7H      gH                                      1.00e-09  0.00      1.7
+ 4735 gC7H3     PHOTON              gC7H2     gH                                      1.00e-09  0.00      1.7
+ 4736 gC7H4     PHOTON              gC7H2     gH2                                     1.00e-09  0.00      1.7
+ 4737 gC7N      PHOTON              gC6       gCN                                     1.00e-09  0.00      1.7
+ 4738 gC8       PHOTON              gC7       gC                                      1.00e-09  0.00      1.7
+ 4739 gC8H      PHOTON              gC8       gH                                      1.00e-09  0.00      1.7
+ 4740 gC8H2     PHOTON              gC8H      gH                                      1.00e-09  0.00      1.7
+ 4741 gC8H3     PHOTON              gC8H2     gH                                      1.00e-09  0.00      1.7
+ 4742 gC8H4     PHOTON              gC8H2     gH2                                     1.00e-09  0.00      1.7
+ 4743 gC9       PHOTON              gC8       gC                                      1.00e-09  0.00      1.7
+ 4744 gC9H      PHOTON              gC9       gH                                      1.00e-09  0.00      1.7
+ 4745 gC9H2     PHOTON              gC9H      gH                                      1.00e-09  0.00      1.7
+ 4746 gC9H3     PHOTON              gC9H2     gH                                      1.00e-09  0.00      1.7
+ 4747 gC9H4     PHOTON              gC9H2     gH2                                     1.00e-09  0.00      1.7
+ 4748 gC9N      PHOTON              gC8       gCN                                     1.00e-09  0.00      1.7
+ 4749 gCCl      PHOTON              gCl       gC                                      1.00e-10  0.00      2.0
+ 4750 gCCP      PHOTON              gCP       gC                                      5.00e-10  0.00      1.7
+ 4751 gCCP      PHOTON              gC2       gP                                      5.00e-10  0.00      1.7
+ 4752 gCH       PHOTON              gC        gH                                      1.40e-10  0.00      1.5
+ 4753 gCH2      PHOTON              gCH       gH                                      5.00e-11  0.00      1.7
+ 4754 gC2H2N    PHOTON              gCH2      gCN                                     1.00e-09  0.00      1.7
+ 4755 gC2H2O    PHOTON              gCH2      gCO                                     9.04e-10  0.00      1.6
+ 4756 gCH3N     PHOTON              gHCN      gH2                                     1.70e-09  0.00      1.6
+ 4757 gCH2NH2   PHOTON              gCH2      gNH2                                    1.00e-09  0.00      1.7
+ 4758 gCH2OH    PHOTON              gCH2      gOH                                     5.00e-10  0.00      1.7
+ 4759 gCH2PH    PHOTON              gHCP      gH2                                     1.00e-09  0.00      1.7
+ 4760 gCH3      PHOTON              gCH       gH2                                     3.00e-11  0.00      1.7
+ 4761 gCH3      PHOTON              gCH2      gH                                      3.00e-11  0.00      1.7
+ 4762 gCH3C3N   PHOTON              gC3N      gCH3                                    2.00e-11  0.00      1.7
+ 4763 gCH3C4H   PHOTON              gC4H      gCH3                                    2.00e-11  0.00      1.7
+ 4764 gCH3C5N   PHOTON              gCH3      gC5N                                    1.00e-09  0.00      1.7
+ 4765 gCH3C6H   PHOTON              gCH3      gC6H                                    1.00e-09  0.00      1.7
+ 4766 gCH3C7N   PHOTON              gCH3      gC7N                                    1.00e-09  0.00      1.7
+ 4767 gC2H4O    PHOTON              gCH4      gCO                                     3.43e-10  0.00      1.5
+ 4768 gC2H4O    PHOTON              gCH3      gHCO                                    3.43e-10  0.00      1.5
+ 4769 gC2H3N    PHOTON              gCH3      gCN                                     1.56e-09  0.00      1.9
+ 4770 gCH3NH    PHOTON              gCH3N     gH                                      1.00e-09  0.00      1.7
+ 4771 gCH3OCH3  PHOTON              gH2CO     gCH4                                    8.21e-10  0.00      1.6
+ 4772 gCH4O     PHOTON              gH2CO     gH2                                     7.19e-10  0.00      1.7
+ 4773 gCH4      PHOTON              gCH2      gH2                                     4.80e-10  0.00      2.2
+ 4774 gCH4      PHOTON              gCH       gH2       gH                            1.60e-10  0.00      2.2
+ 4775 gCH4      PHOTON              gCH3      gH                                      1.60e-10  0.00      2.2
+ 4776 gCH5N     PHOTON              gCH3N     gH        gH                            6.63e-11  0.00      1.5
+ 4777 gCH5N     PHOTON              gCN       gH2       gH2       gH                  9.42e-11  0.00      1.8
+ 4778 gCH5N     PHOTON              gHCN      gH2       gH        gH                  3.50e-10  0.00      1.7
+ 4779 gCH5N     PHOTON              gCH3      gNH2                                    1.55e-10  0.00      1.7
+ 4780 gCHNH     PHOTON              gCH       gNH                                     1.00e-10  0.00      1.7
+ 4781 gClO      PHOTON              gCl       gO                                      1.00e-10  0.00      2.0
+ 4782 gCN       PHOTON              gC        gN                                      1.00e-09  0.00      2.8
+ 4783 gCO       PHOTON              gC        gO                                      3.10e-11  0.00      2.5
+ 4784 gCO2      PHOTON              gCO       gO                                      3.13e-10  0.00      2.0
+ 4785 gCP       PHOTON              gC        gP                                      1.00e-09  0.00      1.7
+ 4786 gCS       PHOTON              gC        gS                                      9.70e-10  0.00      2.0
+ 4787 gH2C3N    PHOTON              gC2H2     gCN                                     1.00e-09  0.00      1.7
+ 4788 gH2C3O    PHOTON              gC2H2     gCO                                     1.00e-09  0.00      1.7
+ 4789 gH2C5N    PHOTON              gC4H2     gCN                                     1.00e-09  0.00      1.7
+ 4790 gH2C7N    PHOTON              gC6H2     gCN                                     1.00e-09  0.00      1.7
+ 4791 gH2C9N    PHOTON              gC8H2     gCN                                     1.00e-09  0.00      1.7
+ 4792 gH2CN     PHOTON              gHCN      gH                                      1.00e-09  0.00      1.7
+ 4793 gH2CO     PHOTON              gCO       gH2                                     4.40e-10  0.00      1.6
+ 4794 gH2CO     PHOTON              gCO       gH        gH                            4.40e-10  0.00      1.6
+ 4795 gH2CS     PHOTON              gCS       gH2                                     1.00e-09  0.00      1.7
+ 4796 gH2O      PHOTON              gOH       gH                                      3.28e-10  0.00      1.6
+ 4797 gH2O2     PHOTON              gOH       gOH                                     8.30e-10  0.00      1.8
+ 4798 gH2S      PHOTON              gHS       gH                                      3.20e-10  0.00      1.7
+ 4799 gH2S2     PHOTON              gHS       gHS                                     1.00e-09  0.00      1.7
+ 4800 gH2SiO    PHOTON              gSiO      gH2                                     1.00e-09  0.00      1.7
+ 4801 gH3C5N    PHOTON              gC2H3     gC3N                                    1.00e-09  0.00      1.7
+ 4802 gH3C7N    PHOTON              gC2H3     gC5N                                    1.00e-09  0.00      1.7
+ 4803 gH3C9N    PHOTON              gC2H3     gC7N                                    1.00e-09  0.00      1.7
+ 4804 gH4C3N    PHOTON              gC2H4     gCN                                     1.00e-09  0.00      1.7
+ 4805 gH5C3N    PHOTON              gC2H5     gCN                                     1.00e-09  0.00      1.7
+ 4806 gHC2NC    PHOTON              gC2H      gCN                                     9.54e-09  0.00      1.8
+ 4807 gHC2O     PHOTON              gCO       gCH                                     1.00e-09  0.00      1.7
+ 4808 gHC3N     PHOTON              gC2H      gCN                                     9.54e-10  0.00      1.8
+ 4809 gHC3O     PHOTON              gCO       gC2H                                    1.00e-09  0.00      1.7
+ 4810 gHC5N     PHOTON              gC4H      gCN                                     5.00e-10  0.00      1.8
+ 4811 gHC5N     PHOTON              gH        gC5N                                    5.00e-10  0.00      1.8
+ 4812 gHC7N     PHOTON              gC6H      gCN                                     1.00e-09  0.00      1.7
+ 4813 gHC9N     PHOTON              gC8H      gCN                                     1.00e-09  0.00      1.7
+ 4814 gHCCN     PHOTON              gC2N      gH                                      1.00e-09  0.00      1.7
+ 4815 gHCCP     PHOTON              gCCP      gH                                      1.00e-09  0.00      1.7
+ 4816 gHCl      PHOTON              gCl       gH                                      1.10e-10  0.00      1.8
+ 4817 gHCN      PHOTON              gCN       gH                                      5.48e-10  0.00      2.0
+ 4818 gHCNC2    PHOTON              gC2H      gCN                                     9.54e-09  0.00      1.8
+ 4819 gHCO      PHOTON              gH        gCO                                     5.87e-10  0.00      0.5
+ 4820 gHCOOCH3  PHOTON              gHCO      gCH2OH                                  1.00e-09  0.00      1.7
+ 4821 gCH2O2    PHOTON              gHCO      gOH                                     2.75e-10  0.00      1.8
+ 4822 gHCP      PHOTON              gCP       gH                                      1.00e-09  0.00      1.7
+ 4823 gHCSi     PHOTON              gCH       gSi                                     1.00e-09  0.00      1.7
+ 4824 gHNC      PHOTON              gCN       gH                                      5.48e-10  0.00      2.0
+ 4825 gHNC3     PHOTON              gC2H      gCN                                     9.54e-09  0.00      1.8
+ 4826 gHNCO     PHOTON              gNH       gCO                                     1.00e-09  0.00      1.7
+ 4827 gHNO      PHOTON              gNO       gH                                      1.70e-10  0.00      0.5
+ 4828 gHNSi     PHOTON              gSiN      gH                                      1.00e-09  0.00      1.7
+ 4829 gHPO      PHOTON              gPO       gH                                      1.00e-09  0.00      1.7
+ 4830 gHS       PHOTON              gH        gS                                      1.00e-11  0.00      2.0
+ 4831 gHS2      PHOTON              gHS       gS                                      1.00e-09  0.00      1.7
+ 4832 gMgH      PHOTON              gMg       gH                                      5.00e-10  0.00      1.4
+ 4833 gMgH2     PHOTON              gMgH      gH                                      5.00e-10  0.00      1.4
+ 4834 gN2       PHOTON              gN        gN                                      5.00e-12  0.00      3.0
+ 4835 gN2H2     PHOTON              gNH2      gN                                      1.00e-09  0.00      1.7
+ 4836 gN2O      PHOTON              gN2       gO                                      1.40e-09  0.00      1.7
+ 4837 gNaH      PHOTON              gNa       gH                                      7.30e-09  0.00      1.1
+ 4838 gNaOH     PHOTON              gNa       gOH                                     1.00e-09  0.00      1.7
+ 4839 gNH       PHOTON              gH        gN                                      4.00e-10  0.00      1.5
+ 4840 gNH2      PHOTON              gNH       gH                                      2.11e-10  0.00      1.5
+ 4841 gNH2CHO   PHOTON              gNH2      gHCO                                    1.00e-09  0.00      1.7
+ 4842 gNH2CN    PHOTON              gNH2      gCN                                     1.00e-09  0.00      1.7
+ 4843 gNH2OH    PHOTON              gNH2      gOH                                     1.00e-09  0.00      1.7
+ 4844 gNH3      PHOTON              gNH       gH2                                     1.30e-10  0.00      1.9
+ 4845 gNH3      PHOTON              gNH2      gH                                      4.94e-10  0.00      1.6
+ 4846 gNO       PHOTON              gN        gO                                      3.00e-10  0.00      2.0
+ 4847 gNO2      PHOTON              gNO       gO                                      1.29e-09  0.00      2.0
+ 4848 gNS       PHOTON              gN        gS                                      1.00e-11  0.00      2.0
+ 4849 gO2       PHOTON              gO        gO                                      3.30e-10  0.00      1.4
+ 4850 gO2H      PHOTON              gOH       gO                                      5.00e-10  0.00      1.7
+ 4851 gO2H      PHOTON              gO2       gH                                      5.00e-10  0.00      1.7
+ 4852 gO3       PHOTON              gO2       gO                                      1.00e-09  0.00      1.7
+ 4853 gOCN      PHOTON              gO        gCN                                     1.00e-11  0.00      2.0
+ 4854 gOCS      PHOTON              gCO       gS                                      2.28e-09  0.00      1.6
+ 4855 gOH       PHOTON              gO        gH                                      1.68e-10  0.00      1.7
+ 4856 gPH       PHOTON              gP        gH                                      1.00e-09  0.00      1.7
+ 4857 gPH2      PHOTON              gPH       gH                                      1.00e-09  0.00      1.7
+ 4858 gPN       PHOTON              gN        gP                                      1.00e-09  0.00      1.7
+ 4859 gPO       PHOTON              gO        gP                                      1.00e-09  0.00      1.7
+ 4860 gS2       PHOTON              gS        gS                                      1.00e-09  0.00      1.7
+ 4861 gSiC      PHOTON              gSi       gC                                      1.00e-10  0.00      2.3
+ 4862 gSiC2     PHOTON              gSiC      gC                                      1.00e-09  0.00      1.7
+ 4863 gSiC2H    PHOTON              gSiC2     gH                                      1.00e-09  0.00      1.7
+ 4864 gSiC2H2   PHOTON              gSiC2     gH2                                     1.00e-09  0.00      1.7
+ 4865 gSiC3     PHOTON              gSiC2     gC                                      1.00e-09  0.00      1.7
+ 4866 gSiC3H    PHOTON              gSiC3     gH                                      1.00e-09  0.00      1.7
+ 4867 gSiC4     PHOTON              gSiC2     gC2                                     1.00e-09  0.00      1.7
+ 4868 gSiCH2    PHOTON              gSiC      gH2                                     1.00e-09  0.00      1.7
+ 4869 gSiCH3    PHOTON              gSiCH2    gH                                      1.00e-09  0.00      1.7
+ 4870 gSiH      PHOTON              gSi       gH                                      1.00e-10  0.00      2.3
+ 4871 gSiH2     PHOTON              gSiH      gH                                      1.00e-09  0.00      1.7
+ 4872 gSiH3     PHOTON              gSiH2     gH                                      1.00e-09  0.00      1.7
+ 4873 gSiH4     PHOTON              gSiH2     gH2                                     1.00e-09  0.00      1.7
+ 4874 gSiN      PHOTON              gSi       gN                                      1.00e-09  0.00      1.7
+ 4875 gSiNC     PHOTON              gCN       gSi                                     1.00e-09  0.00      1.7
+ 4876 gSiO      PHOTON              gSi       gO                                      1.00e-10  0.00      2.3
+ 4877 gSiO2     PHOTON              gSiO      gO                                      1.00e-09  0.00      1.7
+ 4878 gSiS      PHOTON              gSi       gS                                      1.00e-10  0.00      2.3
+ 4879 gSO       PHOTON              gO        gS                                      3.30e-10  0.00      1.4
+ 4880 gSO2      PHOTON              gSO       gO                                      1.05e-09  0.00      1.7
+ 4881 gC10      PHOTON              gC8       gC2                                     1.00e-10  0.00      2.5
+ 4882 gC10      PHOTON              gC9       gC                                      1.00e-10  0.00      2.5
+ 4883 gC2       PHOTON              gC        gC                                      1.00e-10  0.00      2.0
+ 4884 gC2H      PHOTON              gC2       gH                                      5.25e-12  0.00      2.0
+ 4885 gC2H      PHOTON              gCH       gC                                      4.75e-12  0.00      2.0
+ 4886 gC2H2     PHOTON              gC2H      gH                                      1.12e-10  0.00      2.7
+ 4887 gC2H2     PHOTON              gC2       gH        gH                            6.58e-11  0.00      0.0
+ 4888 gC2H2     PHOTON              gCH       gCH                                     2.90e-11  0.00      0.0
+ 4889 gC2H3     PHOTON              gC2H      gH2                                     1.91e-11  0.00      2.3
+ 4890 gC2H3     PHOTON              gC2H2     gH                                      9.26e-11  0.00      2.3
+ 4891 gC2H3     PHOTON              gC2H      gH        gH                            1.88e-10  0.00      2.3
+ 4892 gC2H4     PHOTON              gC2H2     gH        gH                            9.39e-11  0.00      2.7
+ 4893 gC2H4     PHOTON              gC2H2     gH2                                     8.52e-12  0.00      2.7
+ 4894 gC2H4     PHOTON              gC2H3     gH                                      1.56e-11  0.00      2.7
+ 4895 gC2H5     PHOTON              gC2H4     gH                                      4.00e-11  0.00      2.5
+ 4896 gC2H5     PHOTON              gC2H      gH2       gH2                           4.00e-11  0.00      2.5
+ 4897 gC2H5     PHOTON              gC2H2     gH2       gH                            8.00e-11  0.00      2.5
+ 4898 gC2H5     PHOTON              gC2H3     gH2                                     4.00e-11  0.00      2.5
+ 4899 gC2H5OH   PHOTON              gC2H5     gOH                                     1.32e-10  0.00      2.4
+ 4900 gC2H5OH   PHOTON              gC2H2O    gH2       gH2                           1.32e-10  0.00      2.4
+ 4901 gC2H5OH   PHOTON              gCH4      gH2CO                                   1.32e-10  0.00      2.4
+ 4902 gC2H5OH   PHOTON              gC2H4O    gH2                                     1.32e-10  0.00      2.4
+ 4903 gC2H6CO   PHOTON              gC2H4O    gCH2                                    1.00e-10  0.00      2.5
+ 4904 gC2H6CO   PHOTON              gCH3      gCH3      gCO                           1.00e-10  0.00      2.5
+ 4905 gCCO      PHOTON              gCO       gC                                      2.00e-10  0.00      2.5
+ 4906 gC3H3N    PHOTON              gC3N      gH2       gH                            1.00e-10  0.00      2.5
+ 4907 gC3H3N    PHOTON              gHC3N     gH2                                     1.00e-10  0.00      2.5
+ 4908 gC3H4     PHOTON              gC3H2     gH2                                     5.45e-11  0.00      2.4
+ 4909 gC3H4     PHOTON              gC3H3     gH                                      9.34e-10  0.00      2.4
+ 4910 gC4H2     PHOTON              gC4       gH2                                     1.30e-10  0.00      2.3
+ 4911 gC4H2     PHOTON              gC4H      gH                                      1.30e-10  0.00      2.3
+ 4912 gC4P      PHOTON              gC3P      gC                                      1.00e-10  0.00      2.5
+ 4913 gC4P      PHOTON              gCCP      gC2                                     1.00e-10  0.00      2.5
+ 4914 gC6       PHOTON              gC5       gC                                      1.00e-10  0.00      2.5
+ 4915 gC6       PHOTON              gC4       gC2                                     1.00e-10  0.00      2.5
+ 4916 gC6H2     PHOTON              gC6       gH2                                     9.30e-11  0.00      2.5
+ 4917 gC6H2     PHOTON              gC6H      gH                                      9.30e-11  0.00      2.5
+ 4918 gC6H2     PHOTON              gC6       gH        gH                            1.40e-11  0.00      2.5
+ 4919 gC7       PHOTON              gC6       gC                                      8.70e-11  0.00      2.5
+ 4920 gC7       PHOTON              gC5       gC2                                     8.70e-11  0.00      2.5
+ 4921 gC7       PHOTON              gC4       gC3                                     2.61e-11  0.00      2.5
+ 4922 gC7H      PHOTON              gC7       gH                                      1.00e-10  0.00      2.5
+ 4923 gC7H      PHOTON              gC6H      gC                                      1.00e-10  0.00      2.5
+ 4924 gC7H2     PHOTON              gC7H      gH                                      1.00e-10  0.00      2.5
+ 4925 gC7H2     PHOTON              gC7       gH2                                     1.00e-10  0.00      2.5
+ 4926 gC8       PHOTON              gC7       gC                                      1.00e-10  0.00      2.5
+ 4927 gC8       PHOTON              gC6       gC2                                     1.00e-10  0.00      2.5
+ 4928 gC8H      PHOTON              gC8       gH                                      1.00e-10  0.00      2.5
+ 4929 gC8H      PHOTON              gC7H      gC                                      1.00e-10  0.00      2.5
+ 4930 gC8H2     PHOTON              gC8       gH2                                     1.00e-10  0.00      2.5
+ 4931 gC8H2     PHOTON              gC8H      gH                                      1.00e-10  0.00      2.5
+ 4932 gC9       PHOTON              gC8       gC                                      1.00e-10  0.00      2.5
+ 4933 gC9       PHOTON              gC7       gC2                                     1.00e-10  0.00      2.5
+ 4934 gC9H      PHOTON              gC8H      gC                                      1.00e-10  0.00      2.5
+ 4935 gC9H      PHOTON              gC9       gH                                      1.00e-10  0.00      2.5
+ 4936 gC9H2     PHOTON              gC9H      gH                                      1.00e-10  0.00      2.5
+ 4937 gC9H2     PHOTON              gC9       gH2                                     1.00e-10  0.00      2.5
+ 4938 gC9N      PHOTON              gC2       gC7N                                    2.00e-10  0.00      2.5
+ 4939 gCCP      PHOTON              gCP       gC                                      1.00e-10  0.00      2.5
+ 4940 gCCP      PHOTON              gC2       gP                                      1.00e-10  0.00      2.5
+ 4941 gCH       PHOTON              gC        gH                                      2.90e-10  0.00      2.8
+ 4942 gCH2      PHOTON              gC        gH2                                     1.21e-10  0.00      2.3
+ 4943 gCH2      PHOTON              gCH       gH                                      2.51e-10  0.00      2.3
+ 4944 gCH2      PHOTON              gC        gH        gH                            6.28e-10  0.00      2.3
+ 4945 gC2H2N    PHOTON              gCH       gHCN                                    6.67e-11  0.00      2.5
+ 4946 gC2H2N    PHOTON              gCN       gCH2                                    6.67e-11  0.00      2.5
+ 4947 gC2H2N    PHOTON              gC2N      gH2                                     6.67e-11  0.00      2.5
+ 4948 gC2H2O    PHOTON              gC2       gH2O                                    1.15e-10  0.00      2.0
+ 4949 gC2H2O    PHOTON              gCH2      gCO                                     1.15e-10  0.00      2.0
+ 4950 gC2H2O    PHOTON              gC2H2     gO                                      1.15e-10  0.00      2.0
+ 4951 gCH2PH    PHOTON              gCP       gH2       gH                            5.00e-11  0.00      2.5
+ 4952 gCH2PH    PHOTON              gHCP      gH2                                     5.00e-11  0.00      2.5
+ 4953 gCH2PH    PHOTON              gCH3      gP                                      1.00e-10  0.00      2.5
+ 4954 gCH3      PHOTON              gH2       gC        gH                            3.00e-11  0.00      2.1
+ 4955 gCH3      PHOTON              gCH       gH        gH                            1.60e-11  0.00      2.1
+ 4956 gCH3      PHOTON              gCH       gH2                                     1.40e-11  0.00      2.1
+ 4957 gCH3      PHOTON              gCH2      gH                                      4.00e-11  0.00      2.1
+ 4958 gCH3C6H   PHOTON              gC7H2     gH2                                     1.00e-10  0.00      2.5
+ 4959 gCH3C6H   PHOTON              gC7H      gH2       gH                            1.00e-10  0.00      2.5
+ 4960 gC2H4O    PHOTON              gCH3      gHCO                                    8.67e-11  0.00      2.3
+ 4961 gC2H4O    PHOTON              gC2H2O    gH        gH                            8.67e-11  0.00      2.3
+ 4962 gC2H4O    PHOTON              gC2H2O    gH2                                     8.67e-11  0.00      2.3
+ 4963 gC2H3N    PHOTON              gCH3      gCN                                     1.18e-10  0.00      3.1
+ 4964 gC2H3N    PHOTON              gC2H2N    gH                                      1.18e-10  0.00      3.1
+ 4965 gC2H3N    PHOTON              gC2N      gH2       gH                            1.18e-10  0.00      3.1
+ 4966 gC2H3N    PHOTON              gCH2      gHCN                                    1.76e-10  0.00      3.1
+ 4967 gCH3OCH3  PHOTON              gCH4O     gCH2                                    6.50e-11  0.00      2.3
+ 4968 gCH3OCH3  PHOTON              gCH3      gCH3      gO                            6.50e-11  0.00      2.3
+ 4969 gCH3OCH3  PHOTON              gH2CO     gCH4                                    1.30e-10  0.00      2.3
+ 4970 gCH4O     PHOTON              gCH3      gOH                                     2.40e-10  0.00      2.6
+ 4971 gCH4O     PHOTON              gH2CO     gH2                                     2.40e-10  0.00      2.6
+ 4972 gCH5N     PHOTON              gCH3      gNH2                                    1.30e-10  0.00      2.3
+ 4973 gCH5N     PHOTON              gCH3N     gH2                                     1.30e-10  0.00      2.3
+ 4974 gCP       PHOTON              gC        gP                                      2.00e-10  0.00      2.5
+ 4975 gH2CN     PHOTON              gCN       gH        gH                            3.98e-11  0.00      2.5
+ 4976 gH2CN     PHOTON              gHCN      gH                                      8.01e-11  0.00      2.5
+ 4977 gH2CN     PHOTON              gHNC      gH                                      8.01e-11  0.00      2.5
+ 4978 gH2CO     PHOTON              gHCO      gH                                      1.33e-11  0.00      2.8
+ 4979 gH2CO     PHOTON              gCO       gH        gH                            6.67e-11  0.00      2.8
+ 4980 gH2CO     PHOTON              gCO       gH        gH                            1.40e-11  0.00      3.1
+ 4981 gH2O      PHOTON              gH2       gO                                      1.90e-12  0.00      3.1
+ 4982 gH2O      PHOTON              gOH       gH                                      4.20e-12  0.00      3.1
+ 4983 gH2O      PHOTON              gO        gH        gH                            1.49e-11  0.00      3.1
+ 4984 gH2S2     PHOTON              gHS       gHS                                     1.00e-10  0.00      2.5
+ 4985 gH2S2     PHOTON              gHS2      gH                                      1.00e-10  0.00      2.5
+ 4986 gH2SiO    PHOTON              gSiH      gOH                                     1.00e-10  0.00      2.5
+ 4987 gH2SiO    PHOTON              gSiO      gH2                                     1.00e-10  0.00      2.5
+ 4988 gHC7N     PHOTON              gC7N      gH                                      1.00e-10  0.00      2.5
+ 4989 gHC7N     PHOTON              gCN       gC6H                                    1.00e-10  0.00      2.5
+ 4990 gHC9N     PHOTON              gC9N      gH                                      1.00e-10  0.00      2.5
+ 4991 gHC9N     PHOTON              gCN       gC8H                                    1.00e-10  0.00      2.5
+ 4992 gHCCP     PHOTON              gCCP      gH                                      1.00e-10  0.00      2.5
+ 4993 gHCCP     PHOTON              gCP       gCH                                     1.00e-10  0.00      2.5
+ 4994 gHCO      PHOTON              gCO       gH                                      2.46e-10  0.00      2.1
+ 4995 gHCOOCH3  PHOTON              gCH4O     gCO                                     1.00e-10  0.00      2.5
+ 4996 gHCOOCH3  PHOTON              gCH3      gCO2      gH                            1.00e-10  0.00      2.5
+ 4997 gCH2O2    PHOTON              gCO2      gH        gH                            1.73e-10  0.00      2.6
+ 4998 gHCP      PHOTON              gCH       gP                                      1.00e-10  0.00      2.5
+ 4999 gHCP      PHOTON              gCP       gH                                      1.00e-10  0.00      2.5
+ 5000 gHCS      PHOTON              gCS       gH                                      2.00e-10  0.00      2.5
+ 5001 gHCSi     PHOTON              gSi       gCH                                     1.00e-10  0.00      2.5
+ 5002 gHCSi     PHOTON              gSiC      gH                                      1.00e-10  0.00      2.5
+ 5003 gHNSi     PHOTON              gSiN      gH                                      1.00e-10  0.00      2.5
+ 5004 gHNSi     PHOTON              gNH       gSi                                     1.00e-10  0.00      2.5
+ 5005 gHPO      PHOTON              gPO       gH                                      1.00e-10  0.00      2.5
+ 5006 gHPO      PHOTON              gPH       gO                                      1.00e-10  0.00      2.5
+ 5007 gHS2      PHOTON              gHS       gS                                      1.00e-10  0.00      2.5
+ 5008 gHS2      PHOTON              gS2       gH                                      1.00e-10  0.00      2.5
+ 5009 gNH       PHOTON              gN        gH                                      1.00e-11  0.00      2.0
+ 5010 gNH2      PHOTON              gNH       gH                                      5.77e-11  0.00      2.6
+ 5011 gNH2      PHOTON              gN        gH        gH                            1.15e-10  0.00      2.6
+ 5012 gNH3      PHOTON              gNH2      gH                                      6.20e-11  0.00      2.5
+ 5013 gNH3      PHOTON              gNH       gH        gH                            6.20e-11  0.00      2.5
+ 5014 gNO       PHOTON              gN        gO                                      2.00e-10  0.00      2.0
+ 5015 gO2       PHOTON              gO        gO                                      6.20e-12  0.00      3.1
+ 5016 gO2H      PHOTON              gO2       gH                                      2.00e-10  0.00      2.5
+ 5017 gOCS      PHOTON              gCS       gO                                      7.90e-11  0.00      2.7
+ 5018 gOCS      PHOTON              gCO       gS                                      1.58e-10  0.00      2.7
+ 5019 gOH       PHOTON              gO        gH                                      1.60e-12  0.00      3.1
+ 5020 gPH       PHOTON              gP        gH                                      2.00e-10  0.00      2.5
+ 5021 gPH2      PHOTON              gP        gH2                                     1.00e-10  0.00      2.5
+ 5022 gPH2      PHOTON              gPH       gH                                      1.00e-10  0.00      2.5
+ 5023 gPN       PHOTON              gP        gN                                      2.00e-10  0.00      2.5
+ 5024 gPO       PHOTON              gP        gO                                      2.00e-10  0.00      2.5
+ 5025 gS2       PHOTON              gS        gS                                      2.00e-10  0.00      2.5
+ 5026 gSiC2     PHOTON              gSi       gC2                                     1.00e-10  0.00      2.5
+ 5027 gSiC2     PHOTON              gSiC      gC                                      1.00e-10  0.00      2.5
+ 5028 gSiC2H    PHOTON              gC2H      gSi                                     1.00e-10  0.00      2.5
+ 5029 gSiC2H    PHOTON              gSiC2     gH                                      1.00e-10  0.00      2.5
+ 5030 gSiC2H2   PHOTON              gSiC2     gH2                                     1.00e-10  0.00      2.5
+ 5031 gSiC2H2   PHOTON              gSiC2H    gH                                      1.00e-10  0.00      2.5
+ 5032 gSiC3     PHOTON              gSiC      gC2                                     1.00e-10  0.00      2.5
+ 5033 gSiC3     PHOTON              gSiC2     gC                                      1.00e-10  0.00      2.5
+ 5034 gSiC3H    PHOTON              gSi       gC3H                                    1.00e-10  0.00      2.5
+ 5035 gSiC3H    PHOTON              gSiC3     gH                                      1.00e-10  0.00      2.5
+ 5036 gSiC4     PHOTON              gSiC2     gC2                                     1.00e-10  0.00      2.5
+ 5037 gSiC4     PHOTON              gSiC3     gC                                      1.00e-10  0.00      2.5
+ 5038 gSiCH2    PHOTON              gSi       gCH2                                    7.27e-11  0.00      2.5
+ 5039 gSiCH2    PHOTON              gSiC      gH2                                     7.27e-11  0.00      2.5
+ 5040 gSiCH2    PHOTON              gHCSi     gH                                      5.45e-11  0.00      2.5
+ 5041 gSiCH3    PHOTON              gHCSi     gH2                                     1.00e-10  0.00      2.5
+ 5042 gSiCH3    PHOTON              gSiCH2    gH                                      1.00e-10  0.00      2.5
+ 5043 gSiH2     PHOTON              gSi       gH2                                     5.45e-11  0.00      2.5
+ 5044 gSiH2     PHOTON              gSiH      gH                                      7.27e-11  0.00      2.5
+ 5045 gSiH2     PHOTON              gSi       gH        gH                            7.27e-11  0.00      2.5
+ 5046 gSiH3     PHOTON              gSiH      gH2                                     1.00e-10  0.00      2.5
+ 5047 gSiH3     PHOTON              gSiH2     gH                                      1.00e-10  0.00      2.5
+ 5048 gSiH4     PHOTON              gSiH2     gH2                                     1.00e-10  0.00      2.5
+ 5049 gSiH4     PHOTON              gSiH3     gH                                      1.00e-10  0.00      2.5
+ 5050 gSiN      PHOTON              gSi       gN                                      2.00e-10  0.00      2.5
+ 5051 gSiNC     PHOTON              gSi       gCN                                     2.00e-10  0.00      2.5
+ 5052 C         FREEZE              gC                                                1.00e+00  0.00      0.0
+ 5053 C10       FREEZE              gC10                                              1.00e+00  0.00      0.0
+ 5054 C2        FREEZE              gC2                                               1.00e+00  0.00      0.0
+ 5055 C2H       FREEZE              gC2H                                              1.00e+00  0.00      0.0
+ 5056 C2H2      FREEZE              gC2H2                                             1.00e+00  0.00      0.0
+ 5057 C2H3      FREEZE              gC2H3                                             1.00e+00  0.00      0.0
+ 5058 C2H4      FREEZE              gC2H4                                             1.00e+00  0.00      0.0
+ 5059 C2H5      FREEZE              gC2H5                                             1.00e+00  0.00      0.0
+ 5060 C2H5OH    FREEZE              gC2H5OH                                           1.00e+00  0.00      0.0
+ 5061 C2H6      FREEZE              gC2H6                                             1.00e+00  0.00      0.0
+ 5062 C2H6CO    FREEZE              gC2H6CO                                           1.00e+00  0.00      0.0
+ 5063 C2N       FREEZE              gC2N                                              1.00e+00  0.00      0.0
+ 5064 CCO       FREEZE              gCCO                                              1.00e+00  0.00      0.0
+ 5065 C2S       FREEZE              gC2S                                              1.00e+00  0.00      0.0
+ 5066 C3        FREEZE              gC3                                               1.00e+00  0.00      0.0
+ 5067 C3H       FREEZE              gC3H                                              1.00e+00  0.00      0.0
+ 5068 C3H2      FREEZE              gC3H2                                             1.00e+00  0.00      0.0
+ 5069 C3H3      FREEZE              gC3H3                                             1.00e+00  0.00      0.0
+ 5070 C3H3N     FREEZE              gC3H3N                                            1.00e+00  0.00      0.0
+ 5071 C3H4      FREEZE              gC3H4                                             1.00e+00  0.00      0.0
+ 5072 C3N       FREEZE              gC3N                                              1.00e+00  0.00      0.0
+ 5073 C3O       FREEZE              gC3O                                              1.00e+00  0.00      0.0
+ 5074 C3P       FREEZE              gC3P                                              1.00e+00  0.00      0.0
+ 5075 C3S       FREEZE              gC3S                                              1.00e+00  0.00      0.0
+ 5076 C4        FREEZE              gC4                                               1.00e+00  0.00      0.0
+ 5077 C4H       FREEZE              gC4H                                              1.00e+00  0.00      0.0
+ 5078 C4H2      FREEZE              gC4H2                                             1.00e+00  0.00      0.0
+ 5079 C4H3      FREEZE              gC4H3                                             1.00e+00  0.00      0.0
+ 5080 C4H4      FREEZE              gC4H4                                             1.00e+00  0.00      0.0
+ 5081 C4N       FREEZE              gC4N                                              1.00e+00  0.00      0.0
+ 5082 C4P       FREEZE              gC4P                                              1.00e+00  0.00      0.0
+ 5083 C4S       FREEZE              gC4S                                              1.00e+00  0.00      0.0
+ 5084 C5        FREEZE              gC5                                               1.00e+00  0.00      0.0
+ 5085 C5H       FREEZE              gC5H                                              1.00e+00  0.00      0.0
+ 5086 C5H2      FREEZE              gC5H2                                             1.00e+00  0.00      0.0
+ 5087 C5H3      FREEZE              gC5H3                                             1.00e+00  0.00      0.0
+ 5088 C5H4      FREEZE              gC5H4                                             1.00e+00  0.00      0.0
+ 5089 C5N       FREEZE              gC5N                                              1.00e+00  0.00      0.0
+ 5090 C6        FREEZE              gC6                                               1.00e+00  0.00      0.0
+ 5091 C6H       FREEZE              gC6H                                              1.00e+00  0.00      0.0
+ 5092 C6H2      FREEZE              gC6H2                                             1.00e+00  0.00      0.0
+ 5093 C6H3      FREEZE              gC6H3                                             1.00e+00  0.00      0.0
+ 5094 C6H4      FREEZE              gC6H4                                             1.00e+00  0.00      0.0
+ 5095 C6H6      FREEZE              gC6H6                                             1.00e+00  0.00      0.0
+ 5096 C7        FREEZE              gC7                                               1.00e+00  0.00      0.0
+ 5097 C7H       FREEZE              gC7H                                              1.00e+00  0.00      0.0
+ 5098 C7H2      FREEZE              gC7H2                                             1.00e+00  0.00      0.0
+ 5099 C7H3      FREEZE              gC7H3                                             1.00e+00  0.00      0.0
+ 5100 C7H4      FREEZE              gC7H4                                             1.00e+00  0.00      0.0
+ 5101 C7N       FREEZE              gC7N                                              1.00e+00  0.00      0.0
+ 5102 C8        FREEZE              gC8                                               1.00e+00  0.00      0.0
+ 5103 C8H       FREEZE              gC8H                                              1.00e+00  0.00      0.0
+ 5104 C8H2      FREEZE              gC8H2                                             1.00e+00  0.00      0.0
+ 5105 C8H3      FREEZE              gC8H3                                             1.00e+00  0.00      0.0
+ 5106 C8H4      FREEZE              gC8H4                                             1.00e+00  0.00      0.0
+ 5107 C9        FREEZE              gC9                                               1.00e+00  0.00      0.0
+ 5108 C9H       FREEZE              gC9H                                              1.00e+00  0.00      0.0
+ 5109 C9H2      FREEZE              gC9H2                                             1.00e+00  0.00      0.0
+ 5110 C9H3      FREEZE              gC9H3                                             1.00e+00  0.00      0.0
+ 5111 C9H4      FREEZE              gC9H4                                             1.00e+00  0.00      0.0
+ 5112 C9N       FREEZE              gC9N                                              1.00e+00  0.00      0.0
+ 5113 CCl       FREEZE              gCCl                                              1.00e+00  0.00      0.0
+ 5114 CCP       FREEZE              gCCP                                              1.00e+00  0.00      0.0
+ 5115 CH        FREEZE              gCH                                               1.00e+00  0.00      0.0
+ 5116 CH2       FREEZE              gCH2                                              1.00e+00  0.00      0.0
+ 5117 C2H2N     FREEZE              gC2H2N                                            1.00e+00  0.00      0.0
+ 5118 C2H2O     FREEZE              gC2H2O                                            1.00e+00  0.00      0.0
+ 5119 CH3N      FREEZE              gCH3N                                             1.00e+00  0.00      0.0
+ 5120 CH2NH2    FREEZE              gCH2NH2                                           1.00e+00  0.00      0.0
+ 5121 CH2OH     FREEZE              gCH2OH                                            1.00e+00  0.00      0.0
+ 5122 CH2PH     FREEZE              gCH2PH                                            1.00e+00  0.00      0.0
+ 5123 CH3       FREEZE              gCH3                                              1.00e+00  0.00      0.0
+ 5124 CH3C3N    FREEZE              gCH3C3N                                           1.00e+00  0.00      0.0
+ 5125 CH3C4H    FREEZE              gCH3C4H                                           1.00e+00  0.00      0.0
+ 5126 CH3C5N    FREEZE              gCH3C5N                                           1.00e+00  0.00      0.0
+ 5127 CH3C6H    FREEZE              gCH3C6H                                           1.00e+00  0.00      0.0
+ 5128 CH3C7N    FREEZE              gCH3C7N                                           1.00e+00  0.00      0.0
+ 5129 C2H4O     FREEZE              gC2H4O                                            1.00e+00  0.00      0.0
+ 5130 C2H3N     FREEZE              gC2H3N                                            1.00e+00  0.00      0.0
+ 5131 CH3NH     FREEZE              gCH3NH                                            1.00e+00  0.00      0.0
+ 5132 CH3OCH3   FREEZE              gCH3OCH3                                          1.00e+00  0.00      0.0
+ 5133 CH4O      FREEZE              gCH4O                                             1.00e+00  0.00      0.0
+ 5134 CH4       FREEZE              gCH4                                              1.00e+00  0.00      0.0
+ 5135 CH5N      FREEZE              gCH5N                                             1.00e+00  0.00      0.0
+ 5136 CHNH      FREEZE              gCHNH                                             1.00e+00  0.00      0.0
+ 5137 Cl        FREEZE              gCl                                               1.00e+00  0.00      0.0
+ 5138 ClO       FREEZE              gClO                                              1.00e+00  0.00      0.0
+ 5139 CN        FREEZE              gCN                                               1.00e+00  0.00      0.0
+ 5140 CO        FREEZE              gCO                                               1.00e+00  0.00      0.0
+ 5141 CO2       FREEZE              gCO2                                              1.00e+00  0.00      0.0
+ 5142 CP        FREEZE              gCP                                               1.00e+00  0.00      0.0
+ 5143 CS        FREEZE              gCS                                               1.00e+00  0.00      0.0
+ 5144 Fe        FREEZE              gFe                                               1.00e+00  0.00      0.0
+ 5145 FeH       FREEZE              gFeH                                              1.00e+00  0.00      0.0
+ 5146 H         FREEZE              gH                                                1.00e+00  0.00      0.0
+ 5147 H2        FREEZE              gH2                                               0.00e+00  0.00      0.0
+ 5148 H2C3N     FREEZE              gH2C3N                                            1.00e+00  0.00      0.0
+ 5149 H2C3O     FREEZE              gH2C3O                                            1.00e+00  0.00      0.0
+ 5150 H2C5N     FREEZE              gH2C5N                                            1.00e+00  0.00      0.0
+ 5151 H2C7N     FREEZE              gH2C7N                                            1.00e+00  0.00      0.0
+ 5152 H2C9N     FREEZE              gH2C9N                                            1.00e+00  0.00      0.0
+ 5153 H2CN      FREEZE              gH2CN                                             1.00e+00  0.00      0.0
+ 5154 H2CO      FREEZE              gH2CO                                             1.00e+00  0.00      0.0
+ 5155 H2CS      FREEZE              gH2CS                                             1.00e+00  0.00      0.0
+ 5156 H2O       FREEZE              gH2O                                              1.00e+00  0.00      0.0
+ 5157 H2O2      FREEZE              gH2O2                                             1.00e+00  0.00      0.0
+ 5158 H2S       FREEZE              gH2S                                              1.00e+00  0.00      0.0
+ 5159 H2S2      FREEZE              gH2S2                                             1.00e+00  0.00      0.0
+ 5160 H2SiO     FREEZE              gH2SiO                                            1.00e+00  0.00      0.0
+ 5161 H3C5N     FREEZE              gH3C5N                                            1.00e+00  0.00      0.0
+ 5162 H3C7N     FREEZE              gH3C7N                                            1.00e+00  0.00      0.0
+ 5163 H3C9N     FREEZE              gH3C9N                                            1.00e+00  0.00      0.0
+ 5164 H4C3N     FREEZE              gH4C3N                                            1.00e+00  0.00      0.0
+ 5165 H5C3N     FREEZE              gH5C3N                                            1.00e+00  0.00      0.0
+ 5166 HC2NC     FREEZE              gHC2NC                                            1.00e+00  0.00      0.0
+ 5167 HC2O      FREEZE              gHC2O                                             1.00e+00  0.00      0.0
+ 5168 HC3N      FREEZE              gHC3N                                             1.00e+00  0.00      0.0
+ 5169 HC3O      FREEZE              gHC3O                                             1.00e+00  0.00      0.0
+ 5170 HC5N      FREEZE              gHC5N                                             1.00e+00  0.00      0.0
+ 5171 HC7N      FREEZE              gHC7N                                             1.00e+00  0.00      0.0
+ 5172 HC9N      FREEZE              gHC9N                                             1.00e+00  0.00      0.0
+ 5173 HCCN      FREEZE              gHCCN                                             1.00e+00  0.00      0.0
+ 5174 HCCP      FREEZE              gHCCP                                             1.00e+00  0.00      0.0
+ 5175 HCl       FREEZE              gHCl                                              1.00e+00  0.00      0.0
+ 5176 HCN       FREEZE              gHCN                                              1.00e+00  0.00      0.0
+ 5177 HCNC2     FREEZE              gHCNC2                                            1.00e+00  0.00      0.0
+ 5178 HCO       FREEZE              gHCO                                              1.00e+00  0.00      0.0
+ 5179 HCOOCH3   FREEZE              gHCOOCH3                                          1.00e+00  0.00      0.0
+ 5180 CH2O2     FREEZE              gCH2O2                                            1.00e+00  0.00      0.0
+ 5181 HCP       FREEZE              gHCP                                              1.00e+00  0.00      0.0
+ 5182 HCS       FREEZE              gHCS                                              1.00e+00  0.00      0.0
+ 5183 HCSi      FREEZE              gHCSi                                             1.00e+00  0.00      0.0
+ 5184 He        FREEZE              gHe                                               0.00e+00  0.00      0.0
+ 5185 HNC       FREEZE              gHNC                                              1.00e+00  0.00      0.0
+ 5186 HNC3      FREEZE              gHNC3                                             1.00e+00  0.00      0.0
+ 5187 HNCO      FREEZE              gHNCO                                             1.00e+00  0.00      0.0
+ 5188 HNO       FREEZE              gHNO                                              1.00e+00  0.00      0.0
+ 5189 HNSi      FREEZE              gHNSi                                             1.00e+00  0.00      0.0
+ 5190 HPO       FREEZE              gHPO                                              1.00e+00  0.00      0.0
+ 5191 HS        FREEZE              gHS                                               1.00e+00  0.00      0.0
+ 5192 HS2       FREEZE              gHS2                                              1.00e+00  0.00      0.0
+ 5193 Mg        FREEZE              gMg                                               1.00e+00  0.00      0.0
+ 5194 MgH       FREEZE              gMgH                                              1.00e+00  0.00      0.0
+ 5195 MgH2      FREEZE              gMgH2                                             1.00e+00  0.00      0.0
+ 5196 N         FREEZE              gN                                                1.00e+00  0.00      0.0
+ 5197 N2        FREEZE              gN2                                               1.00e+00  0.00      0.0
+ 5198 N2H2      FREEZE              gN2H2                                             1.00e+00  0.00      0.0
+ 5199 N2O       FREEZE              gN2O                                              1.00e+00  0.00      0.0
+ 5200 Na        FREEZE              gNa                                               1.00e+00  0.00      0.0
+ 5201 NaH       FREEZE              gNaH                                              1.00e+00  0.00      0.0
+ 5202 NaOH      FREEZE              gNaOH                                             1.00e+00  0.00      0.0
+ 5203 NH        FREEZE              gNH                                               1.00e+00  0.00      0.0
+ 5204 NH2       FREEZE              gNH2                                              1.00e+00  0.00      0.0
+ 5205 NH2CHO    FREEZE              gNH2CHO                                           1.00e+00  0.00      0.0
+ 5206 NH2CN     FREEZE              gNH2CN                                            1.00e+00  0.00      0.0
+ 5207 NH2OH     FREEZE              gNH2OH                                            1.00e+00  0.00      0.0
+ 5208 NH3       FREEZE              gNH3                                              1.00e+00  0.00      0.0
+ 5209 NO        FREEZE              gNO                                               1.00e+00  0.00      0.0
+ 5210 NO2       FREEZE              gNO2                                              1.00e+00  0.00      0.0
+ 5211 NS        FREEZE              gNS                                               1.00e+00  0.00      0.0
+ 5212 O         FREEZE              gO                                                1.00e+00  0.00      0.0
+ 5213 O2        FREEZE              gO2                                               1.00e+00  0.00      0.0
+ 5214 O2H       FREEZE              gO2H                                              1.00e+00  0.00      0.0
+ 5215 O3        FREEZE              gO3                                               1.00e+00  0.00      0.0
+ 5216 OCN       FREEZE              gOCN                                              1.00e+00  0.00      0.0
+ 5217 OCS       FREEZE              gOCS                                              1.00e+00  0.00      0.0
+ 5218 OH        FREEZE              gOH                                               1.00e+00  0.00      0.0
+ 5219 P         FREEZE              gP                                                1.00e+00  0.00      0.0
+ 5220 PH        FREEZE              gPH                                               1.00e+00  0.00      0.0
+ 5221 PH2       FREEZE              gPH2                                              1.00e+00  0.00      0.0
+ 5222 PN        FREEZE              gPN                                               1.00e+00  0.00      0.0
+ 5223 PO        FREEZE              gPO                                               1.00e+00  0.00      0.0
+ 5224 S         FREEZE              gS                                                1.00e+00  0.00      0.0
+ 5225 S2        FREEZE              gS2                                               1.00e+00  0.00      0.0
+ 5226 Si        FREEZE              gSi                                               1.00e+00  0.00      0.0
+ 5227 SiC       FREEZE              gSiC                                              1.00e+00  0.00      0.0
+ 5228 SiC2      FREEZE              gSiC2                                             1.00e+00  0.00      0.0
+ 5229 SiC2H     FREEZE              gSiC2H                                            1.00e+00  0.00      0.0
+ 5230 SiC2H2    FREEZE              gSiC2H2                                           1.00e+00  0.00      0.0
+ 5231 SiC3      FREEZE              gSiC3                                             1.00e+00  0.00      0.0
+ 5232 SiC3H     FREEZE              gSiC3H                                            1.00e+00  0.00      0.0
+ 5233 SiC4      FREEZE              gSiC4                                             1.00e+00  0.00      0.0
+ 5234 SiCH2     FREEZE              gSiCH2                                            1.00e+00  0.00      0.0
+ 5235 SiCH3     FREEZE              gSiCH3                                            1.00e+00  0.00      0.0
+ 5236 SiH       FREEZE              gSiH                                              1.00e+00  0.00      0.0
+ 5237 SiH2      FREEZE              gSiH2                                             1.00e+00  0.00      0.0
+ 5238 SiH3      FREEZE              gSiH3                                             1.00e+00  0.00      0.0
+ 5239 SiH4      FREEZE              gSiH4                                             1.00e+00  0.00      0.0
+ 5240 SiN       FREEZE              gSiN                                              1.00e+00  0.00      0.0
+ 5241 SiNC      FREEZE              gSiNC                                             1.00e+00  0.00      0.0
+ 5242 SiO       FREEZE              gSiO                                              1.00e+00  0.00      0.0
+ 5243 SiO2      FREEZE              gSiO2                                             1.00e+00  0.00      0.0
+ 5244 SiS       FREEZE              gSiS                                              1.00e+00  0.00      0.0
+ 5245 SO        FREEZE              gSO                                               1.00e+00  0.00      0.0
+ 5246 SO2       FREEZE              gSO2                                              1.00e+00  0.00      0.0
+ 5247 gC        DESORB              C                                                 1.00e+00  0.00    800.0
+ 5248 gC10      DESORB              C10                                               1.00e+00  0.00   8000.0
+ 5249 gC2       DESORB              C2                                                1.00e+00  0.00   1600.0
+ 5250 gC2H      DESORB              C2H                                               1.00e+00  0.00   2140.0
+ 5251 gC2H2     DESORB              C2H2                                              1.00e+00  0.00   2590.0
+ 5252 gC2H3     DESORB              C2H3                                              1.00e+00  0.00   3040.0
+ 5253 gC2H4     DESORB              C2H4                                              1.00e+00  0.00   3490.0
+ 5254 gC2H5     DESORB              C2H5                                              1.00e+00  0.00   3940.0
+ 5255 gC2H5OH   DESORB              C2H5OH                                            1.00e+00  0.00   6580.0
+ 5256 gC2H6     DESORB              C2H6                                              1.00e+00  0.00   4390.0
+ 5257 gC2H6CO   DESORB              C2H6CO                                            1.00e+00  0.00   2820.0
+ 5258 gC2N      DESORB              C2N                                               1.00e+00  0.00   2400.0
+ 5259 gCCO      DESORB              CCO                                               1.00e+00  0.00   1950.0
+ 5260 gC2S      DESORB              C2S                                               1.00e+00  0.00   2700.0
+ 5261 gC3       DESORB              C3                                                1.00e+00  0.00   2400.0
+ 5262 gC3H      DESORB              C3H                                               1.00e+00  0.00   2940.0
+ 5263 gC3H2     DESORB              C3H2                                              1.00e+00  0.00   3390.0
+ 5264 gC3H3     DESORB              C3H3                                              1.00e+00  0.00   3840.0
+ 5265 gC3H3N    DESORB              C3H3N                                             1.00e+00  0.00   5480.0
+ 5266 gC3H4     DESORB              C3H4                                              1.00e+00  0.00   4290.0
+ 5267 gC3N      DESORB              C3N                                               1.00e+00  0.00   3200.0
+ 5268 gC3O      DESORB              C3O                                               1.00e+00  0.00   2750.0
+ 5269 gC3P      DESORB              C3P                                               1.00e+00  0.00   3500.0
+ 5270 gC3S      DESORB              C3S                                               1.00e+00  0.00   3500.0
+ 5271 gC4       DESORB              C4                                                1.00e+00  0.00   3200.0
+ 5272 gC4H      DESORB              C4H                                               1.00e+00  0.00   3740.0
+ 5273 gC4H2     DESORB              C4H2                                              1.00e+00  0.00   4190.0
+ 5274 gC4H3     DESORB              C4H3                                              1.00e+00  0.00   4640.0
+ 5275 gC4H4     DESORB              C4H4                                              1.00e+00  0.00   5090.0
+ 5276 gC4N      DESORB              C4N                                               1.00e+00  0.00   4000.0
+ 5277 gC4P      DESORB              C4P                                               1.00e+00  0.00   4300.0
+ 5278 gC4S      DESORB              C4S                                               1.00e+00  0.00   4300.0
+ 5279 gC5       DESORB              C5                                                1.00e+00  0.00   4000.0
+ 5280 gC5H      DESORB              C5H                                               1.00e+00  0.00   4540.0
+ 5281 gC5H2     DESORB              C5H2                                              1.00e+00  0.00   4990.0
+ 5282 gC5H3     DESORB              C5H3                                              1.00e+00  0.00   5440.0
+ 5283 gC5H4     DESORB              C5H4                                              1.00e+00  0.00   5890.0
+ 5284 gC5N      DESORB              C5N                                               1.00e+00  0.00   4800.0
+ 5285 gC6       DESORB              C6                                                1.00e+00  0.00   4800.0
+ 5286 gC6H      DESORB              C6H                                               1.00e+00  0.00   5340.0
+ 5287 gC6H2     DESORB              C6H2                                              1.00e+00  0.00   5790.0
+ 5288 gC6H3     DESORB              C6H3                                              1.00e+00  0.00   6240.0
+ 5289 gC6H4     DESORB              C6H4                                              1.00e+00  0.00   6690.0
+ 5290 gC6H6     DESORB              C6H6                                              1.00e+00  0.00   7590.0
+ 5291 gC7       DESORB              C7                                                1.00e+00  0.00   5600.0
+ 5292 gC7H      DESORB              C7H                                               1.00e+00  0.00   6140.0
+ 5293 gC7H2     DESORB              C7H2                                              1.00e+00  0.00   6590.0
+ 5294 gC7H3     DESORB              C7H3                                              1.00e+00  0.00   7040.0
+ 5295 gC7H4     DESORB              C7H4                                              1.00e+00  0.00   7490.0
+ 5296 gC7N      DESORB              C7N                                               1.00e+00  0.00   6400.0
+ 5297 gC8       DESORB              C8                                                1.00e+00  0.00   6400.0
+ 5298 gC8H      DESORB              C8H                                               1.00e+00  0.00   6940.0
+ 5299 gC8H2     DESORB              C8H2                                              1.00e+00  0.00   7390.0
+ 5300 gC8H3     DESORB              C8H3                                              1.00e+00  0.00   7840.0
+ 5301 gC8H4     DESORB              C8H4                                              1.00e+00  0.00   8290.0
+ 5302 gC9       DESORB              C9                                                1.00e+00  0.00   7200.0
+ 5303 gC9H      DESORB              C9H                                               1.00e+00  0.00   7740.0
+ 5304 gC9H2     DESORB              C9H2                                              1.00e+00  0.00   8190.0
+ 5305 gC9H3     DESORB              C9H3                                              1.00e+00  0.00   8640.0
+ 5306 gC9H4     DESORB              C9H4                                              1.00e+00  0.00   9090.0
+ 5307 gC9N      DESORB              C9N                                               1.00e+00  0.00   8000.0
+ 5308 gCCl      DESORB              CCl                                               1.00e+00  0.00   1900.0
+ 5309 gCCP      DESORB              CCP                                               1.00e+00  0.00   2700.0
+ 5310 gCH       DESORB              CH                                                1.00e+00  0.00    925.0
+ 5311 gCH2      DESORB              CH2                                               1.00e+00  0.00   1050.0
+ 5312 gC2H2N    DESORB              C2H2N                                             1.00e+00  0.00   4230.0
+ 5313 gC2H2O    DESORB              C2H2O                                             1.00e+00  0.00   2200.0
+ 5314 gCH3N     DESORB              CH3N                                              1.00e+00  0.00   2850.0
+ 5315 gCH2NH2   DESORB              CH2NH2                                            1.00e+00  0.00   5010.0
+ 5316 gCH2OH    DESORB              CH2OH                                             1.00e+00  0.00   2540.0
+ 5317 gCH2PH    DESORB              CH2PH                                             1.00e+00  0.00   3070.0
+ 5318 gCH3      DESORB              CH3                                               1.00e+00  0.00   1180.0
+ 5319 gCH3C3N   DESORB              CH3C3N                                            1.00e+00  0.00   6480.0
+ 5320 gCH3C4H   DESORB              CH3C4H                                            1.00e+00  0.00   5890.0
+ 5321 gCH3C5N   DESORB              CH3C5N                                            1.00e+00  0.00   7880.0
+ 5322 gCH3C6H   DESORB              CH3C6H                                            1.00e+00  0.00   7490.0
+ 5323 gCH3C7N   DESORB              CH3C7N                                            1.00e+00  0.00   9480.0
+ 5324 gC2H4O    DESORB              C2H4O                                             1.00e+00  0.00   2450.0
+ 5325 gC2H3N    DESORB              C2H3N                                             1.00e+00  0.00   4680.0
+ 5326 gCH3NH    DESORB              CH3NH                                             1.00e+00  0.00   3550.0
+ 5327 gCH3OCH3  DESORB              CH3OCH3                                           1.00e+00  0.00   3150.0
+ 5328 gCH4O     DESORB              CH4O                                              1.00e+00  0.00   3700.0
+ 5329 gCH4      DESORB              CH4                                               1.00e+00  0.00   1300.0
+ 5330 gCH5N     DESORB              CH5N                                              1.00e+00  0.00   6580.0
+ 5331 gCHNH     DESORB              CHNH                                              1.00e+00  0.00   3300.0
+ 5332 gCl       DESORB              Cl                                                1.00e+00  0.00   1100.0
+ 5333 gClO      DESORB              ClO                                               1.00e+00  0.00   1900.0
+ 5334 gCN       DESORB              CN                                                1.00e+00  0.00   1600.0
+ 5335 gCO       DESORB              CO                                                1.00e+00  0.00   1150.0
+ 5336 gCO2      DESORB              CO2                                               1.00e+00  0.00   2580.0
+ 5337 gCP       DESORB              CP                                                1.00e+00  0.00   1900.0
+ 5338 gCS       DESORB              CS                                                1.00e+00  0.00   1900.0
+ 5339 gFe       DESORB              Fe                                                1.00e+00  0.00   4200.0
+ 5340 gFeH      DESORB              FeH                                               1.00e+00  0.00   4650.0
+ 5341 gH        DESORB              H                                                 1.00e+00  0.00    450.0
+ 5342 gH2       DESORB              H2                                                1.00e+00  0.00    314.0
+ 5343 gH2C3N    DESORB              H2C3N                                             1.00e+00  0.00   5030.0
+ 5344 gH2C3O    DESORB              H2C3O                                             1.00e+00  0.00   3650.0
+ 5345 gH2C5N    DESORB              H2C5N                                             1.00e+00  0.00   6630.0
+ 5346 gH2C7N    DESORB              H2C7N                                             1.00e+00  0.00   8230.0
+ 5347 gH2C9N    DESORB              H2C9N                                             1.00e+00  0.00   9830.0
+ 5348 gH2CN     DESORB              H2CN                                              1.00e+00  0.00   2400.0
+ 5349 gH2CO     DESORB              H2CO                                              1.00e+00  0.00   3200.0
+ 5350 gH2CS     DESORB              H2CS                                              1.00e+00  0.00   2700.0
+ 5351 gH2O      DESORB              H2O                                               1.00e+00  0.00   5700.0
+ 5352 gH2O2     DESORB              H2O2                                              1.00e+00  0.00   5700.0
+ 5353 gH2S      DESORB              H2S                                               1.00e+00  0.00   2740.0
+ 5354 gH2S2     DESORB              H2S2                                              1.00e+00  0.00   3100.0
+ 5355 gH2SiO    DESORB              H2SiO                                             1.00e+00  0.00   4050.0
+ 5356 gH3C5N    DESORB              H3C5N                                             1.00e+00  0.00   7080.0
+ 5357 gH3C7N    DESORB              H3C7N                                             1.00e+00  0.00   8680.0
+ 5358 gH3C9N    DESORB              H3C9N                                             1.00e+00  0.00  10300.0
+ 5359 gH4C3N    DESORB              H4C3N                                             1.00e+00  0.00   5960.0
+ 5360 gH5C3N    DESORB              H5C3N                                             1.00e+00  0.00   6380.0
+ 5361 gHC2NC    DESORB              HC3N                                              1.00e+00  0.00   4580.0
+ 5362 gHC2O     DESORB              HC2O                                              1.00e+00  0.00   2400.0
+ 5363 gHC3N     DESORB              HC3N                                              1.00e+00  0.00   4580.0
+ 5364 gHC3O     DESORB              HC3O                                              1.00e+00  0.00   3200.0
+ 5365 gHC5N     DESORB              HC5N                                              1.00e+00  0.00   6180.0
+ 5366 gHC7N     DESORB              HC7N                                              1.00e+00  0.00   7780.0
+ 5367 gHC9N     DESORB              HC9N                                              1.00e+00  0.00   9380.0
+ 5368 gHCCN     DESORB              HCCN                                              1.00e+00  0.00   3780.0
+ 5369 gHCCP     DESORB              HCCP                                              1.00e+00  0.00   3220.0
+ 5370 gHCl      DESORB              HCl                                               1.00e+00  0.00   1720.0
+ 5371 gHCN      DESORB              HCN                                               1.00e+00  0.00   2050.0
+ 5372 gHCNC2    DESORB              HC3N                                              1.00e+00  0.00   4580.0
+ 5373 gHCO      DESORB              HCO                                               1.00e+00  0.00   1600.0
+ 5374 gHCOOCH3  DESORB              HCOOCH3                                           1.00e+00  0.00   6300.0
+ 5375 gCH2O2    DESORB              CH2O2                                             1.00e+00  0.00   5570.0
+ 5376 gHCP      DESORB              HCP                                               1.00e+00  0.00   2520.0
+ 5377 gHCS      DESORB              HCS                                               1.00e+00  0.00   2350.0
+ 5378 gHCSi     DESORB              HCSi                                              1.00e+00  0.00   3950.0
+ 5379 gHe       DESORB              He                                                1.00e+00  0.00    200.0
+ 5380 gHNC      DESORB              HNC                                               1.00e+00  0.00   2050.0
+ 5381 gHNC3     DESORB              HC3N                                              1.00e+00  0.00   4580.0
+ 5382 gHNCO     DESORB              HNCO                                              1.00e+00  0.00   2850.0
+ 5383 gHNO      DESORB              HNO                                               1.00e+00  0.00   2050.0
+ 5384 gHNSi     DESORB              HNSi                                              1.00e+00  0.00   3950.0
+ 5385 gHPO      DESORB              HPO                                               1.00e+00  0.00   2520.0
+ 5386 gHS       DESORB              HS                                                1.00e+00  0.00   1450.0
+ 5387 gHS2      DESORB              HS2                                               1.00e+00  0.00   2650.0
+ 5388 gMg       DESORB              Mg                                                1.00e+00  0.00   5300.0
+ 5389 gMgH      DESORB              MgH                                               1.00e+00  0.00   5750.0
+ 5390 gMgH2     DESORB              MgH2                                              1.00e+00  0.00   6200.0
+ 5391 gN        DESORB              N                                                 1.00e+00  0.00    800.0
+ 5392 gN2       DESORB              N2                                                1.00e+00  0.00   1000.0
+ 5393 gN2H2     DESORB              N2H2                                              1.00e+00  0.00   4760.0
+ 5394 gN2O      DESORB              N2O                                               1.00e+00  0.00   2400.0
+ 5395 gNa       DESORB              Na                                                1.00e+00  0.00  11800.0
+ 5396 gNaH      DESORB              NaH                                               1.00e+00  0.00  12300.0
+ 5397 gNaOH     DESORB              NaOH                                              1.00e+00  0.00  14700.0
+ 5398 gNH       DESORB              NH                                                1.00e+00  0.00   2380.0
+ 5399 gNH2      DESORB              NH2                                               1.00e+00  0.00   3960.0
+ 5400 gNH2CHO   DESORB              NH2CHO                                            1.00e+00  0.00   5560.0
+ 5401 gNH2CN    DESORB              NH2CN                                             1.00e+00  0.00   3300.0
+ 5402 gNH2OH    DESORB              NH2OH                                             1.00e+00  0.00   6810.0
+ 5403 gNH3      DESORB              NH3                                               1.00e+00  0.00   5530.0
+ 5404 gNO       DESORB              NO                                                1.00e+00  0.00   1600.0
+ 5405 gNO2      DESORB              NO2                                               1.00e+00  0.00   2400.0
+ 5406 gNS       DESORB              NS                                                1.00e+00  0.00   1900.0
+ 5407 gO        DESORB              O                                                 1.00e+00  0.00    800.0
+ 5408 gO2       DESORB              O2                                                1.00e+00  0.00   1000.0
+ 5409 gO2H      DESORB              O2H                                               1.00e+00  0.00   3650.0
+ 5410 gO3       DESORB              O3                                                1.00e+00  0.00   1800.0
+ 5411 gOCN      DESORB              OCN                                               1.00e+00  0.00   2400.0
+ 5412 gOCS      DESORB              OCS                                               1.00e+00  0.00   2890.0
+ 5413 gOH       DESORB              OH                                                1.00e+00  0.00   2850.0
+ 5414 gP        DESORB              P                                                 1.00e+00  0.00   1100.0
+ 5415 gPH       DESORB              PH                                                1.00e+00  0.00   1720.0
+ 5416 gPH2      DESORB              PH2                                               1.00e+00  0.00   1650.0
+ 5417 gPN       DESORB              PN                                                1.00e+00  0.00   1900.0
+ 5418 gPO       DESORB              PO                                                1.00e+00  0.00   1900.0
+ 5419 gS        DESORB              S                                                 1.00e+00  0.00   1100.0
+ 5420 gS2       DESORB              S2                                                1.00e+00  0.00   2200.0
+ 5421 gSi       DESORB              Si                                                1.00e+00  0.00   2700.0
+ 5422 gSiC      DESORB              SiC                                               1.00e+00  0.00   3500.0
+ 5423 gSiC2     DESORB              SiC2                                              1.00e+00  0.00   4300.0
+ 5424 gSiC2H    DESORB              SiC2H                                             1.00e+00  0.00   4920.0
+ 5425 gSiC2H2   DESORB              SiC2H2                                            1.00e+00  0.00   4850.0
+ 5426 gSiC3     DESORB              SiC3                                              1.00e+00  0.00   5100.0
+ 5427 gSiC3H    DESORB              SiC3H                                             1.00e+00  0.00   5720.0
+ 5428 gSiC4     DESORB              SiC4                                              1.00e+00  0.00   5900.0
+ 5429 gSiCH2    DESORB              SiCH2                                             1.00e+00  0.00   4570.0
+ 5430 gSiCH3    DESORB              SiCH3                                             1.00e+00  0.00   4850.0
+ 5431 gSiH      DESORB              SiH                                               1.00e+00  0.00   3150.0
+ 5432 gSiH2     DESORB              SiH2                                              1.00e+00  0.00   3600.0
+ 5433 gSiH3     DESORB              SiH3                                              1.00e+00  0.00   4050.0
+ 5434 gSiH4     DESORB              SiH4                                              1.00e+00  0.00   4500.0
+ 5435 gSiN      DESORB              SiN                                               1.00e+00  0.00   3500.0
+ 5436 gSiNC     DESORB              SiNC                                              1.00e+00  0.00   4300.0
+ 5437 gSiO      DESORB              SiO                                               1.00e+00  0.00   3500.0
+ 5438 gSiO2     DESORB              SiO2                                              1.00e+00  0.00   4300.0
+ 5439 gSiS      DESORB              SiS                                               1.00e+00  0.00   3800.0
+ 5440 gSO       DESORB              SO                                                1.00e+00  0.00   2600.0
+ 5441 gSO2      DESORB              SO2                                               1.00e+00  0.00   3410.0
+ 5442 gC        gC                  gC2                                               1.00e+00  0.00      0.0
+ 5443 gC        gC                  C2                                                1.00e+00  0.00      0.0
+ 5444 gC        gC2                 gC3                                               1.00e+00  0.00      0.0
+ 5445 gC        gC2                 C3                                                1.00e+00  0.00      0.0
+ 5446 gC        gC2H                gC3H                                              1.00e+00  0.00      0.0
+ 5447 gC        gC2H                C3H                                               1.00e+00  0.00      0.0
+ 5448 gC        gC2H3               gC3H3                                             1.00e+00  0.00      0.0
+ 5449 gC        gC2H3               C3H3                                              1.00e+00  0.00      0.0
+ 5450 gC        gC2N                gC3N                                              1.00e+00  0.00      0.0
+ 5451 gC        gC2N                C3N                                               1.00e+00  0.00      0.0
+ 5452 gC        gCCO                gC3O                                              1.00e+00  0.00      0.0
+ 5453 gC        gCCO                C3O                                               1.00e+00  0.00      0.0
+ 5454 gC        gC2S                gC3S                                              1.00e+00  0.00      0.0
+ 5455 gC        gC2S                C3S                                               1.00e+00  0.00      0.0
+ 5456 gC        gC3                 gC4                                               1.00e+00  0.00      0.0
+ 5457 gC        gC3                 C4                                                1.00e+00  0.00      0.0
+ 5458 gC        gC3H                gC4H                                              1.00e+00  0.00      0.0
+ 5459 gC        gC3H                C4H                                               1.00e+00  0.00      0.0
+ 5460 gC        gC4                 gC5                                               1.00e+00  0.00      0.0
+ 5461 gC        gC4                 C5                                                1.00e+00  0.00      0.0
+ 5462 gC        gC4H                gC5H                                              1.00e+00  0.00      0.0
+ 5463 gC        gC4H                C5H                                               1.00e+00  0.00      0.0
+ 5464 gC        gC5                 gC6                                               1.00e+00  0.00      0.0
+ 5465 gC        gC5                 C6                                                1.00e+00  0.00      0.0
+ 5466 gC        gC5H                gC6H                                              1.00e+00  0.00      0.0
+ 5467 gC        gC5H                C6H                                               1.00e+00  0.00      0.0
+ 5468 gC        gC6                 gC7                                               1.00e+00  0.00      0.0
+ 5469 gC        gC6                 C7                                                1.00e+00  0.00      0.0
+ 5470 gC        gC6H                gC7H                                              1.00e+00  0.00      0.0
+ 5471 gC        gC6H                C7H                                               1.00e+00  0.00      0.0
+ 5472 gC        gC7                 gC8                                               1.00e+00  0.00      0.0
+ 5473 gC        gC7                 C8                                                1.00e+00  0.00      0.0
+ 5474 gC        gC7H                gC8H                                              1.00e+00  0.00      0.0
+ 5475 gC        gC7H                C8H                                               1.00e+00  0.00      0.0
+ 5476 gC        gC8                 gC9                                               1.00e+00  0.00      0.0
+ 5477 gC        gC8                 C9                                                1.00e+00  0.00      0.0
+ 5478 gC        gC8H                gC9H                                              1.00e+00  0.00      0.0
+ 5479 gC        gC8H                C9H                                               1.00e+00  0.00      0.0
+ 5480 gC        gC9                 gC10                                              1.00e+00  0.00      0.0
+ 5481 gC        gC9                 C10                                               1.00e+00  0.00      0.0
+ 5482 gC        gCH                 gC2H                                              1.00e+00  0.00      0.0
+ 5483 gC        gCH                 C2H                                               1.00e+00  0.00      0.0
+ 5484 gC        gCH2                gC2H2                                             1.00e+00  0.00      0.0
+ 5485 gC        gCH2                C2H2                                              1.00e+00  0.00      0.0
+ 5486 gC        gCH3                gC2H3                                             1.00e+00  0.00      0.0
+ 5487 gC        gCH3                C2H3                                              1.00e+00  0.00      0.0
+ 5488 gC        gCN                 gC2N                                              1.00e+00  0.00      0.0
+ 5489 gC        gCN                 C2N                                               1.00e+00  0.00      0.0
+ 5490 gC        gHS                 gCS       gH                                      1.00e+00  0.00      0.0
+ 5491 gC        gHS                 CS        H                                       1.00e+00  0.00      0.0
+ 5492 gC        gN                  gCN                                               1.00e+00  0.00      0.0
+ 5493 gC        gN                  CN                                                1.00e+00  0.00      0.0
+ 5494 gC        gNH                 gHNC                                              1.00e+00  0.00      0.0
+ 5495 gC        gNH                 HNC                                               1.00e+00  0.00      0.0
+ 5496 gC        gNH2                gHNC      gH                                      1.00e+00  0.00      0.0
+ 5497 gC        gNH2                HNC       H                                       1.00e+00  0.00      0.0
+ 5498 gC        gNO                 gCN       gO                                      5.00e-01  0.00      0.0
+ 5499 gC        gNO                 CN        O                                       5.00e-01  0.00      0.0
+ 5500 gC        gNO                 gOCN                                              5.00e-01  0.00      0.0
+ 5501 gC        gNO                 OCN                                               5.00e-01  0.00      0.0
+ 5502 gC        gNS                 gCN       gS                                      1.00e+00  0.00      0.0
+ 5503 gC        gNS                 CN        S                                       1.00e+00  0.00      0.0
+ 5504 gC        gO                  gCO                                               1.00e+00  0.00      0.0
+ 5505 gC        gO                  CO                                                1.00e+00  0.00      0.0
+ 5506 gC        gO2                 gCO       gO                                      1.00e+00  0.00      0.0
+ 5507 gC        gO2                 CO        O                                       1.00e+00  0.00      0.0
+ 5508 gC        gOCN                gCO       gCN                                     1.00e+00  0.00      0.0
+ 5509 gC        gOCN                CO        CN                                      1.00e+00  0.00      0.0
+ 5510 gC        gOH                 gCO       gH                                      1.00e+00  0.00      0.0
+ 5511 gC        gOH                 CO        H                                       1.00e+00  0.00      0.0
+ 5512 gC        gS                  gCS                                               1.00e+00  0.00      0.0
+ 5513 gC        gS                  CS                                                1.00e+00  0.00      0.0
+ 5514 gC        gSO                 gCO       gS                                      1.00e+00  0.00      0.0
+ 5515 gC        gSO                 CO        S                                       1.00e+00  0.00      0.0
+ 5516 gCH       gC2                 gC3H                                              1.00e+00  0.00      0.0
+ 5517 gCH       gC2                 C3H                                               1.00e+00  0.00      0.0
+ 5518 gCH       gC2H                gC3H2                                             1.00e+00  0.00      0.0
+ 5519 gCH       gC2H                C3H2                                              1.00e+00  0.00      0.0
+ 5520 gCH       gC2H3               gC3H4                                             1.00e+00  0.00      0.0
+ 5521 gCH       gC2H3               C3H4                                              1.00e+00  0.00      0.0
+ 5522 gCH       gC3                 gC4H                                              1.00e+00  0.00      0.0
+ 5523 gCH       gC3                 C4H                                               1.00e+00  0.00      0.0
+ 5524 gCH       gC3H                gC4H2                                             1.00e+00  0.00      0.0
+ 5525 gCH       gC3H                C4H2                                              1.00e+00  0.00      0.0
+ 5526 gCH       gC4                 gC5H                                              1.00e+00  0.00      0.0
+ 5527 gCH       gC4                 C5H                                               1.00e+00  0.00      0.0
+ 5528 gCH       gC4H                gC5H2                                             1.00e+00  0.00      0.0
+ 5529 gCH       gC4H                C5H2                                              1.00e+00  0.00      0.0
+ 5530 gCH       gC5                 gC6H                                              1.00e+00  0.00      0.0
+ 5531 gCH       gC5                 C6H                                               1.00e+00  0.00      0.0
+ 5532 gCH       gC5H                gC6H2                                             1.00e+00  0.00      0.0
+ 5533 gCH       gC5H                C6H2                                              1.00e+00  0.00      0.0
+ 5534 gCH       gC6                 gC7H                                              1.00e+00  0.00      0.0
+ 5535 gCH       gC6                 C7H                                               1.00e+00  0.00      0.0
+ 5536 gCH       gC6H                gC7H2                                             1.00e+00  0.00      0.0
+ 5537 gCH       gC6H                C7H2                                              1.00e+00  0.00      0.0
+ 5538 gCH       gC7                 gC8H                                              1.00e+00  0.00      0.0
+ 5539 gCH       gC7                 C8H                                               1.00e+00  0.00      0.0
+ 5540 gCH       gC7H                gC8H2                                             1.00e+00  0.00      0.0
+ 5541 gCH       gC7H                C8H2                                              1.00e+00  0.00      0.0
+ 5542 gCH       gC8                 gC9H                                              1.00e+00  0.00      0.0
+ 5543 gCH       gC8                 C9H                                               1.00e+00  0.00      0.0
+ 5544 gCH       gC8H                gC9H2                                             1.00e+00  0.00      0.0
+ 5545 gCH       gC8H                C9H2                                              1.00e+00  0.00      0.0
+ 5546 gCH       gCH                 gC2H2                                             1.00e+00  0.00      0.0
+ 5547 gCH       gCH                 C2H2                                              1.00e+00  0.00      0.0
+ 5548 gCH       gCH2                gC2H3                                             1.00e+00  0.00      0.0
+ 5549 gCH       gCH2                C2H3                                              1.00e+00  0.00      0.0
+ 5550 gCH       gCH3                gC2H4                                             1.00e+00  0.00      0.0
+ 5551 gCH       gCH3                C2H4                                              1.00e+00  0.00      0.0
+ 5552 gCH       gCN                 gHCCN                                             1.00e+00  0.00      0.0
+ 5553 gCH       gCN                 HCCN                                              1.00e+00  0.00      0.0
+ 5554 gCH       gHNO                gNO       gCH2                                    1.00e+00  0.00      0.0
+ 5555 gCH       gHNO                NO        CH2                                     1.00e+00  0.00      0.0
+ 5556 gCH       gNH                 gHCN      gH                                      3.33e-01  0.00      0.0
+ 5557 gCH       gNH                 HCN       H                                       3.33e-01  0.00      0.0
+ 5558 gCH       gNH                 gHNC      gH                                      3.33e-01  0.00      0.0
+ 5559 gCH       gNH                 HNC       H                                       3.33e-01  0.00      0.0
+ 5560 gCH       gNH                 gCHNH                                             3.33e-01  0.00      0.0
+ 5561 gCH       gNH                 CHNH                                              3.33e-01  0.00      0.0
+ 5562 gCH       gNH2                gCH3N                                             1.00e+00  0.00      0.0
+ 5563 gCH       gNH2                CH3N                                              1.00e+00  0.00      0.0
+ 5564 gCH       gNO                 gHCN      gO                                      1.00e+00  0.00      0.0
+ 5565 gCH       gNO                 HCN       O                                       1.00e+00  0.00      0.0
+ 5566 gCH       gO2                 gHCO      gO                                      1.00e+00  0.00      0.0
+ 5567 gCH       gO2                 HCO       O                                       1.00e+00  0.00      0.0
+ 5568 gCH2      gCH2                gC2H4                                             1.00e+00  0.00      0.0
+ 5569 gCH2      gCH2                C2H4                                              1.00e+00  0.00      0.0
+ 5570 gCH2      gCH3                gC2H5                                             1.00e+00  0.00      0.0
+ 5571 gCH2      gCH3                C2H5                                              1.00e+00  0.00      0.0
+ 5572 gCH2      gCN                 gC2H2N                                            1.00e+00  0.00      0.0
+ 5573 gCH2      gCN                 C2H2N                                             1.00e+00  0.00      0.0
+ 5574 gCH2      gHNO                gCH3      gNO                                     1.00e+00  0.00      0.0
+ 5575 gCH2      gHNO                CH3       NO                                      1.00e+00  0.00      0.0
+ 5576 gCH2      gNH2                gCH2NH2                                           1.00e+00  0.00      0.0
+ 5577 gCH2      gNH2                CH2NH2                                            1.00e+00  0.00      0.0
+ 5578 gCH2      gO2                 gH2CO     gO                                      1.00e+00  0.00      0.0
+ 5579 gCH2      gO2                 H2CO      O                                       1.00e+00  0.00      0.0
+ 5580 gCH3      gC3N                gCH3C3N                                           1.00e+00  0.00      0.0
+ 5581 gCH3      gC3N                CH3C3N                                            1.00e+00  0.00      0.0
+ 5582 gCH3      gC5N                gCH3C5N                                           1.00e+00  0.00      0.0
+ 5583 gCH3      gC5N                CH3C5N                                            1.00e+00  0.00      0.0
+ 5584 gCH3      gC7N                gCH3C7N                                           1.00e+00  0.00      0.0
+ 5585 gCH3      gC7N                CH3C7N                                            1.00e+00  0.00      0.0
+ 5586 gCH3      gCH2OH              gC2H5OH                                           5.00e-01  0.00      0.0
+ 5587 gCH3      gCH2OH              C2H5OH                                            5.00e-01  0.00      0.0
+ 5588 gCH3      gCH2OH              gCH3OCH3                                          5.00e-01  0.00      0.0
+ 5589 gCH3      gCH2OH              CH3OCH3                                           5.00e-01  0.00      0.0
+ 5590 gCH3      gCH3                gC2H6                                             1.00e+00  0.00      0.0
+ 5591 gCH3      gCH3                C2H6                                              1.00e+00  0.00      0.0
+ 5592 gCH3      gCN                 gC2H3N                                            1.00e+00  0.00      0.0
+ 5593 gCH3      gCN                 C2H3N                                             1.00e+00  0.00      0.0
+ 5594 gCH3      gHCO                gC2H4O                                            1.00e+00  0.00      0.0
+ 5595 gCH3      gHCO                C2H4O                                             1.00e+00  0.00      0.0
+ 5596 gCH3      gHNO                gCH4      gNO                                     1.00e+00  0.00      0.0
+ 5597 gCH3      gHNO                CH4       NO                                      1.00e+00  0.00      0.0
+ 5598 gCH4      gC2H                gC2H2     gCH3                                    1.00e+00  0.00    250.0
+ 5599 gCH4      gC2H                C2H2      CH3                                     1.00e+00  0.00    250.0
+ 5600 gH        gC                  gCH                                               1.00e+00  0.00      0.0
+ 5601 gH        gC                  CH                                                1.00e+00  0.00      0.0
+ 5602 gH        gC2                 gC2H                                              1.00e+00  0.00      0.0
+ 5603 gH        gC2                 C2H                                               1.00e+00  0.00      0.0
+ 5604 gH        gC2H                gC2H2                                             1.00e+00  0.00      0.0
+ 5605 gH        gC2H                C2H2                                              1.00e+00  0.00      0.0
+ 5606 gH        gC2H2               gC2H3                                             1.00e+00  0.00   1210.0
+ 5607 gH        gC2H2               C2H3                                              1.00e+00  0.00   1210.0
+ 5608 gH        gC2H3               gC2H4                                             1.00e+00  0.00      0.0
+ 5609 gH        gC2H3               C2H4                                              1.00e+00  0.00      0.0
+ 5610 gH        gC2H4               gC2H5                                             1.00e+00  0.00    750.0
+ 5611 gH        gC2H4               C2H5                                              1.00e+00  0.00    750.0
+ 5612 gH        gC2H5               gC2H6                                             1.00e+00  0.00      0.0
+ 5613 gH        gC2H5               C2H6                                              1.00e+00  0.00      0.0
+ 5614 gH        gC2H6               gC2H5     gH2                                     1.00e+00  0.00   4890.0
+ 5615 gH        gC2H6               C2H5      H2                                      1.00e+00  0.00   4890.0
+ 5616 gH        gC2N                gHCCN                                             1.00e+00  0.00      0.0
+ 5617 gH        gC2N                HCCN                                              1.00e+00  0.00      0.0
+ 5618 gH        gCCO                gHC2O                                             1.00e+00  0.00      0.0
+ 5619 gH        gCCO                HC2O                                              1.00e+00  0.00      0.0
+ 5620 gH        gC3                 gC3H                                              1.00e+00  0.00      0.0
+ 5621 gH        gC3                 C3H                                               1.00e+00  0.00      0.0
+ 5622 gH        gC3H                gC3H2                                             1.00e+00  0.00      0.0
+ 5623 gH        gC3H                C3H2                                              1.00e+00  0.00      0.0
+ 5624 gH        gC3H2               gC3H3                                             1.00e+00  0.00   1210.0
+ 5625 gH        gC3H2               C3H3                                              1.00e+00  0.00   1210.0
+ 5626 gH        gC3H3               gC3H4                                             1.00e+00  0.00      0.0
+ 5627 gH        gC3H3               C3H4                                              1.00e+00  0.00      0.0
+ 5628 gH        gC3H3N              gH4C3N                                            1.00e+00  0.00    750.0
+ 5629 gH        gC3H3N              H4C3N                                             1.00e+00  0.00    750.0
+ 5630 gH        gC3N                gHC3N                                             1.00e+00  0.00      0.0
+ 5631 gH        gC3N                HC3N                                              1.00e+00  0.00      0.0
+ 5632 gH        gC3O                gHC3O                                             1.00e+00  0.00      0.0
+ 5633 gH        gC3O                HC3O                                              1.00e+00  0.00      0.0
+ 5634 gH        gC4                 gC4H                                              1.00e+00  0.00      0.0
+ 5635 gH        gC4                 C4H                                               1.00e+00  0.00      0.0
+ 5636 gH        gC4H                gC4H2                                             1.00e+00  0.00      0.0
+ 5637 gH        gC4H                C4H2                                              1.00e+00  0.00      0.0
+ 5638 gH        gC4H2               gC4H3                                             1.00e+00  0.00   1210.0
+ 5639 gH        gC4H2               C4H3                                              1.00e+00  0.00   1210.0
+ 5640 gH        gC4H3               gC4H4                                             1.00e+00  0.00      0.0
+ 5641 gH        gC4H3               C4H4                                              1.00e+00  0.00      0.0
+ 5642 gH        gC5                 gC5H                                              1.00e+00  0.00      0.0
+ 5643 gH        gC5                 C5H                                               1.00e+00  0.00      0.0
+ 5644 gH        gC5H                gC5H2                                             1.00e+00  0.00      0.0
+ 5645 gH        gC5H                C5H2                                              1.00e+00  0.00      0.0
+ 5646 gH        gC5H2               gC5H3                                             1.00e+00  0.00   1210.0
+ 5647 gH        gC5H2               C5H3                                              1.00e+00  0.00   1210.0
+ 5648 gH        gC5H3               gC5H4                                             1.00e+00  0.00      0.0
+ 5649 gH        gC5H3               C5H4                                              1.00e+00  0.00      0.0
+ 5650 gH        gC5N                gHC5N                                             1.00e+00  0.00      0.0
+ 5651 gH        gC5N                HC5N                                              1.00e+00  0.00      0.0
+ 5652 gH        gC6                 gC6H                                              1.00e+00  0.00      0.0
+ 5653 gH        gC6                 C6H                                               1.00e+00  0.00      0.0
+ 5654 gH        gC6H                gC6H2                                             1.00e+00  0.00      0.0
+ 5655 gH        gC6H                C6H2                                              1.00e+00  0.00      0.0
+ 5656 gH        gC6H2               gC6H3                                             1.00e+00  0.00   1210.0
+ 5657 gH        gC6H2               C6H3                                              1.00e+00  0.00   1210.0
+ 5658 gH        gC6H3               gC6H4                                             1.00e+00  0.00      0.0
+ 5659 gH        gC6H3               C6H4                                              1.00e+00  0.00      0.0
+ 5660 gH        gC7                 gC7H                                              1.00e+00  0.00      0.0
+ 5661 gH        gC7                 C7H                                               1.00e+00  0.00      0.0
+ 5662 gH        gC7H                gC7H2                                             1.00e+00  0.00      0.0
+ 5663 gH        gC7H                C7H2                                              1.00e+00  0.00      0.0
+ 5664 gH        gC7H2               gC7H3                                             1.00e+00  0.00      0.0
+ 5665 gH        gC7H2               C7H3                                              1.00e+00  0.00      0.0
+ 5666 gH        gC7H3               gC7H4                                             1.00e+00  0.00   1210.0
+ 5667 gH        gC7H3               C7H4                                              1.00e+00  0.00   1210.0
+ 5668 gH        gC7N                gHC7N                                             1.00e+00  0.00      0.0
+ 5669 gH        gC7N                HC7N                                              1.00e+00  0.00      0.0
+ 5670 gH        gC8                 gC8H                                              1.00e+00  0.00      0.0
+ 5671 gH        gC8                 C8H                                               1.00e+00  0.00      0.0
+ 5672 gH        gC8H                gC8H2                                             1.00e+00  0.00      0.0
+ 5673 gH        gC8H                C8H2                                              1.00e+00  0.00      0.0
+ 5674 gH        gC8H2               gC8H3                                             1.00e+00  0.00   1210.0
+ 5675 gH        gC8H2               C8H3                                              1.00e+00  0.00   1210.0
+ 5676 gH        gC8H3               gC8H4                                             1.00e+00  0.00      0.0
+ 5677 gH        gC8H3               C8H4                                              1.00e+00  0.00      0.0
+ 5678 gH        gC9                 gC9H                                              1.00e+00  0.00      0.0
+ 5679 gH        gC9                 C9H                                               1.00e+00  0.00      0.0
+ 5680 gH        gC9H                gC9H2                                             1.00e+00  0.00      0.0
+ 5681 gH        gC9H                C9H2                                              1.00e+00  0.00      0.0
+ 5682 gH        gC9H2               gC9H3                                             1.00e+00  0.00   1210.0
+ 5683 gH        gC9H2               C9H3                                              1.00e+00  0.00   1210.0
+ 5684 gH        gC9H3               gC9H4                                             1.00e+00  0.00      0.0
+ 5685 gH        gC9H3               C9H4                                              1.00e+00  0.00      0.0
+ 5686 gH        gC9N                gHC9N                                             1.00e+00  0.00      0.0
+ 5687 gH        gC9N                HC9N                                              1.00e+00  0.00      0.0
+ 5688 gH        gCH                 gCH2                                              1.00e+00  0.00      0.0
+ 5689 gH        gCH                 CH2                                               1.00e+00  0.00      0.0
+ 5690 gH        gCH2                gCH3                                              1.00e+00  0.00      0.0
+ 5691 gH        gCH2                CH3                                               1.00e+00  0.00      0.0
+ 5692 gH        gC2H2N              gC2H3N                                            1.00e+00  0.00      0.0
+ 5693 gH        gC2H2N              C2H3N                                             1.00e+00  0.00      0.0
+ 5694 gH        gCH3N               gCH2NH2                                           5.00e-01  0.00      0.0
+ 5695 gH        gCH3N               CH2NH2                                            5.00e-01  0.00      0.0
+ 5696 gH        gCH3N               gCH3NH                                            5.00e-01  0.00      0.0
+ 5697 gH        gCH3N               CH3NH                                             5.00e-01  0.00      0.0
+ 5698 gH        gCH2NH2             gCH5N                                             1.00e+00  0.00      0.0
+ 5699 gH        gCH2NH2             CH5N                                              1.00e+00  0.00      0.0
+ 5700 gH        gCH2OH              gCH4O                                             1.00e+00  0.00      0.0
+ 5701 gH        gCH2OH              CH4O                                              1.00e+00  0.00      0.0
+ 5702 gH        gCH3                gCH4                                              1.00e+00  0.00      0.0
+ 5703 gH        gCH3                CH4                                               1.00e+00  0.00      0.0
+ 5704 gH        gCH3NH              gCH5N                                             1.00e+00  0.00      0.0
+ 5705 gH        gCH3NH              CH5N                                              1.00e+00  0.00      0.0
+ 5706 gH        gCH4                gCH3      gH2                                     1.00e+00  0.00   5940.0
+ 5707 gH        gCH4                CH3       H2                                      1.00e+00  0.00   5940.0
+ 5708 gH        gCHNH               gCH3N                                             1.00e+00  0.00      0.0
+ 5709 gH        gCHNH               CH3N                                              1.00e+00  0.00      0.0
+ 5710 gH        gCN                 gHCN                                              1.00e+00  0.00      0.0
+ 5711 gH        gCN                 HCN                                               1.00e+00  0.00      0.0
+ 5712 gH        gCO                 gHCO                                              1.00e+00  0.00   2500.0
+ 5713 gH        gCO                 HCO                                               1.00e+00  0.00   2500.0
+ 5714 gH        gCS                 gHCS                                              1.00e+00  0.00   1000.0
+ 5715 gH        gCS                 HCS                                               1.00e+00  0.00   1000.0
+ 5716 gH        gFe                 gFeH                                              1.00e+00  0.00      0.0
+ 5717 gH        gFe                 FeH                                               1.00e+00  0.00      0.0
+ 5718 gH        gH                  gH2                                               1.00e+00  0.00      0.0
+ 5719 gH        gH                  H2                                                1.00e+00  0.00      0.0
+ 5720 gH        gH2C3N              gC3H3N                                            1.00e+00  0.00      0.0
+ 5721 gH        gH2C3N              C3H3N                                             1.00e+00  0.00      0.0
+ 5722 gH        gH2C5N              gH3C5N                                            1.00e+00  0.00      0.0
+ 5723 gH        gH2C5N              H3C5N                                             1.00e+00  0.00      0.0
+ 5724 gH        gH2C7N              gH3C7N                                            1.00e+00  0.00      0.0
+ 5725 gH        gH2C7N              H3C7N                                             1.00e+00  0.00      0.0
+ 5726 gH        gH2C9N              gH3C9N                                            1.00e+00  0.00      0.0
+ 5727 gH        gH2C9N              H3C9N                                             1.00e+00  0.00      0.0
+ 5728 gH        gH2CN               gCH3N                                             1.00e+00  0.00      0.0
+ 5729 gH        gH2CN               CH3N                                              1.00e+00  0.00      0.0
+ 5730 gH        gH2CO               gHCO      gH2                                     0.00e+00  0.00      0.0
+ 5731 gH        gH2CO               HCO       H2                                      0.00e+00  0.00      0.0
+ 5732 gH        gH2CO               gCH2OH                                            1.00e+00  0.00   2500.0
+ 5733 gH        gH2CO               CH2OH                                             1.00e+00  0.00   2500.0
+ 5734 gH        gH2O2               gH2O      gOH                                     5.00e-01  0.00   1400.0
+ 5735 gH        gH2O2               H2O       OH                                      5.00e-01  0.00   1400.0
+ 5736 gH        gH2O2               gO2H      gH2                                     5.00e-01  0.00   1900.0
+ 5737 gH        gH2O2               O2H       H2                                      5.00e-01  0.00   1900.0
+ 5738 gH        gH2S                gH2       gHS                                     1.00e+00  0.00    860.0
+ 5739 gH        gH2S                H2        HS                                      1.00e+00  0.00    860.0
+ 5740 gH        gH4C3N              gH5C3N                                            1.00e+00  0.00      0.0
+ 5741 gH        gH4C3N              H5C3N                                             1.00e+00  0.00      0.0
+ 5742 gH        gHC2O               gC2H2O                                            1.00e+00  0.00      0.0
+ 5743 gH        gHC2O               C2H2O                                             1.00e+00  0.00      0.0
+ 5744 gH        gHC3N               gH2C3N                                            1.00e+00  0.00   1210.0
+ 5745 gH        gHC3N               H2C3N                                             1.00e+00  0.00   1210.0
+ 5746 gH        gHC3O               gH2C3O                                            1.00e+00  0.00      0.0
+ 5747 gH        gHC3O               H2C3O                                             1.00e+00  0.00      0.0
+ 5748 gH        gHC5N               gH2C5N                                            1.00e+00  0.00   1210.0
+ 5749 gH        gHC5N               H2C5N                                             1.00e+00  0.00   1210.0
+ 5750 gH        gHC7N               gH2C7N                                            1.00e+00  0.00   1210.0
+ 5751 gH        gHC7N               H2C7N                                             1.00e+00  0.00   1210.0
+ 5752 gH        gHC9N               gH2C9N                                            1.00e+00  0.00   1210.0
+ 5753 gH        gHC9N               H2C9N                                             1.00e+00  0.00   1210.0
+ 5754 gH        gHCCN               gC2H2N                                            1.00e+00  0.00      0.0
+ 5755 gH        gHCCN               C2H2N                                             1.00e+00  0.00      0.0
+ 5756 gH        gHCO                gH2CO                                             1.00e+00  0.00      0.0
+ 5757 gH        gHCO                H2CO                                              1.00e+00  0.00      0.0
+ 5758 gH        gHCS                gH2CS                                             1.00e+00  0.00      0.0
+ 5759 gH        gHCS                H2CS                                              1.00e+00  0.00      0.0
+ 5760 gH        gHNO                gNO       gH2                                     1.00e+00  0.00   1500.0
+ 5761 gH        gHNO                NO        H2                                      1.00e+00  0.00   1500.0
+ 5762 gH        gHS                 gH2S                                              1.00e+00  0.00      0.0
+ 5763 gH        gHS                 H2S                                               1.00e+00  0.00      0.0
+ 5764 gH        gMg                 gMgH                                              1.00e+00  0.00      0.0
+ 5765 gH        gMg                 MgH                                               1.00e+00  0.00      0.0
+ 5766 gH        gMgH                gMgH2                                             1.00e+00  0.00      0.0
+ 5767 gH        gMgH                MgH2                                              1.00e+00  0.00      0.0
+ 5768 gH        gN                  gNH                                               1.00e+00  0.00      0.0
+ 5769 gH        gN                  NH                                                1.00e+00  0.00      0.0
+ 5770 gH        gN2H2               gH2       gN2       gH                            1.00e+00  0.00    650.0
+ 5771 gH        gN2H2               H2        N2        H                             1.00e+00  0.00    650.0
+ 5772 gH        gNa                 gNaH                                              1.00e+00  0.00      0.0
+ 5773 gH        gNa                 NaH                                               1.00e+00  0.00      0.0
+ 5774 gH        gNH                 gNH2                                              1.00e+00  0.00      0.0
+ 5775 gH        gNH                 NH2                                               1.00e+00  0.00      0.0
+ 5776 gH        gNH2                gNH3                                              1.00e+00  0.00      0.0
+ 5777 gH        gNH2                NH3                                               1.00e+00  0.00      0.0
+ 5778 gH        gNO                 gHNO                                              1.00e+00  0.00      0.0
+ 5779 gH        gNO                 HNO                                               1.00e+00  0.00      0.0
+ 5780 gH        gO                  gOH                                               1.00e+00  0.00      0.0
+ 5781 gH        gO                  OH                                                1.00e+00  0.00      0.0
+ 5782 gH        gO2                 gO2H                                              1.00e+00  0.00   1200.0
+ 5783 gH        gO2                 O2H                                               1.00e+00  0.00   1200.0
+ 5784 gH        gO2H                gH2O2                                             1.00e+00  0.00      0.0
+ 5785 gH        gO2H                H2O2                                              1.00e+00  0.00      0.0
+ 5786 gH        gO3                 gO2       gOH                                     1.00e+00  0.00    450.0
+ 5787 gH        gO3                 O2        OH                                      1.00e+00  0.00    450.0
+ 5788 gH        gOCN                gHNCO                                             1.00e+00  0.00      0.0
+ 5789 gH        gOCN                HNCO                                              1.00e+00  0.00      0.0
+ 5790 gH        gOCS                gCO       gHS                                     1.00e+00  0.00      0.0
+ 5791 gH        gOCS                CO        HS                                      1.00e+00  0.00      0.0
+ 5792 gH        gOH                 gH2O                                              1.00e+00  0.00      0.0
+ 5793 gH        gOH                 H2O                                               1.00e+00  0.00      0.0
+ 5794 gH        gS                  gHS                                               1.00e+00  0.00      0.0
+ 5795 gH        gS                  HS                                                1.00e+00  0.00      0.0
+ 5796 gH        gSi                 gSiH                                              1.00e+00  0.00      0.0
+ 5797 gH        gSi                 SiH                                               1.00e+00  0.00      0.0
+ 5798 gH        gSiH                gSiH2                                             1.00e+00  0.00      0.0
+ 5799 gH        gSiH                SiH2                                              1.00e+00  0.00      0.0
+ 5800 gH        gSiH2               gSiH3                                             1.00e+00  0.00      0.0
+ 5801 gH        gSiH2               SiH3                                              1.00e+00  0.00      0.0
+ 5802 gH        gSiH3               gSiH4                                             1.00e+00  0.00      0.0
+ 5803 gH        gSiH3               SiH4                                              1.00e+00  0.00      0.0
+ 5804 gH        gSO2                gO2       gHS                                     1.00e+00  0.00      0.0
+ 5805 gH        gSO2                O2        HS                                      1.00e+00  0.00      0.0
+ 5806 gH2       gC                  gCH2                                              1.00e+00  0.00   2500.0
+ 5807 gH2       gC                  CH2                                               1.00e+00  0.00   2500.0
+ 5808 gH2       gC2                 gC2H      gH                                      1.00e+00  0.00   4200.0
+ 5809 gH2       gC2                 C2H       H                                       1.00e+00  0.00   4200.0
+ 5810 gH2       gC2H                gC2H2     gH                                      1.00e+00  0.00   4200.0
+ 5811 gH2       gC2H                C2H2      H                                       1.00e+00  0.00   4200.0
+ 5812 gH2       gC3                 gC3H      gH                                      1.00e+00  0.00   4200.0
+ 5813 gH2       gC3                 C3H       H                                       1.00e+00  0.00   4200.0
+ 5814 gH2       gC3H                gC3H2     gH                                      1.00e+00  0.00   4200.0
+ 5815 gH2       gC3H                C3H2      H                                       1.00e+00  0.00   4200.0
+ 5816 gH2       gC4                 gC4H      gH                                      1.00e+00  0.00   4200.0
+ 5817 gH2       gC4                 C4H       H                                       1.00e+00  0.00   4200.0
+ 5818 gH2       gC4H                gC4H2     gH                                      1.00e+00  0.00   4200.0
+ 5819 gH2       gC4H                C4H2      H                                       1.00e+00  0.00   4200.0
+ 5820 gH2       gC5                 gC5H      gH                                      1.00e+00  0.00   4200.0
+ 5821 gH2       gC5                 C5H       H                                       1.00e+00  0.00   4200.0
+ 5822 gH2       gC5H                gC5H2     gH                                      1.00e+00  0.00   4200.0
+ 5823 gH2       gC5H                C5H2      H                                       1.00e+00  0.00   4200.0
+ 5824 gH2       gC6                 gC6H      gH                                      1.00e+00  0.00   4200.0
+ 5825 gH2       gC6                 C6H       H                                       1.00e+00  0.00   4200.0
+ 5826 gH2       gC6H                gC6H2     gH                                      1.00e+00  0.00   4200.0
+ 5827 gH2       gC6H                C6H2      H                                       1.00e+00  0.00   4200.0
+ 5828 gH2       gC7                 gC7H      gH                                      1.00e+00  0.00   4200.0
+ 5829 gH2       gC7                 C7H       H                                       1.00e+00  0.00   4200.0
+ 5830 gH2       gC7H                gC7H2     gH                                      1.00e+00  0.00   4200.0
+ 5831 gH2       gC7H                C7H2      H                                       1.00e+00  0.00   4200.0
+ 5832 gH2       gC8                 gC8H      gH                                      1.00e+00  0.00   4200.0
+ 5833 gH2       gC8                 C8H       H                                       1.00e+00  0.00   4200.0
+ 5834 gH2       gC8H                gC8H2     gH                                      1.00e+00  0.00   4200.0
+ 5835 gH2       gC8H                C8H2      H                                       1.00e+00  0.00   4200.0
+ 5836 gH2       gC9                 gC9H      gH                                      1.00e+00  0.00   4200.0
+ 5837 gH2       gC9                 C9H       H                                       1.00e+00  0.00   4200.0
+ 5838 gH2       gC9H                gC9H2     gH                                      1.00e+00  0.00   4200.0
+ 5839 gH2       gC9H                C9H2      H                                       1.00e+00  0.00   4200.0
+ 5840 gH2       gCH2                gCH3      gH                                      1.00e+00  0.00   3530.0
+ 5841 gH2       gCH2                CH3       H                                       1.00e+00  0.00   3530.0
+ 5842 gH2       gCH3                gCH4      gH                                      1.00e+00  0.00   6440.0
+ 5843 gH2       gCH3                CH4       H                                       1.00e+00  0.00   6440.0
+ 5844 gH2       gCN                 gHCN      gH                                      1.00e+00  0.00   2070.0
+ 5845 gH2       gCN                 HCN       H                                       1.00e+00  0.00   2070.0
+ 5846 gH2       gNH2                gNH3      gH                                      1.00e+00  0.00   6300.0
+ 5847 gH2       gNH2                NH3       H                                       1.00e+00  0.00   6300.0
+ 5848 gH2       gOH                 gH2O      gH                                      1.00e+00  0.00   2100.0
+ 5849 gH2       gOH                 H2O       H                                       1.00e+00  0.00   2100.0
+ 5850 gHCO      gCH2OH              gHCOOCH3                                          1.00e+00  0.00      0.0
+ 5851 gHCO      gCH2OH              HCOOCH3                                           1.00e+00  0.00      0.0
+ 5852 gN        gC2                 gC2N                                              1.00e+00  0.00      0.0
+ 5853 gN        gC2                 C2N                                               1.00e+00  0.00      0.0
+ 5854 gN        gC3                 gC3N                                              1.00e+00  0.00      0.0
+ 5855 gN        gC3                 C3N                                               1.00e+00  0.00      0.0
+ 5856 gN        gC3H                gHC3N                                             1.00e+00  0.00      0.0
+ 5857 gN        gC3H                HC3N                                              1.00e+00  0.00      0.0
+ 5858 gN        gC5                 gC5N                                              1.00e+00  0.00      0.0
+ 5859 gN        gC5                 C5N                                               1.00e+00  0.00      0.0
+ 5860 gN        gC5H                gHC5N                                             1.00e+00  0.00      0.0
+ 5861 gN        gC5H                HC5N                                              1.00e+00  0.00      0.0
+ 5862 gN        gC7                 gC7N                                              1.00e+00  0.00      0.0
+ 5863 gN        gC7                 C7N                                               1.00e+00  0.00      0.0
+ 5864 gN        gC7H                gHC7N                                             1.00e+00  0.00      0.0
+ 5865 gN        gC7H                HC7N                                              1.00e+00  0.00      0.0
+ 5866 gN        gC9                 gC9N                                              1.00e+00  0.00      0.0
+ 5867 gN        gC9                 C9N                                               1.00e+00  0.00      0.0
+ 5868 gN        gC9H                gHC9N                                             1.00e+00  0.00      0.0
+ 5869 gN        gC9H                HC9N                                              1.00e+00  0.00      0.0
+ 5870 gN        gCH                 gHCN                                              1.00e+00  0.00      0.0
+ 5871 gN        gCH                 HCN                                               1.00e+00  0.00      0.0
+ 5872 gN        gCH2                gH2CN                                             1.00e+00  0.00      0.0
+ 5873 gN        gCH2                H2CN                                              1.00e+00  0.00      0.0
+ 5874 gN        gCH2OH              gNH2CHO                                           1.00e+00  0.00      0.0
+ 5875 gN        gCH2OH              NH2CHO                                            1.00e+00  0.00      0.0
+ 5876 gN        gCH3                gCH3N                                             1.00e+00  0.00      0.0
+ 5877 gN        gCH3                CH3N                                              1.00e+00  0.00      0.0
+ 5878 gN        gHS                 gNS       gH                                      1.00e+00  0.00      0.0
+ 5879 gN        gHS                 NS        H                                       1.00e+00  0.00      0.0
+ 5880 gN        gN                  gN2                                               1.00e+00  0.00      0.0
+ 5881 gN        gN                  N2                                                1.00e+00  0.00      0.0
+ 5882 gN        gNH                 gN2       gH                                      1.00e+00  0.00      0.0
+ 5883 gN        gNH                 N2        H                                       1.00e+00  0.00      0.0
+ 5884 gN        gNH2                gN2H2                                             1.00e+00  0.00      0.0
+ 5885 gN        gNH2                N2H2                                              1.00e+00  0.00      0.0
+ 5886 gN        gNS                 gN2       gS                                      1.00e+00  0.00      0.0
+ 5887 gN        gNS                 N2        S                                       1.00e+00  0.00      0.0
+ 5888 gN        gO                  gNO                                               1.00e+00  0.00      0.0
+ 5889 gN        gO                  NO                                                1.00e+00  0.00      0.0
+ 5890 gN        gO2H                gO2       gNH                                     1.00e+00  0.00      0.0
+ 5891 gN        gO2H                O2        NH                                      1.00e+00  0.00      0.0
+ 5892 gN        gS                  gNS                                               1.00e+00  0.00      0.0
+ 5893 gN        gS                  NS                                                1.00e+00  0.00      0.0
+ 5894 gNH       gCH2                gCH3N                                             1.00e+00  0.00      0.0
+ 5895 gNH       gCH2                CH3N                                              1.00e+00  0.00      0.0
+ 5896 gNH       gCH3                gCH3NH                                            1.00e+00  0.00      0.0
+ 5897 gNH       gCH3                CH3NH                                             1.00e+00  0.00      0.0
+ 5898 gNH       gNH                 gN2H2                                             5.00e-01  0.00      0.0
+ 5899 gNH       gNH                 N2H2                                              5.00e-01  0.00      0.0
+ 5900 gNH       gNH                 gN2       gH2                                     5.00e-01  0.00      0.0
+ 5901 gNH       gNH                 N2        H2                                      5.00e-01  0.00      0.0
+ 5902 gNH       gNO                 gN2       gO        gH                            1.00e+00  0.00      0.0
+ 5903 gNH       gNO                 N2        O         H                             1.00e+00  0.00      0.0
+ 5904 gNH2      gCH3                gCH5N                                             1.00e+00  0.00      0.0
+ 5905 gNH2      gCH3                CH5N                                              1.00e+00  0.00      0.0
+ 5906 gNH2      gHCO                gNH2CHO                                           1.00e+00  0.00      0.0
+ 5907 gNH2      gHCO                NH2CHO                                            1.00e+00  0.00      0.0
+ 5908 gNH2      gNO                 gH2O      gN2                                     1.00e+00  0.00      0.0
+ 5909 gNH2      gNO                 H2O       N2                                      1.00e+00  0.00      0.0
+ 5910 gO        gC2                 gCCO                                              1.00e+00  0.00      0.0
+ 5911 gO        gC2                 CCO                                               1.00e+00  0.00      0.0
+ 5912 gO        gC3                 gC3O                                              1.00e+00  0.00      0.0
+ 5913 gO        gC3                 C3O                                               1.00e+00  0.00      0.0
+ 5914 gO        gCH                 gHCO                                              1.00e+00  0.00      0.0
+ 5915 gO        gCH                 HCO                                               1.00e+00  0.00      0.0
+ 5916 gO        gCH2                gH2CO                                             1.00e+00  0.00      0.0
+ 5917 gO        gCH2                H2CO                                              1.00e+00  0.00      0.0
+ 5918 gO        gCH3                gCH2OH                                            1.00e+00  0.00      0.0
+ 5919 gO        gCH3                CH2OH                                             1.00e+00  0.00      0.0
+ 5920 gO        gCN                 gOCN                                              1.00e+00  0.00      0.0
+ 5921 gO        gCN                 OCN                                               1.00e+00  0.00      0.0
+ 5922 gO        gCO                 gCO2                                              1.00e+00  0.00   1000.0
+ 5923 gO        gCO                 CO2                                               1.00e+00  0.00   1000.0
+ 5924 gO        gCS                 gOCS                                              1.00e+00  0.00      0.0
+ 5925 gO        gCS                 OCS                                               1.00e+00  0.00      0.0
+ 5926 gO        gHCO                gCO2      gH                                      5.00e-01  0.00      0.0
+ 5927 gO        gHCO                CO2       H                                       5.00e-01  0.00      0.0
+ 5928 gO        gHCO                gCO       gOH                                     5.00e-01  0.00      0.0
+ 5929 gO        gHCO                CO        OH                                      5.00e-01  0.00      0.0
+ 5930 gO        gHNO                gNO       gOH                                     1.00e+00  0.00      0.0
+ 5931 gO        gHNO                NO        OH                                      1.00e+00  0.00      0.0
+ 5932 gO        gHS                 gSO       gH                                      1.00e+00  0.00      0.0
+ 5933 gO        gHS                 SO        H                                       1.00e+00  0.00      0.0
+ 5934 gO        gNH                 gHNO                                              1.00e+00  0.00      0.0
+ 5935 gO        gNH                 HNO                                               1.00e+00  0.00      0.0
+ 5936 gO        gNH2                gHNO      gH                                      1.00e+00  0.00      0.0
+ 5937 gO        gNH2                HNO       H                                       1.00e+00  0.00      0.0
+ 5938 gO        gNS                 gNO       gS                                      1.00e+00  0.00      0.0
+ 5939 gO        gNS                 NO        S                                       1.00e+00  0.00      0.0
+ 5940 gO        gO                  gO2                                               1.00e+00  0.00      0.0
+ 5941 gO        gO                  O2                                                1.00e+00  0.00      0.0
+ 5942 gO        gO2                 gO3                                               1.00e+00  0.00      0.0
+ 5943 gO        gO2                 O3                                                1.00e+00  0.00      0.0
+ 5944 gO        gO2H                gO2       gOH                                     1.00e+00  0.00      0.0
+ 5945 gO        gO2H                O2        OH                                      1.00e+00  0.00      0.0
+ 5946 gO        gOH                 gO2H                                              1.00e+00  0.00      0.0
+ 5947 gO        gOH                 O2H                                               1.00e+00  0.00      0.0
+ 5948 gO        gS                  gSO                                               1.00e+00  0.00      0.0
+ 5949 gO        gS                  SO                                                1.00e+00  0.00      0.0
+ 5950 gO        gSO                 gSO2                                              1.00e+00  0.00      0.0
+ 5951 gO        gSO                 SO2                                               1.00e+00  0.00      0.0
+ 5952 gOH       gCH2                gCH2OH                                            1.00e+00  0.00      0.0
+ 5953 gOH       gCH2                CH2OH                                             1.00e+00  0.00      0.0
+ 5954 gOH       gCH3                gCH4O                                             1.00e+00  0.00      0.0
+ 5955 gOH       gCH3                CH4O                                              1.00e+00  0.00      0.0
+ 5956 gOH       gCO                 gCO2      gH                                      1.00e+00  0.00     80.0
+ 5957 gOH       gCO                 CO2       H                                       1.00e+00  0.00     80.0
+ 5958 gOH       gH2CO               gHCO      gH2O                                    1.00e+00  0.00      0.0
+ 5959 gOH       gH2CO               HCO       H2O                                     1.00e+00  0.00      0.0
+ 5960 gOH       gHCO                gCH2O2                                            1.00e+00  0.00      0.0
+ 5961 gOH       gHCO                CH2O2                                             1.00e+00  0.00      0.0
+ 5962 gOH       gNH2                gNH2OH                                            1.00e+00  0.00      0.0
+ 5963 gOH       gNH2                NH2OH                                             1.00e+00  0.00      0.0
+ 5964 gOH       gOH                 gH2O2                                             1.00e+00  0.00      0.0
+ 5965 gOH       gOH                 H2O2                                              1.00e+00  0.00      0.0
+ 5966 gS        gCH                 gHCS                                              1.00e+00  0.00      0.0
+ 5967 gS        gCH                 HCS                                               1.00e+00  0.00      0.0
+ 5968 gS        gCH3                gH2CS     gH                                      1.00e+00  0.00      0.0
+ 5969 gS        gCH3                H2CS      H                                       1.00e+00  0.00      0.0
+ 5970 gS        gCO                 gOCS                                              1.00e+00  0.00      0.0
+ 5971 gS        gCO                 OCS                                               1.00e+00  0.00      0.0
+ 5972 gS        gNH                 gNS       gH                                      1.00e+00  0.00      0.0
+ 5973 gS        gNH                 NS        H                                       1.00e+00  0.00      0.0

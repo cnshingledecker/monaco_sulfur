@@ -1,0 +1,795 @@
+gC        gC2S                gC3S                                              
+gC        gC2S                C3S                                               
+gC        gHS                 gCS       gH                                      
+gC        gHS                 CS        H                                       
+gC        gNS                 gCN       gS                                      
+gC        gNS                 CN        S                                       
+gC        gS                  gCS                                               
+gC        gS                  CS                                                
+gC        gSO                 gCO       gS                                      
+gC        gSO                 CO        S                                       
+gC        gS2                 gCS2                                              
+gC        gS2                 CS2                                               
+gC        gH2S                gHCS      gH                                      
+gC        gH2S                HCS       H                                       
+gC        gSO                 gCS       gO                                      
+gC        gSO                 CS        O                                       
+gC        gHCS                gH        gC2S                                    
+gC        gHCS                H         C2S                                     
+gC        gHCS                gS        gC2H                                    
+gC        gHCS                S         C2H                                     
+gC        gSO2                gCO       gSO                                     
+gC        gSO2                CO        SO                                      
+gC        gOCS                gCS       gCO                                     
+gC        gHNCS               HNC       CS                                      
+gC        gHNCS               gHNC      gCS                                     
+gC        gHNCS               HCN       CS                                      
+gC        gHNCS               gHCN      gCS                                     
+gC        gHSCN               HCN       CS                                      
+gC        gHSCN               gHCN      gCS                                     
+gC        gHCNS               HCN       CS                                      
+gC        gHCNS               gHCN      gCS                                     
+gC        gCH3S               CH3       CS                                      
+gC        gCH3S               gCH3      gCS                                     
+gC        gCH2SH              CH3       CS                                      
+gC        gCH2SH              gCH3      gCS                                     
+gC        gCH3SH              CH3       HCS                                     
+gC        gCH3SH              gCH3      gHCS                                    
+gC        gNH2CHS             CH2NH     CS                                      
+gC        gNH2CHS             gCH2NH    gCS                                     
+gC        gC2S                gC2       gCS                                     
+gC        gC2S                C2        CS                                      
+gC        gHC2S               H         C3S                                     
+gC        gHC2S               gH        gC3S                                    
+gC        gHC2S               C2H       CS                                      
+gC        gHC2S               gC2H      gCS                                     
+gC        gC3S                gC3       gCS                                     
+gC        gC3S                C3        CS                                      
+gC        gHC3S               H         C4S                                     
+gC        gHC3S               gH        gC4S                                    
+gC        gHC3S               C3H       CS                                      
+gC        gHC3S               gC3H      gCS                                     
+gC        gC4S                C4        CS                                      
+gC        gC4S                gC4       gCS                                     
+gC2       gH2S                HC2S      H                                       
+gC2       gH2S                gHC2S     gH                                      
+gC2H      gHS                 HC2S      H                                       
+gC2H      gHS                 gHC2S     gH                                      
+gC2H      gCH3SH              CH3S      HC2H                                    
+gC2H      gCH3SH              gCH3S     gHC2H                                   
+gC2H      gCH3SH              CH2SH     HC2H                                    
+gC2H      gCH3SH              gCH2SH    gHC2H                                   
+gC2H      gCS                 gH        gC3S                                    
+gC2H      gCS                 H         C3S                                     
+gCH       gHS                 CS        H2                                      
+gCH       gHS                 gCS       gH2                                     
+gCH       gHCS                HC2S      H                                       
+gCH       gHCS                gHC2S     gH                                      
+gCH       gSO                 gOCS      gH                                      
+gCH       gSO                 OCS       H                                       
+gCH       gSO                 gCO       gHS                                     
+gCH       gSO                 CO        HS                                      
+gCH       gCS                 gH        gC2S                                    
+gCH       gCS                 H         C2S                                     
+gCH       gCS                 gS        gC2H                                    
+gCH       gCS                 S         C2H                                     
+gCH       gC3S                H         C4S                                     
+gCH       gC3S                gH        gC4S                                    
+gCH       gC3S                C3H       CS                                      
+gCH       gC3S                gC3H      gCS                                     
+gCH2      gCS                 HC2S      H                                       
+gCH2      gCS                 gHC2S     gH                                      
+gCH2      gNS                 HCNS      H                                       
+gCH2      gNS                 gHCNS     gH                                      
+gCN       gCH3SH              CH3S      HCN                                     
+gCN       gCH3SH              gCH3S     gHCN                                    
+gCN       gCH3SH              CH2SH     HCN                                     
+gCN       gCH3SH              gCH2SH    gHCN                                    
+gCS       gO2                 gCO       gSO                                     
+gCS       gO2                 CO        SO                                      
+gCS       gO2                 gOCS      gO                                      
+gCS       gO2                 OCS       O                                       
+gCS       gHS                 gCS2      gH                                      
+gCS       gHS                 CS2       H                                       
+gH        gCS                 gHCS                                              
+gH        gCS                 HCS                                               
+gH        gHCS                gH2CS                                             
+gH        gHCS                H2CS                                              
+gH        gHS                 gH2S                                              
+gH        gHS                 H2S                                               
+gH        gS                  gHS                                               
+gH        gS                  HS                                                
+gH        gSO2                gO2       gHS                                     
+gH        gSO2                O2        HS                                      
+gH        gOCS                gCO       gHS                                     
+gH        gOCS                CO        HS                                      
+gH        gHCS                gH2       gCS                                     
+gH        gHCS                H2        CS                                      
+gH        gS2H                gHS       gHS                                     
+gH        gS2H                HS        HS                                      
+gH        gS2H                gH2       gS2                                     
+gH        gS2H                H2        S2                                      
+gH        gHSO                gSO       gH2                                     
+gH        gHSO                SO        H2                                      
+gH        gCSSH               gHCSSH                                            
+gH        gCSSH               HCSSH                                             
+gH        gH2S                gH2       gHS                                     
+gH        gH2S                H2        HS                                      
+gH        gSO                 gHSO                                              
+gH        gSO                 HSO                                               
+gH        gNH2CS              NH2CHS                                            
+gH        gNH2CS              gNH2CHS                                           
+gH        gNH2CS              H2        HNCS                                    
+gH        gNH2CS              gH2       gHNCS                                   
+gH        gCH3S               H2        H2CS                                    
+gH        gCH3S               gH2       gH2CS                                   
+gH        gCH3S               CH3       HS                                      
+gH        gCH3S               gCH3      gHS                                     
+gH        gCH2SH              H2        H2CS                                    
+gH        gCH2SH              gH2       gH2CS                                   
+gH        gCH2SH              CH3       HS                                      
+gH        gCH2SH              gCH3      gHS                                     
+gH        gH2CS               H2        HCS                                     
+gH        gH2CS               gH2       gHCS                                    
+gH        gH2CS               CH3S                                              
+gH        gH2CS               gCH3S                                             
+gH        gH2CS               CH2SH                                             
+gH        gH2CS               gCH2SH                                            
+gH        gCH3S               CH3SH                                             
+gH        gCH3S               gCH3SH                                            
+gH        gCH2SH              CH3SH                                             
+gH        gCH2SH              gCH3SH                                            
+gH        gCH3SH              CH2SH     H2                                      
+gH        gCH3SH              gCH2SH    gH2                                     
+gH        gCH3SH              CH3S      H2                                      
+gH        gCH3SH              gCH3S     gH2                                     
+gH        gCH3SH              CH3       H2S                                     
+gH        gCH3SH              gCH3      gH2S                                    
+gH        gHC3S               H2        C3S                                     
+gH        gHC3S               gH2       gC3S                                    
+gH        gC2S                HC2S                                              
+gH        gC2S                gHC2S                                             
+gH        gC3S                HC3S                                              
+gH        gC3S                gHC3S                                             
+gH2S2     gH                  gH2S      gHS                                     
+gH2S2     gH                  H2S       HS                                      
+gHO2      gH2S                gH2O      gHSO                                    
+gHO2      gH2S                H2O       HSO                                     
+gHS       gHSO                gH2S      gSO                                     
+gHS       gHSO                H2S       SO                                      
+gHS       gHS                 gH2S2                                             
+gHS       gHS                 H2S2                                              
+gHS       gS2H                gH2S      gS2                                     
+gHS       gS2H                H2S       S2                                      
+gHS       gHO2                gH2S      gO2                                     
+gHS       gHO2                H2S       O2                                      
+gHS       gHO2                gHSO      gOH                                     
+gHS       gHO2                HSO       OH                                      
+gHS       gH2CS               gHCSSH    gH                                      
+gHS       gH2CS               HCSSH     H                                       
+gHS       gCS                 gCSSH                                             
+gHS       gCS                 CSSH                                              
+gHS       gCH2                gCH2SH                                            
+gHS       gCH2                CH2SH                                             
+gN        gHS                 gNS       gH                                      
+gN        gHS                 NS        H                                       
+gN        gNS                 gN2       gS                                      
+gN        gNS                 N2        S                                       
+gN        gS                  gNS                                               
+gN        gS                  NS                                                
+gN        gHSO                gSO       gNH                                     
+gN        gHSO                SO        NH                                      
+gN        gHCS                HNCS                                              
+gN        gHCS                gHNCS                                             
+gN        gHCS                HSCN                                              
+gN        gHCS                gHSCN                                             
+gN        gCH3S               CH3       NS                                      
+gN        gCH3S               gCH3      gNS                                     
+gN        gCH2SH              HCN       H2S                                     
+gN        gCH2SH              gHCN      gH2S                                    
+gN        gHC2S               HCN       CS                                      
+gN        gHC2S               gHCN      gCS                                     
+gN        gC2S                gCN       gCS                                     
+gN        gC2S                CN        CS                                      
+gN        gHC3S               HCN       C2S                                     
+gN        gHC3S               gHCN      gC2S                                    
+gN        gC4S                CN        C3S                                     
+gN        gC4S                gCN       gC3S                                    
+gN        gC4S                C3N       CS                                      
+gN        gC4S                gC3N      gCS                                     
+gN        gCH3S               H2CS      NH                                      
+gN        gCH3S               gH2CS     gNH                                     
+gNH       gHCS                HNCS      H                                       
+gNH       gHCS                gHNCS     gH                                      
+gNH       gCS                 HNCS                                              
+gNH       gCS                 gHNCS                                             
+gNH       gC2S                gHCN      gCS                                     
+gNH       gC2S                HCN       CS                                      
+gNH       gC2S                gHNC      gCS                                     
+gNH       gC2S                HNC       CS                                      
+gNH2      gCS                 HNCS      H                                       
+gNH2      gCS                 gHNCS     gH                                      
+gNH2      gCS                 NH2CS                                             
+gNH2      gCS                 gNH2CS                                            
+gNH2      gHCS                NH2CHS                                            
+gNH2      gHCS                gNH2CHS                                           
+gO        gCS                 gOCS                                              
+gO        gCS                 OCS                                               
+gO        gHS                 gSO       gH                                      
+gO        gHS                 SO        H                                       
+gO        gNS                 gNO       gS                                      
+gO        gNS                 NO        S                                       
+gO        gS                  gSO                                               
+gO        gS                  SO                                                
+gO        gSO                 gSO2                                              
+gO        gSO                 SO2                                               
+gO        gCS2                gCS       gSO                                     
+gO        gCS2                CS        SO                                      
+gO        gCS2                gOCS      gS                                      
+gO        gCS2                OCS       S                                       
+gO        gCS2                gCO       gS2                                     
+gO        gCS2                CO        S2                                      
+gO        gH2S                gH        gHSO                                    
+gO        gH2S                H         HSO                                     
+gO        gH2S                gHS       gOH                                     
+gO        gH2S                HS        OH                                      
+gO        gHS                 gSO       gH                                      
+gO        gHS                 SO        H                                       
+gO        gHSO                gSO       gOH                                     
+gO        gHSO                SO        OH                                      
+gO        gHSO                gO2       gHS                                     
+gO        gHSO                O2        HS                                      
+gO        gHS                 gOH       gS                                      
+gO        gHS                 OH        S                                       
+gO        gS2                 gSO       gS                                      
+gO        gS2                 SO        S                                       
+gO        gHCS                gOCS      gH                                      
+gO        gHCS                OCS       H                                       
+gO        gHS                 gHSO                                              
+gO        gHS                 HSO                                               
+gO        gHCNS               HCO       NS                                      
+gO        gHCNS               gHCO      gNS                                     
+gO        gHCNS               HCN       SO                                      
+gO        gHCNS               gHCN      gSO                                     
+gO        gCH3S               CH3       SO                                      
+gO        gCH3S               gCH3      gSO                                     
+gO        gCH2SH              H2CO      HS                                      
+gO        gCH2SH              gH2CO     gHS                                     
+gO        gCH2SH              H2CS      OH                                      
+gO        gCH2SH              gH2CS     gOH                                     
+gO        gHC2S               HCO       CS                                      
+gO        gHC2S               gHCO      gCS                                     
+gO        gC2S                gCO       gCS                                     
+gO        gC2S                CO        CS                                      
+gO        gC3S                gCO       gC2S                                    
+gO        gC3S                CO        C2S                                     
+gO        gHC3S               OH        C3S                                     
+gO        gHC3S               gOH       gC3S                                    
+gO        gHC3S               HCO       C2S                                     
+gO        gHC3S               gHCO      gC2S                                    
+gO        gC4S                CO        C3S                                     
+gO        gC4S                gCO       gC3S                                    
+gO        gC4S                CS        C3O                                     
+gO        gC4S                gCS       gC3O                                    
+gO2       gSO                 gO        gSO2                                    
+gO2       gSO                 O         SO2                                     
+gO3       gHS                 gO2       gHSO                                    
+gO3       gHS                 O2        HSO                                     
+gO3       gHSO                gOH       gSO       gO2                           
+gO3       gHSO                OH        SO        O2                            
+gOH       gS2H                gH2O      gS2                                     
+gOH       gS2H                H2O       S2                                      
+gOH       gS2H                gHSO      gHS                                     
+gOH       gS2H                HSO       HS                                      
+gOH       gH2S                gH2O      gHS                                     
+gOH       gH2S                H2O       HS                                      
+gOH       gCS                 gH        gOCS                                    
+gOH       gCS                 H         OCS                                     
+gOH       gCS                 gCO       gHS                                     
+gOH       gCS                 CO        HS                                      
+gOH       gHS                 gH2O      gS                                      
+gOH       gHS                 H2O       S                                       
+gOH       gHSO                gSO       gH2O                                    
+gOH       gHSO                SO        H2O                                     
+gOH       gHSO                gH2       gSO2                                    
+gOH       gHSO                H2        SO2                                     
+gOH       gCH3SH              H2O       CH3S                                    
+gOH       gCH3SH              gH2O      gCH3S                                   
+gOH       gCH3SH              H2O       CH2SH                                   
+gOH       gCH3SH              gH2O      gCH2SH                                  
+gOH       gC3S                CO        HC2S                                    
+gOH       gC3S                gCO       gHC2S                                   
+gS        gCH                 gHCS                                              
+gS        gCH                 HCS                                               
+gS        gCH3                gH2CS     gH                                      
+gS        gCH3                H2CS      H                                       
+gS        gCO                 gOCS                                              
+gS        gCO                 OCS                                               
+gS        gNH                 gNS       gH                                      
+gS        gNH                 NS        H                                       
+gS        gO2                 gSO       gO                                      
+gS        gO2                 SO        O                                       
+gS        gOH                 gSO       gH                                      
+gS        gOH                 SO        H                                       
+gS        gHS                 gS2       gH                                      
+gS        gHS                 S2        H                                       
+gS        gO2                 gSO       gO                                      
+gS        gO2                 SO        O                                       
+gS        gO3                 gSO       gO2                                     
+gS        gO3                 SO        O2                                      
+gS        gOCS                gS2       gCO                                     
+gS        gOCS                S2        CO                                      
+gS        gHCS                gCS2      gH                                      
+gS        gHCS                CS2       H                                       
+gS        gCH2                gHCS      gH                                      
+gS        gCH2                HCS       H                                       
+gS        gH2S                gH2S2                                             
+gS        gH2S                H2S2                                              
+gS        gS                  gS2                                               
+gS        gS                  S2                                                
+gS        gCS                 gCS2                                              
+gS        gCS                 CS2                                               
+gS        gS2                 gS3                                               
+gS        gS2                 S3                                                
+gS        gS3                 gS4                                               
+gS        gS3                 S4                                                
+gS        gS4                 gS5                                               
+gS        gS4                 S5                                                
+gS        gS5                 gS6                                               
+gS        gS5                 S6                                                
+gS        gHCO                gH        gOCS                                    
+gS        gHCO                H         OCS                                     
+gS        gHCO                gHS       gCO                                     
+gS        gHCO                HS        CO                                      
+gS        gS2H                gHS       gS2                                     
+gS        gS2H                HS        S2                                      
+gS        gOH                 gSO       gH                                      
+gS        gOH                 SO        H                                       
+gS        gHO2                gSO       gOH                                     
+gS        gHO2                SO        OH                                      
+gS        gCH                 gCS       gH                                      
+gS        gCH                 CS        H                                       
+gS        gC2                 gCS       gC                                      
+gS        gC2                 CS        C                                       
+gS        gC2H                gC2S      gH                                      
+gS        gC2H                C2S       H                                       
+gS        gC4                 gC3       gCS                                     
+gS        gC4                 C3        CS                                      
+gS        gC6                 gC5       gCS                                     
+gS        gC6                 C5        CS                                      
+gS        gC2N                gCN       gCS                                     
+gS        gC2N                CN        CS                                      
+gS        gC3N                gC2N      gCS                                     
+gS        gC3N                C2N       CS                                      
+gS        gC4N                gC3N      gCS                                     
+gS        gC4N                C3N       CS                                      
+gS        gC2O                gCO       gCS                                     
+gS        gC2O                CO        CS                                      
+gS        gCH3O               CH3       SO                                      
+gS        gCH3O               gCH3      gSO                                     
+gS        gCH2OH              H2CO      HS                                      
+gS        gCH2OH              gH2CO     gHS                                     
+gS        gCH2OH              H2CS      OH                                      
+gS        gCH2OH              gH2CS     gOH                                     
+gS        gC3H                CS        C2H                                     
+gS        gC3H                gCS       gC2H                                    
+gS        gC3H                C3S       H                                       
+gS        gC3H                gC3S      gH                                      
+gS        gC4H                CS        C3H                                     
+gS        gC4H                gCS       gC3H                                    
+gS        gC4H                C4S       H                                       
+gS        gC4H                gC4S      gH                                      
+gS        gC2S                gCS       gCS                                     
+gS        gC2S                CS        CS                                      
+gS        gC4S                gC3S      gCS                                     
+gS        gC4S                C3S       CS                                      
+gS        gCH3                gCH3S                                             
+gS        gCH3                CH3S                                              
+gS        gCH3S               HS        H2CS                                    
+gS        gCH3S               gHS       gH2CS                                   
+gS        gCH3S               CH3       S2                                      
+gS        gCH3S               gCH3      gS2                                     
+gS2       gS2                 gS4                                               
+gS2       gS2                 S4                                                
+gS2       gS3                 gS5                                               
+gS2       gS3                 S5                                                
+gS2       gS4                 gS6                                               
+gS2       gS4                 S6                                                
+gS2       gS5                 gS7                                               
+gS2       gS5                 S7                                                
+gS        gS6                 gS7                                               
+gS        gS6                 S7                                                
+gS2H      gS2H                gH2S2     gS2                                     
+gS2H      gS2H                H2S2      S2                                      
+gS3       gS3                 gS6                                               
+gS3       gS3                 S6                                                
+gS3       gS4                 gS7                                               
+gS3       gS4                 S7                                                
+gS3       gS5                 gS8                                               
+gS3       gS5                 S8                                                
+gS4       gS4                 gS8                                               
+gS4       gS4                 S8                                                
+gS2       gS6                 gS8                                               
+gS2       gS6                 S8                                                
+gS        gS7                 gS8                                               
+gS        gS7                 S8                                                
+gSO       gO3                 SO2       O2                                      
+gSO       gO3                 gSO2      gO2                                     
+gSO       gSO                 gSO2      gS                                      
+gSO       gSO2                gSO3      gS                                      
+gSO       gSO2                SO3       S                                       
+gSO       gSO                 SO2       S                                       
+gSO       gOH                 gSO2      gH                                      
+gSO       gOH                 SO2       H                                       
+gHS       gHO2                gSO       gH2O                                    
+gHS       gHO2                SO        H2O                                     
+gHS       gCO                 gOCS      gH                                      
+gHS       gCO                 OCS       H                                       
+gH2S      gOCS                gCS2      gH2O                                    
+gH2S      gOCS                CS2       H2O                                     
+gOCS      gOCS                gCO2      gSO2                                    
+gOCS      gOCS                CO2       SO2                                     
+gSO       gOCS                gSO2      gCS                                     
+gSO       gOCS                SO2       CS                                      
+gCO       gOCS                gCO2      gCS                                     
+gCO       gOCS                CO2       CS                                      
+gO        gOCS                gCO       gSO                                     
+gO        gOCS                CO        SO                                      
+gSO       gCO                 gCO2      gS                                      
+gSO       gCO                 CO2       S                                       
+gSO2      gO                  gO2       gSO                                     
+gSO2      gO                  O2        SO                                      
+gSO2      gS                  gO2       gS2                                     
+gSO2      gS                  O2        S2                                      
+gSO2      gCO                 gCO2      gSO                                     
+gSO2      gCO                 CO2       SO                                      
+gSO2      gOCS                gCO       gSO       gSO                           
+gSO2      gOCS                CO        SO        SO                            
+gO2       gSO                 SO3                                               
+gO2       gSO                 gSO3                                              
+gSO2      gSO2                SO        SO3                                     
+gSO2      gSO2                gSO       gSO3                                    
+gO3       gSO2                O2        SO3                                     
+gO3       gSO2                gO2       gSO3                                    
+gO2       gSO2                O         SO3                                     
+gO2       gSO2                gO        gSO3                                    
+gO        gSO3                gO2       gSO2                                    
+gO        gSO3                O2        SO2                                     
+gS        gSO3                gSO       gSO2                                    
+gS        gSO3                SO        SO2                                     
+gO2       gSO3                gO3       gSO2                                    
+gO2       gSO3                O3        SO2                                     
+gO3       gSO3                gSO2      gO2       gO2                           
+gO3       gSO3                SO2       O2        O2                            
+gO2       gS                  gSO2                                              
+gO2       gS                  SO2                                               
+gSO       gSO3                gSO2      gSO2                                    
+gSO       gSO3                SO2       SO2                                     
+gH        gSO3                gOH       gSO2                                    
+gH        gSO3                OH        SO2                                     
+gH2O      gSO3                gH2SO4                                            
+gH2O      gSO3                H2SO4                                             
+gOH       gSO3                gHO2      gSO2                                    
+gOH       gSO3                HO2       SO2                                     
+gHO2      gSO3                gO2       gOH       gSO2                          
+gHO2      gSO3                O2        OH        SO2                           
+gN        gSO3                gNO       gSO2                                    
+gN        gSO3                NO        SO2                                     
+gO        gSO2                gSO3                                              
+gO        gSO2                SO3                                               
+gH        gS2                 S2H                                               
+gSO3      DESORB              SO3                                               
+gC        DESORB              C                                                 
+gC10      DESORB              C10                                               
+gC2       DESORB              C2                                                
+gC2H      DESORB              C2H                                               
+gC2N      DESORB              C2N                                               
+gC2NCH    DESORB              C2NCH                                             
+gC2O      DESORB              C2O                                               
+gC2S      DESORB              C2S                                               
+gC3       DESORB              C3                                                
+gC3H      DESORB              C3H                                               
+gC3H2     DESORB              C3H2                                              
+gC3H3     DESORB              C3H3                                              
+gC3H3N    DESORB              C3H3N                                             
+gC3H4     DESORB              C3H4                                              
+gC3N      DESORB              C3N                                               
+gC3O      DESORB              C3O                                               
+gC3P      DESORB              C3P                                               
+gC3S      DESORB              C3S                                               
+gC4       DESORB              C4                                                
+gC4H      DESORB              C4H                                               
+gC4H3     DESORB              C4H3                                              
+gC4H4     DESORB              C4H4                                              
+gC4N      DESORB              C4N                                               
+gC4P      DESORB              C4P                                               
+gC4S      DESORB              C4S                                               
+gC5       DESORB              C5                                                
+gC5H      DESORB              C5H                                               
+gC5H2     DESORB              C5H2                                              
+gC5H3     DESORB              C5H3                                              
+gC5H4     DESORB              C5H4                                              
+gC5N      DESORB              C5N                                               
+gC6       DESORB              C6                                                
+gC6H      DESORB              C6H                                               
+gC6H2     DESORB              C6H2                                              
+gC6H3     DESORB              C6H3                                              
+gC6H4     DESORB              C6H4                                              
+gC6H6     DESORB              C6H6                                              
+gC7       DESORB              C7                                                
+gC7H      DESORB              C7H                                               
+gC7H2     DESORB              C7H2                                              
+gC7H3     DESORB              C7H3                                              
+gC7H4     DESORB              C7H4                                              
+gC7N      DESORB              C7N                                               
+gC8       DESORB              C8                                                
+gC8H      DESORB              C8H                                               
+gC8H2     DESORB              C8H2                                              
+gC8H3     DESORB              C8H3                                              
+gC8H4     DESORB              C8H4                                              
+gC9       DESORB              C9                                                
+gC9H      DESORB              C9H                                               
+gC9H2     DESORB              C9H2                                              
+gC9H3     DESORB              C9H3                                              
+gC9H4     DESORB              C9H4                                              
+gC9N      DESORB              C9N                                               
+gCCP      DESORB              CCP                                               
+gCH       DESORB              CH                                                
+gCH2      DESORB              CH2                                               
+gCH2CO    DESORB              CH2CO                                             
+gCH2NH    DESORB              CH2NH                                             
+gCH2NH2   DESORB              CH2NH2                                            
+gCH2OH    DESORB              CH2OH                                             
+gCH2PH    DESORB              CH2PH                                             
+gCH2SH    DESORB              CH2SH                                             
+gCH3      DESORB              CH3                                               
+gCH3C3N   DESORB              CH3C3N                                            
+gCH3C4H   DESORB              CH3C4H                                            
+gCH3C5N   DESORB              CH3C5N                                            
+gCH3C6H   DESORB              CH3C6H                                            
+gCH3C7N   DESORB              CH3C7N                                            
+gCH3CH2   DESORB              CH3CH2                                            
+gCH3CH3   DESORB              CH3CH3                                            
+gCH3CHO   DESORB              CH3CHO                                            
+gCH3CN    DESORB              CH3CN                                             
+gCH3CO    DESORB              CH3CO                                             
+gCH3CONH  DESORB              CH3CONH                                           
+gCH3COOH  DESORB              CH3COOH                                           
+gCH3NH    DESORB              CH3NH                                             
+gCH3NH2   DESORB              CH3NH2                                            
+gCH3O     DESORB              CH3O                                              
+gCH3OCH3  DESORB              CH3OCH3                                           
+gCH3OCO   DESORB              CH3OCO                                            
+gCH3OH    DESORB              CH3OH                                             
+gCH3ONH   DESORB              CH3ONH                                            
+gCH3OOH   DESORB              CH3OOH                                            
+gCH3S     DESORB              CH3S                                              
+gCH3SH    DESORB              CH3SH                                             
+gCH4      DESORB              CH4                                               
+gCHOCHO   DESORB              CHOCHO                                            
+gCN       DESORB              CN                                                
+gCO       DESORB              CO                                                
+gCO2      DESORB              CO2                                               
+gCOCHO    DESORB              COCHO                                             
+gCOOH     DESORB              COOH                                              
+gCP       DESORB              CP                                                
+gCS       DESORB              CS                                                
+gCS2      DESORB              CS2                                               
+gCSSH     DESORB              CSSH                                              
+gCl       DESORB              Cl                                                
+gClC      DESORB              ClC                                               
+gClH      DESORB              ClH                                               
+gClO      DESORB              ClO                                               
+gFe       DESORB              Fe                                                
+gFeH      DESORB              FeH                                               
+gH        DESORB              H                                                 
+gH2       DESORB              H2                                                
+gH2C2H    DESORB              H2C2H                                             
+gH2C2H2   DESORB              H2C2H2                                            
+gH2C2N    DESORB              H2C2N                                             
+gH2C5N    DESORB              H2C5N                                             
+gH2C7N    DESORB              H2C7N                                             
+gH2C9N    DESORB              H2C9N                                             
+gH2CN     DESORB              H2CN                                              
+gH2CO     DESORB              H2CO                                              
+gH2CS     DESORB              H2CS                                              
+gH2O      DESORB              H2O                                               
+gH2O2     DESORB              H2O2                                              
+gH2S      DESORB              H2S                                               
+gH2S2     DESORB              H2S2                                              
+gH3C5N    DESORB              H3C5N                                             
+gH3C7N    DESORB              H3C7N                                             
+gH3C9N    DESORB              H3C9N                                             
+gH4C3N    DESORB              H4C3N                                             
+gH5C3N    DESORB              H5C3N                                             
+gHC2H     DESORB              HC2H                                              
+gHC2N     DESORB              HC2N                                              
+gHC2NC    DESORB              HC2NC                                             
+gHC2O     DESORB              HC2O                                              
+gHC2S     DESORB              HC2S                                              
+gHC3N     DESORB              HC3N                                              
+gHC3NH    DESORB              HC3NH                                             
+gHC3O     DESORB              HC3O                                              
+gHC3S     DESORB              HC3S                                              
+gHC4H     DESORB              HC4H                                              
+gHC5N     DESORB              HC5N                                              
+gHC7N     DESORB              HC7N                                              
+gHC9N     DESORB              HC9N                                              
+gHCCP     DESORB              HCCP                                              
+gHCN      DESORB              HCN                                               
+gHCNH     DESORB              HCNH                                              
+gHCNS     DESORB              HCNS                                              
+gHCO      DESORB              HCO                                               
+gHCOCOOH  DESORB              HCOCOOH                                           
+gHCOH     DESORB              HCOH                                              
+gHCOOCH3  DESORB              HCOOCH3                                           
+gHCOOH    DESORB              HCOOH                                             
+gHCP      DESORB              HCP                                               
+gHCS      DESORB              HCS                                               
+gHCSSH    DESORB              HCSSH                                             
+gHNC      DESORB              HNC                                               
+gHNC3     DESORB              HNC3                                              
+gHNCH2OH  DESORB              HNCH2OH                                           
+gHNCHO    DESORB              HNCHO                                             
+gHNCO     DESORB              HNCO                                              
+gHNCOCHO  DESORB              HNCOCHO                                           
+gHNCONH   DESORB              HNCONH                                            
+gHNCOOH   DESORB              HNCOOH                                            
+gHNCS     DESORB              HNCS                                              
+gHNO      DESORB              HNO                                               
+gHNOH     DESORB              HNOH                                              
+gHO2      DESORB              HO2                                               
+gHOC      DESORB              HOC                                               
+gHOCH2CO  DESORB              HOCH2CO                                           
+gHOCH2OH  DESORB              HOCH2OH                                           
+gHOCOOH   DESORB              HOCOOH                                            
+gHPO      DESORB              HPO                                               
+gHS       DESORB              HS                                                
+gHSCN     DESORB              HSCN                                              
+gHSO      DESORB              HSO                                               
+gHe       DESORB              He                                                
+gMg       DESORB              Mg                                                
+gMgH      DESORB              MgH                                               
+gMgH2     DESORB              MgH2                                              
+gN        DESORB              N                                                 
+gN2       DESORB              N2                                                
+gN2H2     DESORB              N2H2                                              
+gN2O      DESORB              N2O                                               
+gNH       DESORB              NH                                                
+gNH2      DESORB              NH2                                               
+gNH2CHO   DESORB              NH2CHO                                            
+gNH2CHS   DESORB              NH2CHS                                            
+gNH2CN    DESORB              NH2CN                                             
+gNH2CO    DESORB              NH2CO                                             
+gNH2CONH  DESORB              NH2CONH                                           
+gNH2COOH  DESORB              NH2COOH                                           
+gNH2CS    DESORB              NH2CS                                             
+gNH2NH    DESORB              NH2NH                                             
+gNH2NH2   DESORB              NH2NH2                                            
+gNH2OCH3  DESORB              NH2OCH3                                           
+gNH2OH    DESORB              NH2OH                                             
+gNH3      DESORB              NH3                                               
+gNO       DESORB              NO                                                
+gNO2      DESORB              NO2                                               
+gNS       DESORB              NS                                                
+gNa       DESORB              Na                                                
+gNaH      DESORB              NaH                                               
+gNaOH     DESORB              NaOH                                              
+gO        DESORB              O                                                 
+gO2       DESORB              O2                                                
+gO3       DESORB              O3                                                
+gOCN      DESORB              OCN                                               
+gOCS      DESORB              OCS                                               
+gOH       DESORB              OH                                                
+gP        DESORB              P                                                 
+gPH       DESORB              PH                                                
+gPH2      DESORB              PH2                                               
+gPN       DESORB              PN                                                
+gPO       DESORB              PO                                                
+gS        DESORB              S                                                 
+gS2       DESORB              S2                                                
+gS2H      DESORB              S2H                                               
+gS3       DESORB              S3                                                
+gS4       DESORB              S4                                                
+gS5       DESORB              S5                                                
+gS6       DESORB              S6                                                
+gS7       DESORB              S7                                                
+gS8       DESORB              S8                                                
+gSO       DESORB              SO                                                
+gSO2      DESORB              SO2                                               
+gcH2C3O   DESORB              cH2C3O                                            
+gC2S      CRP                 gCS       gC                                      
+gC3S      CRP                 gC2       gCS                                     
+gC4S      CRP                 gC3       gCS                                     
+gCH2SH    CRP                 gCH2      gHS                                     
+gCH3S     CRP                 gCH3      gS                                      
+gCH3SH    CRP                 gCH3      gHS                                     
+gCH3SH    CRP                 gCH2SH    gH                                      
+gCH3SH    CRP                 gCH3S     gH                                      
+gCS       CRP                 gC        gS                                      
+gCS2      CRP                 gCS       gS                                      
+gCSSH     CRP                 gCS2      gH                                      
+gH2CS     CRP                 gHCS      gH                                      
+gH2S      CRP                 gHS       gH                                      
+gH2S2     CRP                 gS2H      gH                                      
+gH2S2     CRP                 gS2       gH2                                     
+gHC2S     CRP                 gCS       gCH                                     
+gHC3S     CRP                 gCS       gC2H                                    
+gHCNS     CRP                 gNH       gCS                                     
+gHCS      CRP                 gCH       gS                                      
+gHCS      CRP                 gCS       gH                                      
+gHCSSH    CRP                 gHCS      gHS                                     
+gHNCS     CRP                 gNH       gCS                                     
+gHS       CRP                 gH        gS                                      
+gHSCN     CRP                 gNH       gCS                                     
+gHSO      CRP                 gO        gHS                                     
+gHSO      CRP                 gSO       gH                                      
+gNH2CHS   CRP                 gNH2      gHCS                                    
+gNH2CS    CRP                 gNH2      gCS                                     
+gNS       CRP                 gN        gS                                      
+gOCS      CRP                 gCO       gS                                      
+gS2       CRP                 gS        gS                                      
+gS2H      CRP                 gS2       gH                                      
+gS3       CRP                 gS        gS        gS                            
+gS4       CRP                 gS3       gS                                      
+gS5       CRP                 gS4       gS                                      
+gS6       CRP                 gS3       gS3                                     
+gS7       CRP                 gS        gS6                                     
+gS7       CRP                 gS3       gS4                                     
+gS8       CRP                 gS4       gS4                                     
+gS8       CRP                 gS3       gS5                                     
+gSO       CRP                 gS        gO                                      
+gSO2      CRP                 gSO       gO                                      
+gH2S      CRP                 gS        gH        gH                            
+gH2S      CRP                 gHS       gH                                      
+gHCS      CRP                 gCS       gH                                      
+gOCS      CRP                 gCS       gO                                      
+gOCS      CRP                 gCO       gS                                      
+gC2S      PHOTON              gC2       gS                                      
+gC3S      PHOTON              gC2       gCS                                     
+gC4S      PHOTON              gC3       gCS                                     
+gCH2SH    PHOTON              gCH2      gHS                                     
+gCH3S     PHOTON              gCH3      gS                                      
+gCH3SH    PHOTON              gCH3S     gH                                      
+gCH3SH    PHOTON              gCH3      gHS                                     
+gCS       PHOTON              gC        gS                                      
+gCS2      PHOTON              gCS       gS                                      
+gCSSH     PHOTON              gCS2      gH                                      
+gH2CS     PHOTON              gCS       gH2                                     
+gH2S      PHOTON              gHS       gH                                      
+gH2S2     PHOTON              gS2H      gH                                      
+gH2S2     PHOTON              gS2       gH2                                     
+gHC2S     PHOTON              gCS       gCH                                     
+gHC3S     PHOTON              gCS       gC2H                                    
+gHCNS     PHOTON              gNH       gCS                                     
+gHCSSH    PHOTON              gHCS      gHS                                     
+gHNCS     PHOTON              gNH       gCS                                     
+gHS       PHOTON              gH        gS                                      
+gHSCN     PHOTON              gNH       gCS                                     
+gHSO      PHOTON              gSO       gH                                      
+gHSO      PHOTON              gHS       gO                                      
+gHSO      PHOTON              gOH       gS                                      
+gNH2CHS   PHOTON              gNH2      gHCS                                    
+gNH2CS    PHOTON              gNH2      gCS                                     
+gNS       PHOTON              gN        gS                                      
+gOCS      PHOTON              gCO       gS                                      
+gS2       PHOTON              gS        gS                                      
+gS2H      PHOTON              gS2       gH                                      
+gS3       PHOTON              gS        gS        gS                            
+gS4       PHOTON              gS3       gS                                      
+gS5       PHOTON              gS4       gS                                      
+gS6       PHOTON              gS3       gS3                                     
+gS7       PHOTON              gS6       gS                                      
+gS7       PHOTON              gS3       gS4                                     
+gS8       PHOTON              gS4       gS4                                     
+gS8       PHOTON              gS3       gS5                                     
+gSO       PHOTON              gO        gS                                      
+gSO2      PHOTON              gSO       gO                                      
+gH2S2     PHOTON              gS2H      gH                                      
+gH2S2     PHOTON              gS2       gH2                                     
+gHCS      PHOTON              gCS       gH                                      
+gHSO      PHOTON              gSO       gH                                      
+gOCS      PHOTON              gCS       gO                                      
+gOCS      PHOTON              gCO       gS                                      
+gS2       PHOTON              gS        gS                                      
+gS2H      PHOTON              gS2       gH                                      

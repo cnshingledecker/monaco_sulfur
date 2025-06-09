@@ -1,0 +1,135 @@
+ 1554 gH2S      IONRAD              gS*       gH*       gH*                           5.00E-01  0.00 3.70E+00
+ 1554 gH2S      IONRAD              gHS*      gH*                                     5.00E-01  0.00 3.70E+00
+ 1554 gH2S      IONRAD              gS        gH        gH                            5.00E-01  0.00 2.56E+00
+ 1554 gH2S      IONRAD              gHS       gH                                      5.00E-01  0.00 2.56E+00
+ 1554 gH2S      IONRAD              gH2S*                                             1.00E+00  0.00 2.56E+00
+ 1554 gH2S2     IONRAD              gH2*      gS2*                                    3.33E-01  0.00 3.70E+00
+ 1554 gH2S2     IONRAD              gHS*      gHS*                                    3.33E-01  0.00 3.70E+00
+ 1554 gH2S2     IONRAD              gS2H*     gH*                                     3.33E-01  0.00 3.70E+00
+ 1554 gH2S2     IONRAD              gH2       gS2                                     3.33E-01  0.00 2.74E+00
+ 1554 gH2S2     IONRAD              gHS       gHS                                     3.33E-01  0.00 2.74E+00
+ 1554 gH2S2     IONRAD              gS2H      gH                                      3.33E-01  0.00 2.74E+00
+ 1554 gH2S2     IONRAD              gH2S2*                                            1.00E+00  0.00 2.74E+00
+ 1554 gSO2      IONRAD              gSO*      gO*                                     5.00E-01  0.00 3.70E+00
+ 1554 gSO2      IONRAD              gS*       gO2*                                    5.00E-01  0.00 3.70E+00
+ 1554 gSO2      IONRAD              gSO       gO                                      5.00E-01  0.00 1.91E+00
+ 1554 gSO2      IONRAD              gS        gO2                                     5.00E-01  0.00 1.91E+00
+ 1554 gSO2      IONRAD              gSO2*                                             1.00E+00  0.00 1.91E+00
+ 1491 gHS       IONRAD              gH*       gS*                                     1.00E+00  0.00 3.70E+00
+
+ 1491 gHS       IONRAD              gH        gS                                      1.00E+00  0.00 2.51E+00
+ 1491 gHS       IONRAD              gHS*                                              1.00E+00  0.00 2.51E+00
+ 1554 gOCS      IONRAD              gCS*      gO*                                     5.00E-01  0.00 3.70E+00
+ 1554 gOCS      IONRAD              gS*       gCO*                                    5.00E-01  0.00 3.70E+00
+ 1554 gOCS      IONRAD              gCS       gO                                      5.00E-01  0.00 2.56E+00
+ 1554 gOCS      IONRAD              gS        gCO                                     5.00E-01  0.00 2.56E+00
+ 1554 gOCS      IONRAD              gOCS*                                             1.00E+00  0.00 2.56E+00
+ 1491 gS2H      IONRAD              gH*       gS2*                                    1.00E+00  0.00 3.70E+00
+ 1491 gS2H      IONRAD              gH        gS2                                     1.00E+00  0.00 6.40E+00
+ 1491 gS2H      IONRAD              gS2H*                                             1.00E+00  0.00 6.40E+00
+ 1554 bH2S      IONRAD              bS*       bH*       bH*                           5.00E-01  0.00 3.70E+00
+ 1554 bH2S      IONRAD              bHS*      bH*                                     5.00E-01  0.00 3.70E+00
+ 1554 bH2S      IONRAD              bS        bH        bH                            5.00E-01  0.00 2.56E+00
+ 1554 bH2S      IONRAD              bHS       bH                                      5.00E-01  0.00 2.56E+00
+ 1554 bH2S      IONRAD              bH2S*                                             1.00E+00  0.00 2.56E+00
+ 1554 bH2S2     IONRAD              bH2*      bS2*                                    3.33E-01  0.00 3.70E+00
+ 1554 bH2S2     IONRAD              bHS*      bHS*                                    3.33E-01  0.00 3.70E+00
+ 1554 bH2S2     IONRAD              bS2H*     bH*                                     3.33E-01  0.00 3.70E+00
+ 1554 bH2S2     IONRAD              bH2       bS2                                     3.33E-01  0.00 2.74E+00
+ 1554 bH2S2     IONRAD              bHS       bHS                                     3.33E-01  0.00 2.74E+00
+ 1554 bH2S2     IONRAD              bS2H      bH                                      3.33E-01  0.00 2.74E+00
+ 1554 bH2S2     IONRAD              bH2S2*                                            1.00E+00  0.00 2.74E+00
+ 1554 bSO2      IONRAD              bSO*      bO*                                     5.00E-01  0.00 3.70E+00
+ 1554 bSO2      IONRAD              bS*       bO2*                                    5.00E-01  0.00 3.70E+00
+ 1554 bSO2      IONRAD              bSO       bO                                      5.00E-01  0.00 1.91E+00
+ 1554 bSO2      IONRAD              bS        bO2                                     5.00E-01  0.00 1.91E+00
+ 1554 bSO2      IONRAD              bSO2*                                             1.00E+00  0.00 1.91E+00
+ 1491 bHS       IONRAD              bH*       bS*                                     1.00E+00  0.00 3.70E+00
+ 1491 bHS       IONRAD              bH        bS                                      1.00E+00  0.00 2.51E+00
+ 1491 bHS       IONRAD              bHS*                                              1.00E+00  0.00 2.51E+00
+ 1554 bOCS      IONRAD              bCS*      bO*                                     5.00E-01  0.00 3.70E+00
+ 1554 bOCS      IONRAD              bS*       bCO*                                    5.00E-01  0.00 3.70E+00
+ 1554 bOCS      IONRAD              bCS       bO                                      5.00E-01  0.00 2.56E+00
+ 1554 bOCS      IONRAD              bS        bCO                                     5.00E-01  0.00 2.56E+00
+ 1554 bOCS      IONRAD              bOCS*                                             1.00E+00  0.00 2.56E+00
+ 1491 bS2H      IONRAD              bH*       bS2*                                    1.00E+00  0.00 3.70E+00
+ 1491 bS2H      IONRAD              bH        bS2                                     1.00E+00  0.00 6.40E+00
+ 1491 bS2H      IONRAD              bS2H*                                             1.00E+00  0.00 6.40E+00
+ 1491 gSO3      IONRAD              gSO2*     gO*                                     0.50E+00  0.00 3.70E+01
+ 1491 bSO3      IONRAD              bSO2*     bO*                                     0.50E+00  0.00 3.70E+01
+ 1491 gSO3      IONRAD              gSO*      gO2*                                    0.50E+00  0.00 3.70E+01
+ 1491 bSO3      IONRAD              bSO*      bO2*                                    0.50E+00  0.00 3.70E+01
+ 1491 gSO3      IONRAD              gSO2      gO                                      0.50E+00  0.00 2.39E+01
+ 1491 bSO3      IONRAD              bSO2      bO                                      0.50E+00  0.00 2.39E+01
+ 1491 gSO3      IONRAD              gSO       gO2                                     0.50E+00  0.00 2.39E+01
+ 1491 bSO3      IONRAD              bSO       bO2                                     0.50E+00  0.00 2.39E+01
+ 1491 gSO3      IONRAD              gSO3*                                             1.00E+00  0.00 2.39E+01
+ 1491 bSO3      IONRAD              bSO3*                                             1.00E+00  0.00 2.39E+01
+ 1491 gSO       IONRAD              gS*       gO*                                     1.00E+00  0.00 3.70E+00
+ 1491 gSO       IONRAD              gS        gO                                      1.00E+00  0.00 5.51E+00
+ 1491 gSO       IONRAD              gSO*                                              1.00E+00  0.00 5.51E+00
+ 1491 bSO       IONRAD              bS*       bO*                                     1.00E+00  0.00 3.70E+00
+ 1491 bSO       IONRAD              bS        bO                                      1.00E+00  0.00 5.51E+00
+ 1491 bSO       IONRAD              bSO*                                              1.00E+00  0.00 5.51E+00
+ 1491 bS        IONRAD              bS*                                               1.00E+00  0.00 3.70E+00
+ 1491 bS        IONRAD              bS*                                               1.00E+00  0.00 2.91E+00
+ 1491 gS        IONRAD              gS*                                               1.00E+00  0.00 3.70E+00
+ 1491 gS        IONRAD              gS*                                               1.00E+00  0.00 2.91E+00
+ 1491 gS2       IONRAD              gS*       gS*                                     1.00E+00  0.00 3.70E+00
+ 1491 bS2       IONRAD              bS*       bS*                                     1.00E+00  0.00 3.70E+00
+ 1491 gS2       IONRAD              gS        gS                                      1.00E+00  0.00 2.00E+00
+ 1491 bS2       IONRAD              bS        bS                                      1.00E+00  0.00 2.00E+00
+ 1491 gS2       IONRAD              gS2*                                              1.00E+00  0.00 2.00E+00
+ 1491 bS2       IONRAD              bS2*                                              1.00E+00  0.00 2.00E+00
+ 1491 gS3       IONRAD              gS2*      gS*                                     1.00E+00  0.00 3.70E+00
+ 1491 bS3       IONRAD              bS2*      bS*                                     1.00E+00  0.00 3.70E+00
+ 1491 gS3       IONRAD              gS2       gS                                      1.00E+00  0.00 2.00E+00
+ 1491 bS3       IONRAD              bS2       bS                                      1.00E+00  0.00 2.00E+00
+ 1491 gS3       IONRAD              gS3*                                              1.00E+00  0.00 2.00E+00
+ 1491 bS3       IONRAD              bS3*                                              1.00E+00  0.00 2.00E+00
+ 1491 gS4       IONRAD              gS3*      gS*                                     0.50E+00  0.00 3.70E+00
+ 1491 bS4       IONRAD              bS3*      bS*                                     0.50E+00  0.00 3.70E+00
+ 1491 gS4       IONRAD              gS2*      gS2*                                    0.50E+00  0.00 3.70E+00
+ 1491 bS4       IONRAD              bS2*      bS2*                                    0.50E+00  0.00 3.70E+00
+ 1491 gS4       IONRAD              gS3       gS                                      0.50E+00  0.00 2.00E+00
+ 1491 bS4       IONRAD              bS3       bS                                      0.50E+00  0.00 2.00E+00
+ 1491 gS4       IONRAD              gS2       gS2                                     0.50E+00  0.00 2.00E+00
+ 1491 bS4       IONRAD              bS2       bS2                                     0.50E+00  0.00 2.00E+00
+ 1491 gS4       IONRAD              gS4*                                              1.00E+00  0.00 2.00E+00
+ 1491 bS4       IONRAD              bS4*                                              1.00E+00  0.00 2.00E+00
+ 1491 gS5       IONRAD              gS4*      gS*                                     0.50E+00  0.00 3.70E+00
+ 1491 bS5       IONRAD              bS4*      bS*                                     0.50E+00  0.00 3.70E+00
+ 1491 gS5       IONRAD              gS3*      gS2*                                    0.50E+00  0.00 3.70E+00
+ 1491 bS5       IONRAD              bS3*      bS2*                                    0.50E+00  0.00 3.70E+00
+ 1491 gS5       IONRAD              gS4       gS                                      0.50E+00  0.00 2.00E+00
+ 1491 bS5       IONRAD              bS4       bS                                      0.50E+00  0.00 2.00E+00
+ 1491 gS5       IONRAD              gS3       gS2                                     0.50E+00  0.00 2.00E+00
+ 1491 bS5       IONRAD              bS3       bS2                                     0.50E+00  0.00 2.00E+00
+ 1491 gS5       IONRAD              gS5*                                              1.00E+00  0.00 2.00E+00
+ 1491 bS5       IONRAD              bS5*                                              1.00E+00  0.00 2.00E+00
+ 1491 gS6       IONRAD              gS5*      gS*                                     1.00E+00  0.00 3.70E+00
+ 1491 bS6       IONRAD              bS5*      bS*                                     1.00E+00  0.00 3.70E+00
+ 1491 gS6       IONRAD              gS5       gS                                      1.00E+00  0.00 2.00E+00
+ 1491 bS6       IONRAD              bS5       bS                                      1.00E+00  0.00 2.00E+00
+ 1491 gS6       IONRAD              gS6*                                              1.00E+00  0.00 2.00E+00
+ 1491 bS6       IONRAD              bS6*                                              1.00E+00  0.00 2.00E+00
+ 1491 gS7       IONRAD              gS6*      gS*                                     0.50E+00  0.00 3.70E+00
+ 1491 bS7       IONRAD              bS6*      bS*                                     0.50E+00  0.00 3.70E+00
+ 1491 gS7       IONRAD              gS5*      gS2*                                    0.50E+00  0.00 3.70E+00
+ 1491 bS7       IONRAD              bS5*      bS2*                                    0.50E+00  0.00 3.70E+00
+ 1491 gS7       IONRAD              gS6       gS                                      0.50E+00  0.00 2.00E+00
+ 1491 bS7       IONRAD              bS6       bS                                      0.50E+00  0.00 2.00E+00
+ 1491 gS7       IONRAD              gS5       gS2                                     0.50E+00  0.00 2.00E+00
+ 1491 bS7       IONRAD              bS5       bS2                                     0.50E+00  0.00 2.00E+00
+ 1491 gS7       IONRAD              gS7*                                              1.00E+00  0.00 2.00E+00
+ 1491 bS7       IONRAD              bS7*                                              1.00E+00  0.00 2.00E+00
+ 1491 gS8       IONRAD              gS5*      gS3*                                    0.50E+00  0.00 3.70E+00
+ 1491 bS8       IONRAD              bS5*      bS3*                                    0.50E+00  0.00 3.70E+00
+ 1491 gS8       IONRAD              gS5*      gS2*      gS*                           0.50E+00  0.00 3.70E+00
+ 1491 bS8       IONRAD              bS5*      bS2*      bS*                           0.50E+00  0.00 3.70E+00
+ 1491 gS8       IONRAD              gS5       gS3                                     0.50E+00  0.00 2.00E+00
+ 1491 bS8       IONRAD              bS5       bS3                                     0.50E+00  0.00 2.00E+00
+ 1491 gS8       IONRAD              gS5       gS2       gS                            0.50E+00  0.00 2.00E+00
+ 1491 bS8       IONRAD              bS5*      bS2*      bS*                           0.50E+00  0.00 2.00E+00
+ 1491 gS8       IONRAD              gS8*                                              1.00E+00  0.00 2.00E+00
+ 1491 bS8       IONRAD              bS8*                                              1.00E+00  0.00 2.00E+00
