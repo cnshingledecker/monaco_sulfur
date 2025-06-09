@@ -16,6 +16,7 @@ INTEGER :: prodatoms,reactatoms
 REAL*8  :: a, b, c
 REAL*8  :: apriori_nml
 CHARACTER*10 :: groundstate,s_name, r1, r2, p1, p2, p3, p4, p5
+CHARACTER*50 :: printStatementValue
 TYPE (reaction), DIMENSION(:), ALLOCATABLE :: rtemp
 
 ! Set a priori number of monolayers
@@ -31,7 +32,9 @@ READ(1,*)nspecies
 DO i = 1, nspecies
   READ(1,'(a10)')s_name
   IF (s_name(1:1) == 'g') n_surf_spec = n_surf_spec + 1
+!  PRINT *, "The species is ",s_name
 ENDDO
+
 
 READ(1,*)nreactions
 
@@ -68,7 +71,7 @@ IF ( suprathermal .EQ. 1 ) THEN
 ELSE
   ALLOCATE (s(nspecies+n_surf_spec))
   IF ( MODEL_EXPERIMENT .EQ. 0 ) THEN
-    ALLOCATE (abundances_bulk(nspecies+n_surf_spec,100000)) !Up to 300 monolayers
+    ALLOCATE (abundances_bulk(nspecies+n_surf_spec,500)) !Up to 300 monolayers
   ELSE
     ALLOCATE (abundances_bulk(nspecies+n_surf_spec,INT(apriori_nml))) !Arbitrarily many monolayers
   ENDIF
@@ -94,12 +97,17 @@ first_surf_spec = 0
 
 DO i = 1, nspecies
   READ(1,'(a10)')s(i)%name
+!  PRINT *, s(i)%name
   s(i)%idx = i
   s(i)%gas_idx = i
   s(i)%weight = aweight(s(i)%name)
+!  PRINT *, "Weight = ", s(i)%weight
   s(i)%natoms = numatoms(s(i)%name)
+!  PRINT *, "N_atoms = ", s(i)%natoms
   IF (first_surf_spec == 0 .AND. s(i)%name(1:1) == 'g') first_surf_spec = i
 ENDDO
+
+
 
 !Looking for indexes of gas counterparts of surface species
 DO i = 1, nspecies
@@ -111,6 +119,24 @@ DO i = 1, nspecies
     ENDDO
   ENDIF
 ENDDO
+
+IF ( suprathermal .EQ. 1 ) THEN
+  !Adding suprathermal surface species
+  DO i = 1, n_surf_spec
+      s(nspecies+i)%name = s(first_surf_spec+i-1)%name(1:LEN_TRIM(s(first_surf_spec+i-1)%name))//'*'
+      s(nspecies+i)%idx = nspecies + i
+      s(nspecies+i)%gas_idx = s(first_surf_spec+i-1)%gas_idx
+      s(nspecies+i)%weight = s(first_surf_spec+i-1)%weight
+      s(nspecies+i)%natoms = s(first_surf_spec+i-1)%natoms
+      s(nspecies+i)%enthalpia_known = s(first_surf_spec+i-1)%enthalpia_known
+      s(nspecies+i)%enthalpia = s(first_surf_spec+i-1)%enthalpia
+      s(nspecies+i)%edes = s(first_surf_spec+i-1)%edes
+      s(nspecies+i)%racc = s(first_surf_spec+i-1)%racc
+  ENDDO
+  nspecies = nspecies + n_surf_spec
+END IF
+
+
 
 CALL read_enthalpias
 
@@ -130,6 +156,7 @@ Nsup_g          = 0
 
 DO i = 1, nreactions
   READ(1,1000)r(ii)%idx, r(ii)%r1, r(ii)%r2, r(ii)%p1, r(ii)%p2, r(ii)%p3, r(ii)%p4, r(ii)%p5, r(ii)%alpha, r(ii)%beta, r(ii)%gamma
+!  PRINT*,"r(ii) is: ",r(ii)
   r(ii)%ir1 = species_idx(r(ii)%r1)
   r(ii)%ir2 = species_idx(r(ii)%r2)
   r(ii)%ip1 = species_idx(r(ii)%p1)
@@ -139,6 +166,40 @@ DO i = 1, nreactions
   r(ii)%ip5 = species_idx(r(ii)%p5)
   IF (r(ii)%ir1==-1 .OR. r(ii)%ir2==-1 .OR. r(ii)%ip1==-1 .OR. r(ii)%ip2==-1 .OR. r(ii)%ip3==-1 .OR. r(ii)%ip4==-1 .OR. r(ii)%ip5==-1) THEN
       PRINT '(a31, i5, 1x, 7a10)','Reaction with unknown species: ', r(ii)%idx, r(ii)%r1, r(ii)%r2, r(ii)%p1, r(ii)%p2, r(ii)%p3, r(ii)%p4, r(ii)%p5
+      PRINT *, "Around line 150"
+
+      IF (r(ii)%ir1==-1) THEN
+	PRINT *, "Problem is with ", r(ii)%r1
+      ENDIF
+
+      IF (r(ii)%ir2==-1) THEN
+	PRINT *, "Problem is with ", r(ii)%r2
+      ENDIF
+
+      IF (r(ii)%ip1==-1) THEN
+	PRINT *, "Problem is with ", r(ii)%p1
+	PRINT *, "Weight =", s(r(ii)%ip1)%weight
+	PRINT *, "Num. atoms =", s(r(ii)%ip1)%natoms
+	PRINT *, "Idx =", s(r(ii)%ip1)%idx
+	PRINT *, "Gas Idx =", s(r(ii)%ip1)%gas_idx
+      ENDIF
+
+      IF (r(ii)%ip2==-1) THEN
+	PRINT *, "Problem is with ", r(ii)%p2
+      ENDIF
+
+      IF (r(ii)%ip3==-1) THEN
+	PRINT *, "Problem is with ", r(ii)%p3
+      ENDIF
+
+      IF (r(ii)%ip4==-1) THEN
+	PRINT *, "Problem is with ", r(ii)%p4
+      ENDIF
+
+      IF (r(ii)%ip5==-1) THEN
+	PRINT *, "Problem is with ", r(ii)%p5
+      ENDIF
+
       STOP
   ENDIF
 
@@ -177,26 +238,11 @@ DO i = 1, n_surf_spec
     s(nspecies+i)%racc = s(first_surf_spec+i-1)%racc
 ENDDO
 nspecies = nspecies + n_surf_spec
-n_bulk_spec = nspecies
 
 first_suprathermal_species = nspecies+1
 
 ! C. N. Shingledecker
 IF ( suprathermal .EQ. 1 ) THEN
-  !Adding suprathermal surface species
-  DO i = 1, n_surf_spec
-      s(nspecies+i)%name = s(first_surf_spec+i-1)%name(1:LEN_TRIM(s(first_surf_spec+i-1)%name))//'*'
-      s(nspecies+i)%idx = nspecies + i
-      s(nspecies+i)%gas_idx = s(first_surf_spec+i-1)%gas_idx
-      s(nspecies+i)%weight = s(first_surf_spec+i-1)%weight
-      s(nspecies+i)%natoms = s(first_surf_spec+i-1)%natoms
-      s(nspecies+i)%enthalpia_known = s(first_surf_spec+i-1)%enthalpia_known
-      s(nspecies+i)%enthalpia = s(first_surf_spec+i-1)%enthalpia
-      s(nspecies+i)%edes = s(first_surf_spec+i-1)%edes
-      s(nspecies+i)%racc = s(first_surf_spec+i-1)%racc
-  ENDDO
-  nspecies = nspecies + n_surf_spec
-
   !Adding suprathermal bulk species
   DO i = 1, n_surf_spec
       s(nspecies+i)%name = 'b'//s(first_surf_spec+i-1)%name(2:LEN_TRIM(s(first_surf_spec+i-1)%name))//'*'
@@ -244,6 +290,7 @@ IF (bulk_chemistry>0) THEN
             IF (r(i)%p4(1:1)=='g') r(nreactions+s_r_counter)%p4 = 'b'//r(i)%p4(2:LEN_TRIM(r(i)%p4))
             IF (r(i)%p5(1:1)=='g') r(nreactions+s_r_counter)%p5 = 'b'//r(i)%p5(2:LEN_TRIM(r(i)%p5))
 
+!            PRINT*,"r(nreactions+s_r_counter) is: ",r(nreactions+s_r_counter)
             r(nreactions+s_r_counter)%ir1 = species_idx(r(nreactions+s_r_counter)%r1)
             r(nreactions+s_r_counter)%ir2 = species_idx(r(nreactions+s_r_counter)%r2)
             r(nreactions+s_r_counter)%ip1 = species_idx(r(nreactions+s_r_counter)%p1)
@@ -287,7 +334,7 @@ ENDDO
 
 ! Now generate new reactions array with additional space for suprathermal
 ! reactions.
-PRINT *, "original size(r)= ",size(r)
+!PRINT *, "original size(r)= ",size(r)
 ALLOCATE( rtemp(SIZE(r) + Nsup_g) )
 rtemp(1:SIZE(r)) = r
 DEALLOCATE( r )
@@ -295,8 +342,8 @@ ALLOCATE( r(SIZE(rtemp)) )
 r = rtemp
 DEALLOCATE( rtemp )
 
-PRINT *, "Nsup_g = ",Nsup_g
-PRINT *, "next size(r)= ",size(r)
+!PRINT *, "Nsup_g = ",Nsup_g
+!PRINT *, "next size(r)= ",size(r)
 
 
 ! C. N. Shingledecker
@@ -323,6 +370,7 @@ IF ( suprathermal .EQ. 1 ) THEN
             ! Make the first reactant suprathermal
             r(nreactions+s_r_counter)%r1 = r(i)%r1(1:LEN_TRIM(r(i)%r1))//'*'
 
+!            PRINT*,"r(nreactions+s_r_counter) is: ",r(nreactions+s_r_counter)
             r(nreactions+s_r_counter)%ir1 = species_idx(r(nreactions+s_r_counter)%r1)
             r(nreactions+s_r_counter)%ir2 = species_idx(r(nreactions+s_r_counter)%r2)
             r(nreactions+s_r_counter)%ip1 = species_idx(r(nreactions+s_r_counter)%p1)
@@ -345,13 +393,13 @@ IF ( suprathermal .EQ. 1 ) THEN
               s_r_counter = s_r_counter + 1
               r(nreactions+s_r_counter)%idx = nreactions+s_r_counter
 
-              PRINT *, "nreactions=",nreactions
-              PRINT *, "s_r_counter=",s_r_counter
-              PRINT *, "n_surf_react=",n_surf_react
-              PRINT *, "nreactions+s_r_counter=",nreactions+s_r_counter
-              PRINT *, "size(r)=",size(r,1)
-              PRINT *, r(i)%r1," + ",r(i)%r2," -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3," + ",r(i)%p4
-              PRINT *, "************************"
+!              PRINT *, "nreactions=",nreactions
+!              PRINT *, "s_r_counter=",s_r_counter
+!              PRINT *, "n_surf_react=",n_surf_react
+!              PRINT *, "nreactions+s_r_counter=",nreactions+s_r_counter
+!              PRINT *, "size(r)=",size(r,1)
+!              PRINT *, r(i)%r1," + ",r(i)%r2," -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3," + ",r(i)%p4
+!              PRINT *, "************************"
 
 
               r(nreactions+s_r_counter)%r1 = r(i)%r1
@@ -365,6 +413,7 @@ IF ( suprathermal .EQ. 1 ) THEN
               IF (ii .EQ. 1) r(nreactions+s_r_counter)%r1 = r(i)%r1(1:LEN_TRIM(r(i)%r1))//'*'
               IF (ii .EQ. 2) r(nreactions+s_r_counter)%r2 = r(i)%r2(1:LEN_TRIM(r(i)%r2))//'*'
 
+!              PRINT*,"r(nreactions+s_r_counter) is: ",r(nreactions+s_r_counter)
               r(nreactions+s_r_counter)%ir1 = species_idx(r(nreactions+s_r_counter)%r1)
               r(nreactions+s_r_counter)%ir2 = species_idx(r(nreactions+s_r_counter)%r2)
               r(nreactions+s_r_counter)%ip1 = species_idx(r(nreactions+s_r_counter)%p1)
@@ -416,6 +465,9 @@ IF ( suprathermal .EQ. 1 ) THEN
     DO ii=nreactions+1,nreactions + Nlines
       READ(3,1000)rtemp(ii)%idx, rtemp(ii)%r1, rtemp(ii)%r2, rtemp(ii)%p1, rtemp(ii)%p2, rtemp(ii)%p3, rtemp(ii)%p4, rtemp(ii)%p5, rtemp(ii)%alpha, rtemp(ii)%beta, rtemp(ii)%gamma
       rtemp(ii)%idx = ii
+
+
+!      PRINT*,"rtemp(ii) is: ",rtemp(ii)
       rtemp(ii)%ir1 = species_idx(rtemp(ii)%r1)
       rtemp(ii)%ir2 = species_idx(rtemp(ii)%r2)
       rtemp(ii)%ip1 = species_idx(rtemp(ii)%p1)
@@ -471,6 +523,8 @@ IF ( suprathermal .EQ. 1 ) THEN
     DO ii=nreactions+1,nreactions+Nlines
       READ(3,1000)rtemp(ii)%idx, rtemp(ii)%r1, rtemp(ii)%r2, rtemp(ii)%p1, rtemp(ii)%p2, rtemp(ii)%p3, rtemp(ii)%p4, rtemp(ii)%p5, rtemp(ii)%alpha, rtemp(ii)%beta, rtemp(ii)%gamma
       rtemp(ii)%idx = ii
+
+!      PRINT*,"rtemp(ii) is: ",rtemp(ii)
       rtemp(ii)%ir1 = species_idx(rtemp(ii)%r1)
       rtemp(ii)%ir2 = species_idx(rtemp(ii)%r2)
       rtemp(ii)%ip1 = species_idx(rtemp(ii)%p1)
@@ -518,9 +572,11 @@ IF ( suprathermal .EQ. 1 ) THEN
     ! Add the new quenching reactions to the temp reactions object
     OPEN(3,FILE='quenching.out',STATUS='REPLACE',IOSTAT=io)
     jj = first_suprathermal_species
-    PRINT *, "First suprathermal_species =",jj
+!    PRINT *, "First suprathermal_species =",jj
     DO ii=nreactions+1,nreactions+(nspecies - first_suprathermal_species - 1)
       groundstate = s(jj)%name(1:LEN_TRIM(s(jj)%name)-1)
+
+!      PRINT*,"rtemp(ii) is: ",rtemp(ii)
       rtemp(ii)%r1  = s(jj)%name
       rtemp(ii)%r2  = "QUENCH"
       rtemp(ii)%p1  = s(jj)%name(1:LEN_TRIM(s(jj)%name)-1)
@@ -532,6 +588,10 @@ IF ( suprathermal .EQ. 1 ) THEN
       rtemp(ii)%ir1 = species_idx(s(jj)%name)
       rtemp(ii)%ir2 = 0
       rtemp(ii)%ip1 = species_idx(groundstate)
+      rtemp(ii)%ip2 = 0
+      rtemp(ii)%ip3 = 0
+      rtemp(ii)%ip4 = 0
+      rtemp(ii)%ip5 = 0
       rtemp(ii)%alpha = 1.00e0
       rtemp(ii)%beta = 1.00e0
       rtemp(ii)%gamma = 1.00e0
@@ -539,9 +599,9 @@ IF ( suprathermal .EQ. 1 ) THEN
       rtemp(ii)%exothermicity = 0.00e0
       rtemp(ii)%exothermicity_known = 0
       WRITE(3,1000)rtemp(ii)%idx, rtemp(ii)%r1, rtemp(ii)%r2, rtemp(ii)%p1, rtemp(ii)%p2, rtemp(ii)%p3, rtemp(ii)%p4, rtemp(ii)%p5, rtemp(ii)%alpha, rtemp(ii)%beta, rtemp(ii)%gamma
-      PRINT *, s(jj)%name," -> ",s(jj)%name(1:LEN_TRIM(s(jj)%name)-1)
-      PRINT *, "jj = ",jj, " nspecies= ",nspecies
-      PRINT *, "************************"
+!      PRINT *, s(jj)%name," -> ",s(jj)%name(1:LEN_TRIM(s(jj)%name)-1)
+!      PRINT *, "jj = ",jj, " nspecies= ",nspecies
+!      PRINT *, "************************"
       jj = jj + 1
     END DO
     CLOSE(3)
@@ -582,6 +642,7 @@ IF ( suprathermal .EQ. 1 ) THEN
       READ(3,1002)rtemp(ii)%idx, rtemp(ii)%r1, rtemp(ii)%r2, rtemp(ii)%p1, rtemp(ii)%p2, rtemp(ii)%p3, rtemp(ii)%p4, rtemp(ii)%p5, rtemp(ii)%alpha, rtemp(ii)%beta, rtemp(ii)%gamma
       WRITE(1001,1002)rtemp(ii)%idx, rtemp(ii)%r1, rtemp(ii)%r2, rtemp(ii)%p1, rtemp(ii)%p2, rtemp(ii)%p3, rtemp(ii)%p4, rtemp(ii)%p5, rtemp(ii)%alpha, rtemp(ii)%beta, rtemp(ii)%gamma
       rtemp(ii)%idx = ii
+!      PRINT*,"rtemp(ii) is: ",rtemp(ii)
       rtemp(ii)%ir1 = species_idx(rtemp(ii)%r1)
       rtemp(ii)%ir2 = species_idx(rtemp(ii)%r2)
       rtemp(ii)%ip1 = species_idx(rtemp(ii)%p1)
@@ -622,153 +683,61 @@ IF ( suprathermal .EQ. 1 ) THEN
         IF ( r(i)%ip2 .NE. 0 ) prodatoms = prodatoms + s(r(i)%ip2)%natoms
         IF ( r(i)%ip3 .NE. 0 ) prodatoms = prodatoms + s(r(i)%ip3)%natoms
         IF ( r(i)%ip4 .NE. 0 ) prodatoms = prodatoms + s(r(i)%ip4)%natoms
+        IF ( r(i)%ip5 .NE. 0 ) prodatoms = prodatoms + s(r(i)%ip5)%natoms
         reactatoms = s(r(i)%ir1)%natoms
 
-        IF (ANY(r(i)%r2 .EQ. (/"QUENCH","CRPHOT","PHOTON","FREEZE","DESORB","IONRAD","G-","G0","CR","CRP","PHOION","PHOEXC"/)) .EQV. .FALSE.) THEN
+        IF (ANY(r(i)%r2 .EQ. (/"QUENCH","CRPHOT","PHOTON","FREEZE","DESORB","IONRAD","G-    ","G0    ","CR    ","CRP   ","PHOION","PHOEXC"/)) .EQV. .FALSE.) THEN
           reactatoms = reactatoms + s(r(i)%ir2)%natoms
         ENDIF
 
-        PRINT *, "Prodatoms=",prodatoms
-        PRINT *, "Reactatoms=",reactatoms
-        PRINT *, r(i)%ir1,r(i)%ir2,r(i)%ip1,r(i)%ip2,r(i)%ip3,r(i)%ip4
-        IF ( prodatoms .NE. reactatoms ) THEN
-          PRINT *, "Atoms not equal for reaction involving",r(i)%r1," + ",r(i)%r2
-          CALL EXIT()
+!        PRINT *, "-----------------------------------------"
+!        PRINT *, r(i)%r1," + ",r(i)%r2," -> ",r(i)%p1," + ",r(i)%p2
+!        PRINT *, "Prodatoms=",prodatoms
+!        PRINT *, "Reactatoms=",reactatoms
+!        PRINT *, "ir1_natoms = ",s(r(i)%ir1)%natoms
+!        PRINT *, "ip1_natoms = ",s(r(i)%ip1)%natoms
+!        PRINT *, "alpha=",r(i)%alpha," beta=",r(i)%beta," gamma=",r(i)%gamma
+!        PRINT *, "rate=",r(i)%rate, " exothermicity =",r(i)%exothermicity
+!        PRINT *, r(i)%ir1,r(i)%ir2,r(i)%ip1,r(i)%ip2,r(i)%ip3,r(i)%ip4,r(i)%ip5
+        IF (prodatoms .NE. reactatoms) THEN
+          IF  ( r(i)%r1(2:2) .NE. "e" ) THEN
+            PRINT *, "Atoms not equal"
+            CALL EXIT()
+          ENDIF
         ENDIF
+        IF ( ISNAN(r(i)%alpha) ) THEN
+          PRINT *, "Alpha = NaN"
+        ENDIF
+
+        IF ( ISNAN(r(i)%beta) ) THEN
+          PRINT *, "Beta = NaN"
+        ENDIF
+
+        IF ( ISNAN(r(i)%gamma) ) THEN
+          PRINT *, "Gamma = NaN"
+        ENDIF
+
+        IF ( ISNAN(r(i)%rate) ) THEN
+          PRINT *, "Rate = NaN"
+        ENDIF
+
+        IF ( ISNAN(r(i)%exothermicity) ) THEN
+          PRINT *, "Exothermicity = NaN"
+        ENDIF
+
+
       ENDIF
     ENDDO
 END IF
 
 
-OPEN(1001,FILE="all_reactions.out",STATUS='REPLACE')
-DO i = 1, nreactions
-  ! First, check to make sure that the reaction idx are correct
-  !! There should always be a reactant1
-  IF ( TRIM(r(i)%r1).NE.TRIM(s(r(i)%ir1)%name) ) THEN
-    PRINT *, r(i)%r1," ≠ ",s(r(i)%ir1)%name
-    CALL EXIT()
-  ENDIF
-
-  !! There should always be a reactant2, but sometimes it is special
-  IF (ANY(r(i)%r2 .EQ. (/"QUENCH","CRPHOT","PHOTON","FREEZE","DESORB","IONRAD","CR","CRP","PHOION","PHOEXC"/)) .EQV. .TRUE.) THEN
-    IF ( r(i)%ir2 .NE. 0 ) THEN
-      PRINT *, "ir2 for ",r(i)%r2," ≠ 0"
-      PRINT *, "ir2 = ",r(i)%ir2," which corresponds to ",s(r(i)%ir2)%name
-      CALL EXIT()
-    ENDIF
-  ELSE
-    IF ( TRIM(r(i)%r2).NE.TRIM(s(r(i)%ir2)%name) ) THEN
-      PRINT *, r(i)%r2," ≠ ",s(r(i)%ir2)%name
-      CALL EXIT()
-    ENDIF
-  ENDIF
-
-  !! There should always be a product1
-  IF ( TRIM(r(i)%p1).NE.TRIM(s(r(i)%ip1)%name) ) THEN
-    PRINT *, r(i)%p1," ≠ ",s(r(i)%ip1)%name
-    CALL EXIT()
-  ENDIF
-
-  ! If p2 is present, check that ip2 is correct, otherwise it should be 0
-  IF ( TRIM(r(i)%p2).NE."" ) THEN
-    IF ( TRIM(r(i)%p2).NE.TRIM(s(r(i)%ip2)%name) ) THEN
-       PRINT *, r(i)%p2," ≠ ",s(r(i)%ip2)%name
-      CALL EXIT()
-    ENDIF
-  ELSE
-    IF ( r(i)%ip2 .NE. 0 ) THEN
-      PRINT *, "ip2 for ≠ 0"
-      PRINT *, "ip2 = ",r(i)%ip2," which corresponds to ",s(r(i)%ip2)%name
-      CALL EXIT()
-    ENDIF
-  ENDIF
-
-  IF ( TRIM(r(i)%p3).NE."" ) THEN
-    IF ( TRIM(r(i)%p3).NE.TRIM(s(r(i)%ip3)%name) ) THEN
-       PRINT *, r(i)%p3," ≠ ",s(r(i)%ip3)%name
-      CALL EXIT()
-    ENDIF
-  ELSE
-    IF ( r(i)%ip3 .NE. 0 ) THEN
-      PRINT *, "ip3 for ≠ 0"
-      PRINT *, "ip3 = ",r(i)%ip3," which corresponds to ",s(r(i)%ip3)%name
-      CALL EXIT()
-    ENDIF
-  ENDIF
-
-  IF ( TRIM(r(i)%p4).NE."" ) THEN
-    IF ( TRIM(r(i)%p4).NE.TRIM(s(r(i)%ip4)%name) ) THEN
-       PRINT *, r(i)%p4," ≠ ",s(r(i)%ip4)%name
-      CALL EXIT()
-    ENDIF
-  ELSE
-    IF ( r(i)%ip4 .NE. 0 ) THEN
-      PRINT *, "ip4 for ≠ 0"
-      PRINT *, "ip4 = ",r(i)%ip4," which corresponds to ",s(r(i)%ip4)%name
-      CALL EXIT()
-    ENDIF
-  ENDIF
-
-  IF ( TRIM(r(i)%p5).NE."" ) THEN
-    IF ( TRIM(r(i)%p5).NE.TRIM(s(r(i)%ip5)%name) ) THEN
-       PRINT *, r(i)%p5," ≠ ",s(r(i)%ip5)%name
-      CALL EXIT()
-    ENDIF
-  ELSE
-    IF ( r(i)%ip5 .NE. 0 ) THEN
-      PRINT *, "ip5 for ≠ 0"
-      PRINT *, "ip5 = ",r(i)%ip5," which corresponds to ",s(r(i)%ip5)%name
-      CALL EXIT()
-    ENDIF
-  ENDIF
-
-  ! Also check to make sure that bulk reactions lead to bulk products
-  IF ( (r(i)%r1(1:1).EQ."b") .AND. (r(i)%p1(1:1).NE."b") ) THEN
-    PRINT *, r(i)%r1," + ",r(i)%r2," -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3
-    CALL EXIT()
-  ENDIF
-
-   1010 FORMAT(1X,I5,1X,A10,A10,10X,A10,A10,A10,A10,A10,E8.2,1X,F5.2,1X,F8.1)
-   WRITE(1001,1010) r(i)%idx, r(i)%r1, r(i)%r2, r(i)%p1, r(i)%p2, r(i)%p3, r(i)%p4, r(i)%p5, r(i)%alpha, r(i)%beta, r(i)%gamma
-!  write(1001,1001)r(i)%idx,r(i)%rtype,r(i)%r1,r(i)%r2,r(i)%p1,r(i)%p2,r(i)%p3,r(i)%p4,r(i)%p5,r(i)%exothermicity,r(i)%exothermicity_known, r(i)%alpha !(des_reactive*P)/(1+des_reactive*P)
-ENDDO
-CLOSE(1001)
 
 OPEN (1,FILE='species.out', STATUS='REPLACE')
 write(1,*)'Species, Weight, Number of Atoms, Index, Gas twin index, Desorption energy'
 DO i = 1, nspecies
-  ! Verify that the integer id numbers of the species and gas-phase equivalent are correct
-  IF ((s(i)%name(1:1).EQ."g").OR. (s(i)%name(1:1).EQ."b")) THEN
-    ! For surface species, idx should not equal gas_idx
-    IF (s(i)%idx.EQ.s(i)%gas_idx) THEN
-      PRINT *, s(i)%name," idx = ",s(i)%idx," = gas_idx =",s(i)%gas_idx
-      CALL EXIT()
-    ELSE
-      IF ( s(i)%name(2:LEN_TRIM(s(i)%name)).NE.TRIM(s(s(i)%gas_idx)%name) ) THEN
-        IF ( s(i)%name(LEN_TRIM(s(i)%name):LEN_TRIM(s(i)%name)).EQ."*" ) THEN
-          IF ( s(i)%name(2:LEN_TRIM(s(i)%name)-1).NE.TRIM(s(s(i)%gas_idx)%name) ) THEN
-            PRINT *, s(i)%name(2:LEN_TRIM(s(i)%name)-1)," ≠ ",TRIM(s(s(i)%gas_idx)%name)
-            CALL EXIT ()
-          ENDIF
-        ELSE
-          PRINT *, s(i)%name(2:LEN_TRIM(s(i)%name)-1)," ≠ ",TRIM(s(s(i)%gas_idx)%name)
-          CALL EXIT ()
-        ENDIF
-      ENDIF
-    ENDIF
-  ELSE
-    ! If the species is gas, then idx should equal gas_idx
-    IF (s(i)%idx.NE.s(i)%gas_idx) THEN
-      PRINT *, s(i)%name," idx of", s(i)%idx," ≠ gas_idx = ",s(i)%gas_idx
-      CALL EXIT()
-    ENDIF
-  ENDIF
-
-  ! Write out infor on each species
   write(1,'(a10,1x,1pe12.4,1x,i3,1x,2i4,1pe12.4)')s(i)%name, s(i)%weight, s(i)%natoms, s(i)%idx, s(i)%gas_idx, s(i)%edes
 ENDDO
 CLOSE (1)
-
 
 RETURN
 100 PRINT*, 'File ',chem_file(1:LEN_TRIM(chem_file)),' not found!'
@@ -838,55 +807,34 @@ SUBROUTINE get_rd_efficiency(ii)
 IMPLICIT NONE
 
 INTEGER :: ii
-REAL*8  :: P,obaval
+REAL*8  :: P
 
   !Setting efficiency of reactive desorption using des_reactive_type
     SELECT CASE (des_reactive_type)
     CASE (0) !Garrod_ea07
-      ! Special Case for H + H2S -> H2 + HS and H + HS -> H2S
-      IF ((r(ii)%r1.EQ."gH".AND.r(ii)%r2.EQ."gH2S").OR.(r(ii)%r1.EQ."gH".AND.r(ii)%r2.EQ."gHS")) THEN
-        obaval = des_reactive
-        IF (r(ii)%rtype == 13 .AND. r(ii)%p1(1:1) == 'g') THEN
-          IF (r(ii)%exothermicity_known==1) THEN
-            P = (1.d0-s(r(ii)%ip1)%edes/r(ii)%exothermicity)**(dmax1(2.d0,3.d0*s(r(ii)%ip1)%natoms-5.d0)-1.d0)
-            r(ii)%alpha =(1.d0 - (obaval*P)/(1+obaval*P))*r(ii)%alpha
-          ELSE
-            r(ii)%alpha = (1.d0 - obaval)*r(ii)%alpha
-          ENDIF
-        ENDIF
-        IF (r(ii)%rtype == 13 .AND. r(ii)%p1(1:1) /= 'g') THEN
-          IF (r(ii)%exothermicity_known==1) THEN
-            P = (1.d0-s(r(ii)%ip1)%edes/r(ii)%exothermicity)**(dmax1(2.d0,3.d0*s(r(ii)%ip1)%natoms-5.d0)-1.d0)
-            r(ii)%alpha =((obaval*P)/(1+obaval*P))*r(ii)%alpha
-          ELSE
-            r(ii)%alpha = obaval*r(ii)%alpha
-          ENDIF
-        ENDIF
-      ELSE
-        IF (r(ii)%rtype == 13 .AND. r(ii)%p1(1:1) == 'g') THEN
+      IF (r(ii)%rtype == 13 .AND. r(ii)%p1(1:1) == 'g') THEN
           IF (r(ii)%ip2/=0) THEN
-            r(ii)%alpha = 1.0d0*r(ii)%alpha
+              r(ii)%alpha = 1.0d0*r(ii)%alpha
           ELSE
-            IF (r(ii)%exothermicity_known==1) THEN
-              P = (1.d0-s(r(ii)%ip1)%edes/r(ii)%exothermicity)**(dmax1(2.d0,3.d0*s(r(ii)%ip1)%natoms-5.d0)-1.d0)
-              r(ii)%alpha =(1.d0 - (des_reactive*P)/(1+des_reactive*P))*r(ii)%alpha
-            ELSE
-              r(ii)%alpha = (1.d0 - des_reactive)*r(ii)%alpha
-            ENDIF
+              IF (r(ii)%exothermicity_known==1) THEN
+                  P = (1.d0-s(r(ii)%ip1)%edes/r(ii)%exothermicity)**(dmax1(2.d0,3.d0*s(r(ii)%ip1)%natoms-5.d0)-1.d0)
+                  r(ii)%alpha =(1.d0 - (des_reactive*P)/(1+des_reactive*P))*r(ii)%alpha
+              ELSE
+                  r(ii)%alpha = (1.d0 - des_reactive)*r(ii)%alpha
+              ENDIF
           ENDIF
-        ENDIF
-        IF (r(ii)%rtype == 13 .AND. r(ii)%p1(1:1) /= 'g') THEN
+      ENDIF
+      IF (r(ii)%rtype == 13 .AND. r(ii)%p1(1:1) /= 'g') THEN
           IF (r(ii)%ip2/=0) THEN
-            r(ii)%alpha = 0.d0
+              r(ii)%alpha = 0.d0
           ELSE
-            IF (r(ii)%exothermicity_known==1) THEN
-              P = (1.d0-s(r(ii)%ip1)%edes/r(ii)%exothermicity)**(dmax1(2.d0,3.d0*s(r(ii)%ip1)%natoms-5.d0)-1.d0)
-              r(ii)%alpha =((des_reactive*P)/(1+des_reactive*P))*r(ii)%alpha
-            ELSE
-              r(ii)%alpha = des_reactive*r(ii)%alpha
-            ENDIF
+              IF (r(ii)%exothermicity_known==1) THEN
+                  P = (1.d0-s(r(ii)%ip1)%edes/r(ii)%exothermicity)**(dmax1(2.d0,3.d0*s(r(ii)%ip1)%natoms-5.d0)-1.d0)
+                  r(ii)%alpha =((des_reactive*P)/(1+des_reactive*P))*r(ii)%alpha
+              ELSE
+                  r(ii)%alpha = des_reactive*r(ii)%alpha
+              ENDIF
           ENDIF
-        ENDIF
       ENDIF
   CASE (1) !Vasyunin&Herbst13
       IF (r(ii)%rtype == 13 .AND. r(ii)%p1(1:1) == 'g') r(ii)%alpha = (1.d0 - des_reactive)*r(ii)%alpha
@@ -930,8 +878,10 @@ END SUBROUTINE get_rd_efficiency
 INTEGER FUNCTION get_rtype(r1,r2)
 IMPLICIT NONE
 CHARACTER*10 r1, r2
+LOGICAL :: r1IsIon, r2IsIon
 
 get_rtype = 1
+!PRINT *,"r1: ", r1," + r2: ",r2
 
 IF (r2(1:LEN_TRIM(r2)) == 'CRP') get_rtype = 2
 IF (r2(1:LEN_TRIM(r2)) == 'PHOTON') get_rtype = 3
@@ -952,11 +902,38 @@ IF (((r1(LEN_TRIM(r1):LEN_TRIM(r1)) .EQ. '*' .OR. r2(LEN_TRIM(r2):LEN_TRIM(r2)) 
   .AND. ((r1(1:1) .EQ. 'b') .OR. (r2(1:1) .EQ. 'b'))) get_rtype = 16
 IF (r2(1:LEN_TRIM(r2)) == 'IONRAD') get_rtype = 17
 IF (r2(1:LEN_TRIM(r2)) == 'QUENCH') THEN
-  PRINT *, r1," + ",r2
+!  PRINT *, r1," + ",r2
   get_rtype = 18
 ENDIF
 IF (r2(1:LEN_TRIM(r2)) == 'PHOION') get_rtype = 19
 IF (r2(1:LEN_TRIM(r2)) == 'PHOEXC') get_rtype = 20
+
+r1IsIon = ((r1(LEN_TRIM(r1):LEN_TRIM(r1)) == '+') .OR. (r1(LEN_TRIM(r1):LEN_TRIM(r1)) == '-'))
+r2IsIon = ((r2(LEN_TRIM(r2):LEN_TRIM(r2)) == '+') .OR. (r2(LEN_TRIM(r2):LEN_TRIM(r2)) == '-'))
+
+IF(((r1IsIon .eqv. .TRUE.) .AND. (r2IsIon .eqv. .FALSE.)) .OR. ((r1IsIon .eqv. .FALSE.) .AND. (r2IsIon .eqv. .TRUE.))) THEN
+!  PRINT*,"First if (outer one) is ok"
+  IF(r1(1:1) .EQ. 'g') THEN
+!    PRINT *, "r1 or r2 is an ion and they are both grain species"
+    get_rtype = 21
+  ENDIF
+  IF(r1(1:1) .EQ. 'b') THEN
+!    PRINT *, "r1 or r2 is an ion and they are both bulk species"
+    get_rtype = 22
+  ENDIF
+ENDIF
+
+IF((r1IsIon .eqv. .TRUE.) .AND. (r2IsIon .eqv. .TRUE.)) THEN
+!  PRINT*,"Second if (outer one) is ok"
+  IF(r1(1:1) .EQ. 'g') THEN
+!    PRINT *, "r1 and r2 are ions and they are both grain species"
+    get_rtype = 23
+  ENDIF 
+  IF(r1(1:1) .EQ. 'b') THEN
+!    PRINT *, "r1 and r2 are ions and they are both bulk species"
+    get_rtype = 24
+  ENDIF
+ENDIF
 
 END FUNCTION get_rtype
 
