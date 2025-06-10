@@ -13,40 +13,43 @@ DELTA_AVIS            = 0          ; 0 - Constant interstellar Av; 1 - Variable
 DELTA_ZETACR          = 0          ; 0 - Constant CR ion. rate; 1 - Variable
 DELTA_ZETAX           = 0          ; 0 - Constant X-Ray ion. rate; 1 - Variable
 DELTA_SELFSHIELD      = 0          ; 0 - Constant shielding; 1 - Variable
-MODEL_EXPERIMENT      = 0          ; 1 - Model an experiment -> limit external sources of energy
+MODEL_EXPERIMENT      = 1          ; 1 - Model an experiment -> limit external sources of energy
 FAST_BULK             = 1          ; 1 - Reactive bulk species react non-diffusively; 0 - not
-FAST_ATOMS            = 0          ; 1 - Reactive bulk species react non-diffusively; 0 - not
+FAST_ATOMS            = 1          ; 1 - Reactive bulk species react non-diffusively; 0 - not
 PHOTOEXC              = 0          ; 1 - Detailed photoexcitation/dissociation; 0 - off
 PHOTOION              = 0          ; 1 - Detailed photoionization/dissociation to suprathermal products; 0 - off
 FIXED_DVAL            = 1          ; 1 - Fixed δ value, used in detailed photo rate coefficients
 FIXED_NU              = 0          ; 1 - Fixed ν value, the "trial frequency" used in fast bulk rates
-DISABLE_DESORB        = 0          ; 1 - No desorption. Used when modeling some experiments. NB: must also set DES_REACTIVE=0
+DISABLE_DESORB        = 1          ; 1 - No desorption. Used when modeling some experiments. NB: must also set DES_REACTIVE=0
+CORRECTION            = 0          ; 1 - Concentration-dependent correction factor; 0 - off 
 
 CHEM_FILE             = network.dat
-RTOL                  = 1.0000E-07 ; Relative tolerance
-ATOL                  = 1.0000E-17 ; Absolute tolerance
+RTOL                  = 1.0000E-05 ; Relative tolerance
+ATOL                  = 1.0000E-15 ; Absolute tolerance
 
 N_S_ML                = 4.0000E+00 ; Number of `surface` monolayers (to mimic model 4-4 in VH13)
 
+CORRFAC1              = 1.3400E+00 ; First correction factor. Used if CORRECTION=1
+CORRFAC2              = 1.0000E+02 ; Second correction factor. Used if CORRECTION=1
 DVAL                  = 1.0000E-01 ; δ value representing difference between gas and solid cross-sections
 ICE_THICK             = 1.0000E-04 ; Thickness of ice, cm (MODEL_EXPERIMENT=1 only!)
 RHO_ICE               = 3.1000E+22 ; Density of ice, cm-3 (MODEL_EXPERIMENT=1 only!)
-RHO                   = 1.0000E+02 ; Density of gas, cm-3
-T                     = 1.0000E+02 ; Temperature, K
-TDUST                 = 1.5000E+01 ; Dust temperature, K
+RHO                   = 1.0000E+04 ; Density of gas, cm-3
+T                     = 1.0000E+01 ; Temperature, K
+TDUST                 = 1.0000E+01 ; Dust temperature, K
 G0_STELLAR            = 1.0000E+00 ; Stellar UV field in units of Draine's
-AVST                  = 5.0000E-01 ; AvSt - stellar extinction
-AVIS                  = 5.0000E-01 ; AvIS - interstellar extinction
-ZETACR                = 1.0000E-16 ; ZetaCR - cosmic ray ionization rate
+AVST                  = 1.0000E+01 ; AvSt - stellar extinction
+AVIS                  = 1.0000E+01 ; AvIS - interstellar extinction
+ZETACR                = 1.3000E-17 ; ZetaCR - cosmic ray ionization rate
 ZETAX                 = 0.0000E+00 ; ZetaX - X-ray ionization rate
 PHI_EXP               = 1.0000E+11 ; Flux of particles in experiment
 Se_EXP                = 3.3000E-14 ; ev cm^2; Electronic stopping cross-section in experiment 
-TRIAL_NU              = 1.0000E+00 ; Trial Frequency for bulk-phase radical reactions
+TRIAL_NU              = 1.0000E+13 ; Trial Frequency for bulk-phase radical reactions
 DES_T                 = 1          ; Thermal desorption 1-on/0-off
 DES_CRP               = 1          ; Cosmic ray desorption 1-on/0-off
 DES_PHOTON            = 1          ; Photodesorption 1-on/0-off
 PH_YIELD              = 1.0000E-05 ; Photodesorption yield
-DES_REACTIVE          = 1.0000E-02 ; Efficiency of the reactive desorption
+DES_REACTIVE          = 1.0000E-00 ; Efficiency of the reactive desorption
 DES_REACTIVE_TYPE     = 0          ; Type of RE: 0 - Garrod_ea07, 1 - Vasyunin&Herbst13, 2 - Minissale&Dulieu
 AGR                   = 1.0000E-05 ; Grain size, cm
 DRHO                  = 3.0000E+00 ; Grain density, g*cm-3
@@ -67,22 +70,14 @@ EFFSURFMASS           = 1.2000E+02 ; effective mass of surface molecules for RD 
 
 INIT_NON_ZERO         = 1          ; 0 - no initial abundances, 1 - read from init* files 
 
-TIMESTEPS             = 100        ; Amount of time moments in output
-TSTART                = 1.0000E+02 ; Time of the first output
-TEND                  = 3.0000E+07 ; Time of the last output
+TIMESTEPS             = 1000        ; Amount of time moments in output
+TSTART                = 1.0000E-12 ; Time of the first output
+TEND                  = 1.3600E+12 ; Time of the last output
 
-N_DET_SPEC            = 27         ; # of species for detailed study
-CS
-SO
-bO
+N_DET_SPEC            = 13         ; # of species for detailed study
 bHS
 bH
 bH2S
-bHSO
-bCS
-bNS
-bOCS
-bSO2
 bS
 bS2
 bS3
@@ -90,12 +85,6 @@ bS4
 bS6
 bS7
 bS8
-gCS
 gH2S
 gHS
-gSO2
-gSO
-SO2
-gOCS
-OCS
 gS2

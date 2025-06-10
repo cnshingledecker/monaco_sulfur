@@ -38,9 +38,9 @@ DO i=1,nspecies
   OPEN ( UNIT=40, FILE="final_gas_abundances.out",STATUS='unknown',ACCESS='append' )
   OPEN ( UNIT=50, FILE="final_surface_abundances.out",STATUS='unknown',ACCESS='append' )
   OPEN ( UNIT=60, FILE="final_bulk_abundances.out",STATUS='unknown',ACCESS='append' )
-  WRITE(20,'(A103)') "! time [year]; Each column is the abundance (relative to H) [number ratio] for several spatial positions"
-  WRITE(30,'(A103)') "! time [year]; Each column is the abundance (relative to H) [number ratio] for several spatial positions"
   IF ( MODEL_EXPERIMENT .EQ. 0 ) THEN
+    WRITE(20,'(A103)') "! time [year]; Each column is the abundance (relative to H) [number ratio] for several spatial positions"
+    WRITE(30,'(A103)') "! time [year]; Each column is the abundance (relative to H) [number ratio] for several spatial positions"
     DO j=1,timesteps
       abundance = ABS(s(i)%abundance_out(j)/gdens*ddens)
       IF (abundance .LT. 1.0e-35) abundance = 0.0E0
@@ -56,14 +56,16 @@ DO i=1,nspecies
       WRITE(40,1004) s(i)%name,s(i)%abundance_out(j)/gdens*ddens, keycomment
     ENDIF
   ELSE
+    WRITE(20,'(A103)') "! Fluence [particles/cm^2]; Each column is the abundance (relative to H2S) [number ratio] for several spatial positions"
+    WRITE(30,'(A103)') "! Fluence [particles/cm^2]; Each column is the abundance (relative to H2S) [number ratio] for several spatial positions"
     DO j=1,timesteps
-      abundance = s(i)%abundance_out(j)/(s(species_idx('bH2O      '))%abundance_out(j) +& 
-        s(species_idx('gH2O      '))%abundance_out(j))
+      abundance = s(i)%abundance_out(j)/(s(species_idx('bH2S      '))%abundance_out(j) +& 
+        s(species_idx('gH2S      '))%abundance_out(j))
 !      abundance = s(i)%abundance_out(j)/(2.0*1.0e20*1.0e-12)
 !      abundance = s(i)%abundance_out(j)
       IF (abundance .LT. 1.0e-35) abundance = 0.0E0
-      WRITE(20,1957) timesteps_out(j),abundance
-      WRITE(30,1958) timesteps_out(j),",",abundance
+      WRITE(20,1957) timesteps_out(j)*PHI_EXP,abundance
+      WRITE(30,1958) timesteps_out(j)*PHI_EXP,",",abundance
     ENDDO
   ENDIF
 

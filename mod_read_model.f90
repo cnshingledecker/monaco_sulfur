@@ -41,7 +41,7 @@ READ(1,1000)keyname, PHOTOION, keycomment ! For modeling photoexperiments
 READ(1,1000)keyname, FIXED_DVAL, keycomment ! For modeling photoexperiments
 READ(1,1000)keyname, FIXED_NU, keycomment ! For modeling photoexperiments
 READ(1,1000)keyname, DISABLE_DESORB, keycomment ! For modeling photoexperiments
-
+READ(1,1000)keyname, CORRECTION, keycomment ! For turning the concentration dependent correction factor off and on
 READ(1,*)
 READ(1,1002)keyname, chem_file
 READ(1,1001)keyname, rtol, keycomment
@@ -49,6 +49,8 @@ READ(1,1001)keyname, atol, keycomment
 READ(1,*)
 READ(1,1001)keyname, n_s_ml
 READ(1,*)
+READ(1,1001)keyname, CORRFAC1, keycomment ! For concentration dependent correction factor
+READ(1,1001)keyname, CORRFAC2, keycomment ! For concentration dependent correction factor
 READ(1,1001)keyname, DVAL, keycomment ! For modeling photoexperiments
 READ(1,1001)keyname, ICE_THICK, keycomment
 READ(1,1001)keyname, RHO_ICE, keycomment

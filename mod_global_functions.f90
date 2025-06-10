@@ -25,6 +25,51 @@ CONTAINS
 ! aweight  == computed atomic weight
 !
 !..............................................................................
+REAL(wp) FUNCTION rfrac(rnum)
+  IMPLICIT NONE
+  INTEGER :: rnum ! The reaction number
+  REAL :: reactantsum
+
+  reactantsum = s(r(rnum)%ir1)%abundance + s(r(rnum)%ir2)%abundance
+  rfrac = reactantsum/bmol
+END FUNCTION rfrac 
+
+REAL(wp) FUNCTION correct(frac)
+  IMPLICIT NONE
+  REAL(wp) :: frac
+  REAL :: numerator,denominator
+
+  numerator = (10**(frac*CORRFAC1)) - 1
+  denominator = 100.0
+
+  correct = numerator/denominator
+END FUNCTION correct
+
+
+REAL(wp) FUNCTION DILUTE(rnum)
+  IMPLICIT NONE
+  INTEGER :: rnum ! The reaction number
+  REAL(wp) :: unity
+
+  unity = 1.0
+
+  dilute = correct(rfrac(rnum)) + (rfrac(rnum)**CORRFAC2)*(1.0 - correct(unity))
+  IF (dilute.GT.1) THEN
+    PRINT *, "ERROR: Dilution Factor greater than 1"
+    PRINT *, r(rnum)%r1," + ",r(rnum)%r2," -> ",r(rnum)%p1," + ",r(rnum)%p2," + ",r(rnum)%p3
+    PRINT *,"reactant fraction = ",rfrac(rnum)
+    PRINT *,"Dilution factor = ",dilute
+    dilute = 1.0
+  ELSEIF ( dilute .LT. 0 ) THEN
+    PRINT *, "ERROR: Dilution Factor less than 0"
+    PRINT *, r(rnum)%r1," + ",r(rnum)%r2," -> ",r(rnum)%p1," + ",r(rnum)%p2," + ",r(rnum)%p3
+    PRINT *,"reactant fraction = ",rfrac(rnum)
+    PRINT *,"Dilution factor = ",dilute
+    dilute = 0
+  ENDIF
+END FUNCTION DILUTE 
+
+
 REAL(wp) FUNCTION aweight(x)
 IMPLICIT NONE
 
@@ -37,7 +82,7 @@ REAL(wp) w1, w2
 CHARACTER*1 s1, tmp1, multi
 CHARACTER*2 s2, tmp2
 LOGICAL cond
-DIMENSION s1(8), w1(8), s2(6), w2(6)
+DIMENSION s1(8), w1(8), s2(7), w2(7)
 
 PRINT *, x
 
@@ -59,6 +104,7 @@ s2(3) = 'Si'
 s2(4) = 'Na'
 s2(5) = 'Mg'
 s2(6) = 'Cl'
+s2(7) = 'Xe'
 
 ! and their weights:
 w1(1) = 1.00790E-00
@@ -75,7 +121,7 @@ w2(3) = 2.80855E+01
 w2(4) = 2.29898E+01
 w2(5) = 2.43050E+01
 w2(6) = 3.54527E+01
-
+w2(7) = 1.31290E+02
 
 ! Initialization of borders of the species name:
 !CALL len_tri2(x,10,last)
@@ -122,7 +168,7 @@ IF ((last-first).GE.1) THEN
     cond = .true.
 
 ! Start a search among two-letter atoms:
-    DO i = 1, 6
+    DO i = 1, 7
 		IF (tmp2.EQ.s2(i)) THEN
 			aweight = aweight + w2(i)
             first = first + 2
@@ -209,7 +255,7 @@ REAL(wp) w1, w2
 CHARACTER*1 s1, tmp1, multi
 CHARACTER*2 s2, tmp2
 LOGICAL cond
-DIMENSION s1(8), w1(8), s2(6), w2(6)
+DIMENSION s1(8), w1(8), s2(7), w2(7)
 
 ! Initialization of the output:
 numatoms = 0.0d0
@@ -229,6 +275,7 @@ s2(3) = 'Si'
 s2(4) = 'Na'
 s2(5) = 'Mg'
 s2(6) = 'Cl'
+s2(7) = 'Xe'
 
 ! Initialization of borders of the species name:
 !CALL len_tri2(x,10,last)
@@ -275,7 +322,7 @@ IF ((last-first).GE.1) THEN
     cond = .true.
 
 ! Start a search among two-letter atoms:
-    DO i = 1, 6
+    DO i = 1, 7
 		IF (tmp2.EQ.s2(i)) THEN
 			!aweight = aweight + w2(i)
 			numatoms = numatoms + 1
@@ -431,7 +478,7 @@ REAL(wp) FUNCTION numelement(x,element)
   CHARACTER*2 s2, tmp2
   LOGICAL cond
   LOGICAL twoletter
-  DIMENSION s1(8), w1(8), s2(6), w2(6)
+  DIMENSION s1(8), w1(8), s2(7), w2(7)
 
 
   ! Initialization of the output:
@@ -453,6 +500,7 @@ REAL(wp) FUNCTION numelement(x,element)
   s2(4) = 'Na'
   s2(5) = 'Mg'
   s2(6) = 'Cl'
+  s2(7) = 'Xe'
 
   i_element = 0
   twoletter = .FALSE.
@@ -465,7 +513,7 @@ REAL(wp) FUNCTION numelement(x,element)
     ENDIF
   ENDDO
 
-  DO i = 1,6
+  DO i = 1,7
     IF (TRIM(s2(i)) .EQ. TRIM(element)) THEN
       i_element = i
       twoletter = .TRUE.

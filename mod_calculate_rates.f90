@@ -1,5 +1,6 @@
 MODULE calculate_rates
 USE global_variables
+USE global_functions
 
 IMPLICIT NONE
 
@@ -13,7 +14,7 @@ INTEGER i
 CHARACTER(LEN=10)         :: reactant_names(2)
 CHARACTER(LEN=10)         :: r1,r2
 REAL(wp)                  :: f1,f2,rate,r_alpha
-
+REAL                      :: reaction_abundance
 
 IF (delta_t==1) T = get_parameter(tcur/year, n_t_steps, time_t_array, t_array)
 IF (delta_tdust==1) Tdust = get_parameter(tcur/year, n_tdust_steps, time_tdust_array, tdust_array)
@@ -43,7 +44,16 @@ ak_photo = 0.d0
 ak_therm = 0.d0
 ak_crp   = 0.d0
 
+
 DO i = 1, nreactions
+!  PRINT *, r(i)%r1," + ",r(i)%r2
+!  PRINT *, "r(i)%ir1=",r(i)%ir1
+!  PRINT *, "r(i)%ir2=",r(i)%ir2
+!  PRINT *, "s(r(i)%ir1)%frac_abundance",s(r(i)%ir1)%frac_abundance
+!  PRINT *, "s(r(i)%ir2)%frac_abundance",s(r(i)%ir2)%frac_abundance
+  IF ( r(i)%ir2 .NE. 0 ) THEN
+    reaction_abundance = s(r(i)%ir1)%frac_abundance+s(r(i)%ir2)%frac_abundance
+  ENDIF
     SELECT CASE (r(i)%rtype)
         CASE (1) !Two-body molecule(ion) - molecule(ion) gas-phase reaction
             r(i)%rate = r(i)%alpha*(T/300.0d0)**r(i)%beta*dexp(-r(i)%gamma/T) * ddens
@@ -401,6 +411,7 @@ DO i = 1, nreactions
             ENDIF
         CASE (14) !Bulk two-body reaction
 
+!            PRINT *,"CALCULATING RATE USING ", r(i)%r1, " AND ", r(i)%r2
             ! Compute their vibrational frequencies:
             IF ( FIXED_NU .EQ. 1 ) THEN
               anu0 = TRIAL_NU
@@ -586,10 +597,20 @@ DO i = 1, nreactions
                ) THEN
 !            IF ( FAST_BULK .EQ. 1 ) THEN
               ! Non-diffusive form: no hopping away assumed
-              r(i)%rate = r(i)%alpha*akbar*(anu0 + anu1)
+              IF ( CORRECTION.EQ.1) THEN
+                r(i)%rate = r(i)%alpha*akbar*(anu0 + anu1)*dilute(i)        
+              ELSE
+                r(i)%rate = r(i)%alpha*akbar*(anu0 + anu1)
+              ENDIF
             ELSE
               r(i)%rate = r(i)%alpha*akbar*(Rdiff0 + Rdiff1)
             ENDIF
+!            IF ( dilute(i).GT.0.0 ) THEN
+!              PRINT *, r(i)%r1," + ",r(i)%r2," -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3
+!              PRINT *,"reactant fraction = ",rfrac(i)
+!              PRINT *,"Dilution factor = ",dilute(i)
+!              PRINT *,"********************************************************"
+!            ENDIF
 
 !            IF ( ANY(radical_names .EQ. r1) .OR. ANY(radical_names .EQ. r2) ) THEN
 !              PRINT *, r_alpha,akbar
@@ -624,7 +645,17 @@ DO i = 1, nreactions
             Rdiff0 = anu0
             Rdiff1 = anu1
 
-            r(i)%rate = r(i)%alpha*(Rdiff0 + Rdiff1)
+            IF ( CORRECTION.EQ.1) THEN
+              r(i)%rate = r(i)%alpha*akbar*(anu0 + anu1)*dilute(i)        
+            ELSE
+              r(i)%rate = r(i)%alpha*akbar*(anu0 + anu1)
+            ENDIF
+!            IF (dilute(i).GT.0.0 ) THEN
+!              PRINT *, r(i)%r1," + ",r(i)%r2," -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3
+!              PRINT *,"reactant fraction = ",rfrac(i)
+!              PRINT *,"Dilution factor = ",dilute(i)
+!              PRINT *,"********************************************************"
+!            ENDIF
 
             IF (r(i)%r1 == r(i)%r2) r(i)%rate = r(i)%rate/2.d0
 !            PRINT *, r(i)%r1," + ",r(i)%r2," -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3
@@ -636,11 +667,11 @@ DO i = 1, nreactions
           ELSE
             r(i)%rate = suprathermal*radiolysis*r(i)%alpha*(r(i)%gamma/1.0d2)*PHI_EXP*Se_EXP
 !            r(i)%rate = suprathermal*radiolysis*r(i)%alpha*(r(i)%gamma/1.0d2)*PHI_EXP*Se_EXP*(1.0)*RHO_ICE*(1.0/0.7071067)
-            IF ( r(i)%rate .GT. 0.0d0 ) THEN
-              PRINT *, r(i)%r1," + IONRAD -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3
-              PRINT *, "k_rad=",r(i)%rate
-              PRINT *, "************************"
-            ENDIF
+!            IF ( r(i)%rate .GT. 0.0d0 ) THEN
+!              PRINT *, r(i)%r1," + IONRAD -> ",r(i)%p1," + ",r(i)%p2," + ",r(i)%p3
+!              PRINT *, "k_rad=",r(i)%rate
+!              PRINT *, "************************"
+!            ENDIF
           ENDIF
         CASE (18) ! Quenching of suprathermal species
           ! Compute their vibrational (trial) frequencies:
@@ -675,6 +706,7 @@ ENDDO
 !write(22,*)'============='
 !stop
 !pause
+
 1000 FORMAT(1X,I4,1X,I2,1X,2(A10),10X,5(A10),1pE14.8,1X,F5.2,1X,F8.1)
 
 END SUBROUTINE calc_rates

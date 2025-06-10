@@ -65,6 +65,7 @@ DO i = 1, init_non_zero
 ENDDO
 
 CALL calc_rates(0.d0)
+PRINT *, "Called calc_rates. Now selecting case ",eqtype
 
 SELECT CASE (eqtype)
   CASE (1)
