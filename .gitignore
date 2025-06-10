@@ -1,0 +1,8 @@
+*.mod
+*.csv
+*.ab
+fort*
+analytics*
+*.out
+*.o
+monaco
