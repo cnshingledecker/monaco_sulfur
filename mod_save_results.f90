@@ -8,6 +8,7 @@ CONTAINS
 SUBROUTINE save_results_shingledecker
 IMPLICIT NONE
 INTEGER :: i,j
+INTEGER :: idx_bH2O, idx_gH2O
 CHARACTER*20 :: abfile, csvfile
 CHARACTER*30 :: abform, csvform
 CHARACTER*10 :: species
@@ -15,6 +16,9 @@ CHARACTER*40 :: keycomment
 DOUBLE PRECISION :: abundance
 
 PRINT*, "SAVE_RESULTS: Saving results..."
+
+idx_bH2O = species_idx('bH2O      ')
+idx_gH2O = species_idx('gH2O      ')
 
 CALL SYSTEM("rm -rf ab")
 CALL SYSTEM("rm -rf csv")
@@ -57,8 +61,8 @@ DO i=1,nspecies
     ENDIF
   ELSE
     DO j=1,timesteps
-      abundance = s(i)%abundance_out(j)/(s(species_idx('bH2O      '))%abundance_out(j) +& 
-        s(species_idx('gH2O      '))%abundance_out(j))
+      abundance = s(i)%abundance_out(j)/(s(idx_bH2O)%abundance_out(j) +&
+        s(idx_gH2O)%abundance_out(j))
 !      abundance = s(i)%abundance_out(j)/(2.0*1.0e20*1.0e-12)
 !      abundance = s(i)%abundance_out(j)
       IF (abundance .LT. 1.0e-35) abundance = 0.0E0

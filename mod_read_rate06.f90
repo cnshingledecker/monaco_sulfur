@@ -796,7 +796,6 @@ INTEGER :: ii
   r(ii)%exothermicity = -r(ii)%exothermicity
 
 RETURN
-STOP
 END SUBROUTINE get_reaction_thermodynamics
 
 SUBROUTINE get_rd_efficiency(ii)
@@ -846,7 +845,6 @@ REAL*8  :: P
   END SELECT
 
 RETURN
-STOP
 END SUBROUTINE get_rd_efficiency
 
 !This function returns the reactions type by its reactants

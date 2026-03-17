@@ -3,12 +3,35 @@ USE global_variables
 
 IMPLICIT NONE
 
+! Cached CO/H2 self-shielding tables from Lee_ea_17.txt (read once at startup)
+REAL(wp), SAVE :: sh_tnco(52), sh_th1(52)
+REAL(wp), SAVE :: sh_tnh2(43), sh_th2(43), sh_tav(43), sh_th3(43)
+LOGICAL,  SAVE :: shield_tables_loaded = .FALSE.
+
 CONTAINS
+
+SUBROUTINE load_shield_tables
+IMPLICIT NONE
+INTEGER :: i, fu
+OPEN(newunit=fu, FILE='Lee_ea_17.txt', STATUS='OLD')
+READ(fu,*)
+READ(fu,*)
+READ(fu,*)
+DO i = 1, 43
+  READ(fu,*) sh_tnco(i), sh_th1(i), sh_tnh2(i), sh_th2(i), sh_tav(i), sh_th3(i)
+ENDDO
+DO i = 44, 52
+  READ(fu,*) sh_tnco(i), sh_th1(i)
+ENDDO
+CLOSE(fu)
+shield_tables_loaded = .TRUE.
+END SUBROUTINE load_shield_tables
 
 SUBROUTINE calc_rates(tcur)
 IMPLICIT NONE
 REAL(wp) Stick, Stick_H, Cion, Vth, anu0, anu1, ak_photo, ak_therm, ak_crp, tcrp, Rdiff0, Rdiff1, akbar, amur, dust2gas_corr, tcur
 REAL(wp) alpha,beta,gamma,T0,tunn,k_react
+REAL(wp) pi_agr2, nsites_surf, nsites_surf2
 INTEGER i
 CHARACTER(LEN=10)         :: reactant_names(2)
 CHARACTER(LEN=10)         :: r1,r2
@@ -42,6 +65,11 @@ CALL shield(T,AvIS,fh2_is,fco_is)
 ak_photo = 0.d0
 ak_therm = 0.d0
 ak_crp   = 0.d0
+
+! Precompute grain geometry constants (agr and sitedens are fixed during a run)
+pi_agr2     = PI * agr * agr
+nsites_surf  = 4.0d0 * pi_agr2 * sitedens
+nsites_surf2 = 2.0d0 * pi_agr2 * sitedens
 
 DO i = 1, nreactions
     SELECT CASE (r(i)%rtype)
@@ -79,20 +107,20 @@ DO i = 1, nreactions
             ENDIF
         CASE (7) !Ions plus negatively charged grains
             Vth = DSQRT(8.0d0*ak_B*T/PI/s(r(i)%ir1)%weight/aMp)
-            r(i)%rate = r(i)%alpha*PI*agr*agr*Vth*Stick*Cion*ddens
+            r(i)%rate = r(i)%alpha*pi_agr2*Vth*Stick*Cion*ddens
         CASE (8) !Ions plus neutral grains
             Vth = DSQRT(8.0d0*ak_B*T/PI/s(r(i)%ir1)%weight/aMp)
-            r(i)%rate = r(i)%alpha*PI*agr*agr*Vth*Stick*ddens
+            r(i)%rate = r(i)%alpha*pi_agr2*Vth*Stick*ddens
         CASE (9) !Collisions of the electrons with the neutral grains
             Vth = DSQRT(8.0D0*ak_B*T/PI/aMe)
-            r(i)%rate = PI*agr*agr*Vth*1.329D0*DEXP(-T/20.0D0)*ddens
+            r(i)%rate = pi_agr2*Vth*1.329D0*DEXP(-T/20.0D0)*ddens
         CASE (10) !Collisions of the electrons with the positively charged grains
             Vth = DSQRT(8.0D0*ak_B*T/PI/aMe)
-            r(i)%rate = PI*agr*agr*Vth*1.329D0*DEXP(-T/20.0D0)*Cion*ddens
+            r(i)%rate = pi_agr2*Vth*1.329D0*DEXP(-T/20.0D0)*Cion*ddens
         CASE (11) !Accretion (FREEZE)
             Vth = DSQRT(8.0d0*ak_B*T/PI/s(r(i)%ir1)%weight/aMp)
-            r(i)%rate = r(i)%alpha*PI*agr*agr*Vth*Stick*ddens
-            IF (r(i)%r1=='H') r(i)%rate = r(i)%alpha*PI*agr*agr*Vth*Stick_H*ddens
+            r(i)%rate = r(i)%alpha*pi_agr2*Vth*Stick*ddens
+            IF (r(i)%r1=='H') r(i)%rate = r(i)%alpha*pi_agr2*Vth*Stick_H*ddens
             s(r(i)%ir1)%racc = r(i)%rate
         CASE (12) !Desorption (DESORB)
             anu0 = DSQRT(2.d0*sitedens*ak_B/aMp*r(i)%gamma/PI/PI/s(r(i)%ir1)%weight)
@@ -118,8 +146,8 @@ DO i = 1, nreactions
             anu0 = DSQRT(sitedens*ak_B/aMp*s(r(i)%ir1)%edes/PI/PI/s(r(i)%ir1)%weight)
             anu1 = DSQRT(sitedens*ak_B/aMp*s(r(i)%ir2)%edes/PI/PI/s(r(i)%ir2)%weight)
             ! Compute diffusion rates of the reactants (thermal hopping and quantum tunneling for the model of HHL 1992):
-            Rdiff0 = anu0/(4.0d0*pi*agr**2.0d0*sitedens)*DEXP(-ebed*s(r(i)%ir1)%edes/Tdust)
-            Rdiff1 = anu1/(4.0d0*pi*agr**2.0d0*sitedens)*DEXP(-ebed*s(r(i)%ir2)%edes/Tdust)
+            Rdiff0 = anu0/(nsites_surf)*DEXP(-ebed*s(r(i)%ir1)%edes/Tdust)
+            Rdiff1 = anu1/(nsites_surf)*DEXP(-ebed*s(r(i)%ir2)%edes/Tdust)
 
 
             !Diffusion barriers:
@@ -129,12 +157,12 @@ DO i = 1, nreactions
                     amur = s(r(i)%ir1)%weight*aMp
 !                    akbar=DEXP(-4D0*PI/hp*1D-8*DSQRT(2D0*amur*ebed*s(r(i)%ir1)%edes*ak_B))
                     akbar=DEXP(-4D0*PI/hp*1D-8*DSQRT(2D0*amur*0.37*s(r(i)%ir1)%edes*ak_B)) ! EBED = 0.37 for atomic H following Senevirathne et al. 2017
-                    Rdiff0 = anu0/(4.0d0*pi*agr**2.0d0*sitedens)*akbar
+                    Rdiff0 = anu0/(nsites_surf)*akbar
                 ENDIF
                 IF (s(r(i)%ir2)%name=='gH' .OR. s(r(i)%ir2)%name=='gH2') THEN
                     amur = s(r(i)%ir2)%weight*aMp
                     akbar=DEXP(-4D0*PI/hp*1D-8*DSQRT(2D0*amur*0.37*s(r(i)%ir2)%edes*ak_B)) ! EBED = 0.37 for atomic H following Senevirathne et al. 2017
-                    Rdiff1 = anu1/(4.0d0*pi*agr**2.0d0*sitedens)*akbar
+                    Rdiff1 = anu1/(nsites_surf)*akbar
                 ENDIF
                 ! ED = 1040 K = 520 K / 0.5, with 520 K being the best fit barrier height
                 ! a = 0.7 Angstrom
@@ -142,11 +170,11 @@ DO i = 1, nreactions
 !                IF (s(r(i)%ir1)%name=='gO') THEN
 !                  amur   = s(r(i)%ir2)%weight*aMp
 !                  akbar  = DEXP(-4D0*PI/hp*0.7D-8*DSQRT(2D0*amur*ebed*1040.0*ak_B))
-!                  Rdiff0 = anu0/(2.0d0*pi*agr**2.0d0*sitedens)*akbar
+!                  Rdiff0 = anu0/(nsites_surf2)*akbar
 !                ELSE IF (s(r(i)%ir2)%name=='gO') THEN
 !                  amur   = s(r(i)%ir2)%weight*aMp
 !                  akbar  = DEXP(-4D0*PI/hp*0.7D-8*DSQRT(2D0*amur*ebed*1040.0*ak_B))
-!                  Rdiff1 = anu1/(2.0d0*pi*agr**2.0d0*sitedens)*akbar
+!                  Rdiff1 = anu1/(nsites_surf2)*akbar
 !                ENDIF
             ENDIF
 
@@ -169,7 +197,7 @@ DO i = 1, nreactions
 
             IF (hop_act_competition==1 .AND. shingledecker_tunn .EQ. 0) THEN
                 IF (r(i)%gamma/=0.d0) THEN
-                  akbar = (akbar*anu0+akbar*anu1)/(akbar*anu0+akbar*anu1+Rdiff0*(2.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(2.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = (akbar*anu0+akbar*anu1)/(akbar*anu0+akbar*anu1+Rdiff0*(nsites_surf2)+Rdiff1*(nsites_surf2))
 !                  IF (s(r(i)%ir1)%name=='gH' .OR. s(r(i)%ir1)%name=='gH2' .OR. s(r(i)%ir2)%name=='gH' .OR. s(r(i)%ir2)%name=='gH2') THEN
 !                    PRINT *, r(i)%r1," = H or H2, and/or, ",r(i)%r2, " with akbar= ",akbar
 !                  ELSE
@@ -191,15 +219,15 @@ DO i = 1, nreactions
                                                anu1*DEXP(-r(i)%gamma/Tdust)+&
                                                akbar*anu0+&
                                                akbar*anu1+&
-                                               Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+&
-                                               Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens)&
+                                               Rdiff0*(nsites_surf)+&
+                                               Rdiff1*(nsites_surf)&
                                               )
 !                  PRINT *, r(i)%r1," = H or H2, and/or, ",r(i)%r2, " with akbar= ",akbar
                 ENDIF
               ! If there is no tunnel rate, the only thermal rate is used in the numerator
               ELSE
                 IF (r(i)%gamma/=0.d0) THEN
-                  akbar = (akbar*anu0+akbar*anu1)/(akbar*anu0+akbar*anu1+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = (akbar*anu0+akbar*anu1)/(akbar*anu0+akbar*anu1+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
 !                  PRINT *, r(i)%r1," NOT EQUAL TO H or H2, and/or, ",r(i)%r2, " with akbar= ",akbar
                 ENDIF
               ENDIF
@@ -217,13 +245,13 @@ DO i = 1, nreactions
 
                 IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
                   ! Revised competition formula with Lamberts results: tunn = k_react = lowT = highT
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
                   ! Competition formula using traditional square barrier tunneling
 !                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
 !                  akbar=(anu0+anu1)*DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
-!                  akbar = akbar/(akbar+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
-                  akbar = tunn /(tunn +Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+!                  akbar = akbar/(akbar+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
+                  akbar = tunn /(tunn +Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE
                   ! Constant tunneling term using square barrier
                   amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
@@ -241,13 +269,13 @@ DO i = 1, nreactions
 
                 IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
                   ! Revised competition formula with Lamberts results: tunn = k_react = lowT = highT
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
                   ! Competition formula using traditional square barrier tunneling
 !                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
 !                  akbar=(anu0+anu1)*DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
-!                  akbar = akbar/(akbar+Rdiff0*(2.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(2.0d0*pi*agr**2.0d0*sitedens))
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+!                  akbar = akbar/(akbar+Rdiff0*(nsites_surf2)+Rdiff1*(nsites_surf2))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE
                   ! Constant tunneling term using square barrier
                   amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
@@ -265,13 +293,13 @@ DO i = 1, nreactions
 
                 IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
                   ! Revised competition formula with Lamberts results: tunn = k_react = lowT = highT
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
                   ! Competition formula using traditional square barrier tunneling
 !                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
 !                  akbar=(anu0+anu1)*DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
-!                  akbar = akbar/(akbar+Rdiff0*(2.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(2.0d0*pi*agr**2.0d0*sitedens))
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+!                  akbar = akbar/(akbar+Rdiff0*(nsites_surf2)+Rdiff1*(nsites_surf2))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE
                   ! Constant tunneling term using square barrier
                   amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
@@ -289,13 +317,13 @@ DO i = 1, nreactions
 
                 IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
                   ! Revised competition formula with Lamberts results: tunn = k_react = lowT = highT
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
                   ! Competition formula using traditional square barrier tunneling
 !                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
 !                  akbar=(anu0+anu1)*DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
-!                  akbar = akbar/(akbar+Rdiff0*(2.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+!                  akbar = akbar/(akbar+Rdiff0*(nsites_surf2)+Rdiff1*(nsites_surf))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE
                   ! Constant tunneling term using square barrier
                   amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
@@ -333,13 +361,13 @@ DO i = 1, nreactions
 
                 IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
                   ! Revised competition formula with Lamberts results: tunn = k_react = lowT = highT
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
                   ! Competition formula using traditional square barrier tunneling
 !                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
 !                  akbar=(anu0+anu1)*DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
-!                  akbar = akbar/(akbar+Rdiff0*(2.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(2.0d0*pi*agr**2.0d0*sitedens))
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+!                  akbar = akbar/(akbar+Rdiff0*(nsites_surf2)+Rdiff1*(nsites_surf2))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
                 ELSE
                   ! Constant tunneling term using square barrier
@@ -375,13 +403,13 @@ DO i = 1, nreactions
 
                 IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
                   ! Revised competition formula with Lamberts results: tunn = k_react = lowT = highT
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
                   ! Competition formula using traditional square barrier tunneling
 !                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
 !                  akbar=(anu0+anu1)*DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
-!                  akbar = akbar/(akbar+Rdiff0*(2.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
-                  akbar = tunn/(tunn+Rdiff0*(4.0d0*pi*agr**2.0d0*sitedens)+Rdiff1*(4.0d0*pi*agr**2.0d0*sitedens))
+!                  akbar = akbar/(akbar+Rdiff0*(nsites_surf2)+Rdiff1*(nsites_surf))
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
                 ELSE
                   ! Constant tunneling term using square barrier
                   amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
@@ -608,8 +636,8 @@ DO i = 1, nreactions
 
             ! Compute reaction rates - no diffusion - of the reactants (Shingledecker et al. 2018):
             IF ( r(i)%r1(1:1) .EQ. 'g' ) THEN
-              Rdiff0 = anu0/(4.0d0*pi*agr**2.0d0*sitedens)
-              Rdiff1 = anu1/(4.0d0*pi*agr**2.0d0*sitedens)
+              Rdiff0 = anu0/(nsites_surf)
+              Rdiff1 = anu1/(nsites_surf)
             ENDIF
 
             r(i)%rate = r(i)%alpha*(Rdiff0 + Rdiff1)
@@ -717,13 +745,11 @@ REAL(wp) t, nh2, nco, fh2, fco, Av
 ! Local variables:
 INTEGER i, ih2, ico
 REAL(wp) b5, x, tth1, tth2, tth3
-REAL(wp) th1(52), th2(43), th3(43), tnco(52), tnh2(43), tav(43)
-! Common block:
+! Constants:
 REAL(wp) sigma, delta
 
 sigma = 1.59D+21  !mag.^(-1)/cm^2, NH to Av conversion factor for 0.12 mkm grains
 delta = 6.0d-5
-!Av = Nh2*2.0D0/sigma
 nh2 = av*sigma/2.d0
 nco = nh2*delta
 ! Compute H2 self-shielding (Draine & Bertoldi 1996):
@@ -731,53 +757,38 @@ b5 = 3.0D0*dsqrt(t/100.0D0)
 x = nh2/5.0D+14
 
 fh2 = 0.965/(1.0D0+x/b5)**2.0D0 + 0.035/DSQRT(1.0D0+x)*DEXP(-8.5D-4*DSQRT(1.0D0+x))
-! Compute CO self-shielding (Lee et al. 1996):
-OPEN(1, file="Lee_ea_17.txt")
-!    rewind 1
-READ(1,*)
-READ(1,*)
-READ(1,*)
 
-DO i = 1, 43
-    READ(1,*) tnco(i), th1(i), tnh2(i), th2(i), tav(i), th3(i)
-ENDDO
-
-DO i = 44, 52
-    READ(1,*) tnco(i), th1(i)
-ENDDO
-
+! Compute CO self-shielding (Lee et al. 1996) using cached tables:
 ! Search N(CO) position:
 DO i = 1, 51
-    IF (tnco(i)>=nco) EXIT
+    IF (sh_tnco(i)>=nco) EXIT
 ENDDO
 i = i - 1
 IF (nco<1.0D-08) i = 1
 ico = i
-tth1 = th1(i) + (th1(i+1) - th1(i)) / (tnco(i+1) - tnco(i)) * (nco - tnco(i))
+tth1 = sh_th1(i) + (sh_th1(i+1) - sh_th1(i)) / (sh_tnco(i+1) - sh_tnco(i)) * (nco - sh_tnco(i))
 
 ! Search N(H2) position:
 DO i = 1, 42
-    IF (tnh2(i)>=nh2) EXIT
+    IF (sh_tnh2(i)>=nh2) EXIT
 ENDDO
 i = i - 1
 IF (nh2<1.0D-08) i = 1
 ih2 = i
-tth2 = th2(i) + (th2(i+1) - th2(i)) / (tnh2(i+1) - tnh2(i)) * (nh2 - tnh2(i))
+tth2 = sh_th2(i) + (sh_th2(i+1) - sh_th2(i)) / (sh_tnh2(i+1) - sh_tnh2(i)) * (nh2 - sh_tnh2(i))
 
 ! Search Av position:
 DO i = 1, 42
-    IF (tav(i)>=Av) EXIT
+    IF (sh_tav(i)>=Av) EXIT
 ENDDO
 i=i-1
 IF (Av<1.0D-08) i = 1
-tth3 = th3(i) + (th3(i+1) - th3(i)) / (tav(i+1) - tav(i)) * (Av - tav(i))
+tth3 = sh_th3(i) + (sh_th3(i+1) - sh_th3(i)) / (sh_tav(i+1) - sh_tav(i)) * (Av - sh_tav(i))
 
 ! CO self-shielding:
 fco = tth1*tth2*tth3
 IF (fco<=0.0D0) fco = 1.0d-30
 
-! Exit:
-CLOSE (1)
 RETURN
 END SUBROUTINE shield
 

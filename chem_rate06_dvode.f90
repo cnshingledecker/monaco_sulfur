@@ -14,6 +14,7 @@ rde = 0
 OPEN(newunit=myunit,file='rd_eff.txt')
 
 CALL read_model_setup
+CALL load_shield_tables
 CALL read_rate06database
 
 IF (MODEL_EXPERIMENT.EQ.0) THEN
