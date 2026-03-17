@@ -133,7 +133,7 @@ DO i = 1, nreactions
                 ENDIF
                 IF (s(r(i)%ir2)%name=='gH' .OR. s(r(i)%ir2)%name=='gH2') THEN
                     amur = s(r(i)%ir2)%weight*aMp
-                    akbar=DEXP(-4D0*PI/hp*1D-8*DSQRT(2D0*amur*0.37*s(r(i)%ir1)%edes*ak_B)) ! EBED = 0.37 for atomic H following Senevirathne et al. 2017
+                    akbar=DEXP(-4D0*PI/hp*1D-8*DSQRT(2D0*amur*0.37*s(r(i)%ir2)%edes*ak_B)) ! EBED = 0.37 for atomic H following Senevirathne et al. 2017
                     Rdiff1 = anu1/(4.0d0*pi*agr**2.0d0*sitedens)*akbar
                 ENDIF
                 ! ED = 1040 K = 520 K / 0.5, with 520 K being the best fit barrier height
@@ -279,8 +279,8 @@ DO i = 1, nreactions
                 ENDIF
                 IF ( akbar .GT. 1.0 ) akbar = 1.0
               ! Special case for H + CS -> HCS
-              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir1)%name=='gCS') .OR. &
-                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir2)%name=='gCS')) THEN
+              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gCS') .OR. &
+                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gCS')) THEN
                 alpha = 3.323e11 !4.16e11
                 beta  = 0.5 !0.26
                 gamma = 100.87914 !140.0
@@ -303,8 +303,8 @@ DO i = 1, nreactions
                 ENDIF
                 IF ( akbar .GT. 1.0 ) akbar = 1.0
               ! Special case for H + H2CS ->
-              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir1)%name=='gH2CS') .OR. &
-                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir2)%name=='gH2CS')) THEN
+              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gH2CS') .OR. &
+                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gH2CS')) THEN
                 ! -> H2 + HCS
                 IF (s(r(i)%ip1)%name=='gH2' .OR. s(r(i)%ip2)%name=='H2') THEN
                   alpha = 3.5734311e9
@@ -348,8 +348,8 @@ DO i = 1, nreactions
                 ENDIF
                 IF ( akbar .GT. 1.0 ) akbar = 1.0
               ! Special case for H + CH3SH ->
-              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir1)%name=='gCH3SH') .OR. &
-                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir2)%name=='gCH3SH')) THEN
+              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gCH3SH') .OR. &
+                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gCH3SH')) THEN
                 ! -> H2 + CH2SH
                 IF (s(r(i)%ip1)%name=='gCH2SH' .OR. s(r(i)%ip2)%name=='CH2SH') THEN
                   alpha = 1.167802255e9
@@ -497,8 +497,8 @@ DO i = 1, nreactions
                 akbar = k_react/(anu0+anu1)
                 IF ( akbar .GT. 1.0 ) akbar = 1.0
               ! Special case for H + CS -> HCS
-              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir1)%name=='bCS') .OR. &
-                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir2)%name=='bCS')) THEN
+              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir2)%name=='bCS') .OR. &
+                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir1)%name=='bCS')) THEN
 !                alpha = 2.05296E12
 !                beta  = -8.10946
 !                gamma = 984.986
@@ -513,8 +513,8 @@ DO i = 1, nreactions
                 akbar = k_react/(anu0+anu1)
                 IF ( akbar .GT. 1.0 ) akbar = 1.0
               ! Special case for H + H2CS ->
-              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir1)%name=='bH2CS') .OR. &
-                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir2)%name=='bH2CS')) THEN
+              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir2)%name=='bH2CS') .OR. &
+                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir1)%name=='bH2CS')) THEN
                 ! -> H2 + HCS
                 IF (s(r(i)%ip1)%name=='bH2') THEN
                   alpha = 3.5734311e9
@@ -541,8 +541,8 @@ DO i = 1, nreactions
                 akbar = k_react/(anu0+anu1)
                 IF ( akbar .GT. 1.0 ) akbar = 1.0
               ! Special case for H + CH3SH ->
-              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir1)%name=='bCH3SH') .OR. &
-                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir2)%name=='bCH3SH')) THEN
+              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir2)%name=='bCH3SH') .OR. &
+                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir1)%name=='bCH3SH')) THEN
                 ! -> H2 + CH2SH
                 IF (s(r(i)%ip1)%name=='bCH2SH' ) THEN
                   alpha = 1.167802255e9

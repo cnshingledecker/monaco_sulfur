@@ -7,9 +7,19 @@ OBJECTS = $(SOURCES:.f90=.o)
 
 # Compiler and flags
 #FC = ifort
- FC = gfortran  # Uncomment for gfortran
-#FLAGS = -g -pg -O2 -fprotect-parens -fp-model=strict -march=native -module . -diag-disable=10448  # ifort options with module path and warning suppression
- FLAGS = -g -pg -O2 -march=native -ffree-line-length-512 -J .  # gfortran options with module path
+ FC = gfortran
+
+#FLAGS = -g -pg -O2 -fprotect-parens -fp-model=strict -march=native -module . -diag-disable=10448  # ifort options
+
+# Chemistry/physics modules: O3 + native tuning + real*8 promotion
+FLAGS = -O3 -march=native -funroll-loops -fdefault-real-8 -ffree-line-length-512 -J .
+
+# DVODE gets conservative flags: no -O3, no -ffast-math, strict FP behavior
+DVODE_FLAGS = -O2 -march=native -fdefault-real-8 -ffree-line-length-512 -J .
+
+# Debug build: swap FLAGS -> DEBUG_FLAGS and recompile
+DEBUG_FLAGS = -g -pg -O0 -fbacktrace -fcheck=all -ffpe-trap=invalid,overflow,zero \
+              -fdefault-real-8 -ffree-line-length-512 -J . -Wall -Wextra
 
 # Target executable
 TARGET = monaco
@@ -23,6 +33,7 @@ $(TARGET): $(OBJECTS)
 	@echo "Make complete"                # TAB required here
 
 # Compilation rules with dependencies
+
 mod_global_variables.o: mod_global_variables.f90
 	$(FC) $(FLAGS) -c $< -o $@           # TAB required here
 
@@ -32,8 +43,9 @@ mod_global_functions.o: mod_global_functions.f90 mod_global_variables.o
 mod_calculate_rates.o: mod_calculate_rates.f90 mod_global_variables.o mod_global_functions.o
 	$(FC) $(FLAGS) -c $< -o $@           # TAB required here
 
+# DVODE compiled separately with conservative flags
 dvode_f90_m.o: dvode_f90_m.f90
-	$(FC) $(FLAGS) -c $< -o $@           # TAB required here
+	$(FC) $(DVODE_FLAGS) -c $< -o $@     # TAB required here
 
 mod_read_rate06.o: mod_read_rate06.f90 mod_global_variables.o mod_global_functions.o
 	$(FC) $(FLAGS) -c $< -o $@           # TAB required here

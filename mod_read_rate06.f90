@@ -178,10 +178,6 @@ DO i = 1, nreactions
 
       IF (r(ii)%ip1==-1) THEN
 	PRINT *, "Problem is with ", r(ii)%p1
-	PRINT *, "Weight =", s(r(ii)%ip1)%weight
-	PRINT *, "Num. atoms =", s(r(ii)%ip1)%natoms
-	PRINT *, "Idx =", s(r(ii)%ip1)%idx
-	PRINT *, "Gas Idx =", s(r(ii)%ip1)%gas_idx
       ENDIF
 
       IF (r(ii)%ip2==-1) THEN
