@@ -334,7 +334,7 @@ DO i = 1, nreactions
               ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gH2CS') .OR. &
                 (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gH2CS')) THEN
                 ! -> H2 + HCS
-                IF (s(r(i)%ip1)%name=='gH2' .OR. s(r(i)%ip2)%name=='H2') THEN
+                IF (s(r(i)%ip1)%name=='gH2' .OR. r(i)%p2=='H2') THEN
                   alpha = 3.5734311e9
                   beta  = 0.941334
                   gamma = 1297.3053
@@ -342,7 +342,7 @@ DO i = 1, nreactions
                   tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
 !                  tunn = 1.34e4
                 ! -> CH3S
-                ELSE IF (s(r(i)%ip1)%name=='gCH3S' .OR. s(r(i)%ip2)%name=='CH3S') THEN
+                ELSE IF (s(r(i)%ip1)%name=='gCH3S' .OR. r(i)%p2=='CH3S') THEN
                   alpha = 1.630289e11
                   beta  = 0.5
                   gamma = 291.36034
@@ -350,7 +350,7 @@ DO i = 1, nreactions
                   tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
 !                  tunn = 1.28e9
                 ! -> CH2SH
-                ELSE IF (s(r(i)%ip1)%name=='gCH2SH' .OR. s(r(i)%ip2)%name=='CH2SH') THEN
+                ELSE IF (s(r(i)%ip1)%name=='gCH2SH' .OR. r(i)%p2=='CH2SH') THEN
                   alpha = 6.39456860192e11
                   beta  = 0.5
                   gamma = 30.3538029
@@ -379,21 +379,21 @@ DO i = 1, nreactions
               ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gCH3SH') .OR. &
                 (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gCH3SH')) THEN
                 ! -> H2 + CH2SH
-                IF (s(r(i)%ip1)%name=='gCH2SH' .OR. s(r(i)%ip2)%name=='CH2SH') THEN
+                IF (s(r(i)%ip1)%name=='gCH2SH' .OR. r(i)%p2=='CH2SH') THEN
                   alpha = 1.167802255e9
                   beta  = 1.21674
                   gamma = 1710.485
                   T0    = 154.11195
                   tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
                 ! -> H2 + CH3S
-                ELSE IF (s(r(i)%ip1)%name=='gCH3S' .OR. s(r(i)%ip2)%name=='CH3S') THEN
+                ELSE IF (s(r(i)%ip1)%name=='gCH3S' .OR. r(i)%p2=='CH3S') THEN
                   alpha = 4.49278e10
                   beta  = 0.5
                   gamma = 381.3269
                   T0    = 83.78988
                   tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
                 ! -> H2S + CH3
-                ELSE IF (s(r(i)%ip1)%name=='gCH3' .OR. s(r(i)%ip2)%name=='CH3') THEN
+                ELSE IF (s(r(i)%ip1)%name=='gCH3' .OR. r(i)%p2=='CH3') THEN
                   alpha = 2.90685007e10
                   beta  = 0.416228
                   gamma = 1059.0413
