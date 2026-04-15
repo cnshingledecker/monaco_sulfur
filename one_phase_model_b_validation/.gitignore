@@ -1,0 +1,8 @@
+ab/
+csv/
+analytics_*
+fort.*
+final_*_abundances.out
+one_phase_final_*_abundances.out
+one_phase_run.log
+results_*

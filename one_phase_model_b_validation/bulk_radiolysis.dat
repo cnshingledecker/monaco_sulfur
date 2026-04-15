@@ -1,0 +1,74 @@
+ 1459 bH2O      IONRAD              bO*       bH2*                                    5.00E-01  0.00 3.70E+00
+ 1460 bH2O      IONRAD              bOH*      bH*                                     5.00E-01  0.00 3.70E+00
+ 1461 bH2O      IONRAD              bH        bOH                                     1.00E+00  0.00 1.75E+00
+ 1462 bH2O      IONRAD              bH2O*                                             1.00E+00  0.00 1.75E+00
+ 1467 bO2       IONRAD              bO*       bO*                                     1.00E+00  0.00 3.70E+00
+ 1468 bO2       IONRAD              bO        bO                                      1.00E+00  0.00 2.43E+00
+ 1469 bO2       IONRAD              bO2*                                              1.00E+00  0.00 2.43E+00
+ 1473 bO3       IONRAD              bO2*      bO*                                     1.00E+00  0.00 3.70E+00
+ 1474 bO3       IONRAD              bO2       bO                                      1.00E+00  0.00 4.06E+00
+ 1475 bO3       IONRAD              bO3*                                              1.00E+00  0.00 4.06E+00
+ 1479 bCO       IONRAD              bO*       bC*                                     1.00E+00  0.00 3.70E+00
+ 1480 bCO       IONRAD              bO        bC                                      1.00E+00  0.00 1.27E+00
+ 1481 bCO       IONRAD              bCO*                                              1.00E+00  0.00 1.27E+00
+ 1485 bCO2      IONRAD              bO*       bCO*                                    1.00E+00  0.00 3.70E+00
+ 1486 bCO2      IONRAD              bO        bCO                                     1.00E+00  0.00 1.25E+00
+ 1487 bCO2      IONRAD              bCO2*                                             1.00E+00  0.00 1.25E+00
+ 1491 bNO       IONRAD              bO*       bN*                                     1.00E+00  0.00 3.70E+00
+ 1492 bNO       IONRAD              bO        bN                                      1.00E+00  0.00 1.92E+00
+ 1493 bNO       IONRAD              bNO*                                              1.00E+00  0.00 1.92E+00
+ 1497 bNO2      IONRAD              bO*       bNO*                                    1.00E+00  0.00 3.70E+00
+ 1498 bNO2      IONRAD              bO        bNO                                     1.00E+00  0.00 1.21E+00
+ 1499 bNO2      IONRAD              bNO2*                                             1.00E+00  0.00 1.21E+00
+ 1503 bHO2      IONRAD              bO*       bOH*                                    1.00E+00  0.00 3.70E+00
+ 1504 bHO2      IONRAD              bH        bO2                                     1.00E+00  0.00 3.71E+00
+ 1505 bHO2      IONRAD              bHO2*                                             1.00E+00  0.00 3.71E+00
+ 1509 bH2O2     IONRAD              bO*       bH2O*                                   5.00E-01  0.00 3.70E+00
+ 1510 bH2O2     IONRAD              bOH*      bOH*                                    5.00E-01  0.00 3.70E+00
+ 1511 bH2O2     IONRAD              bOH       bOH*                                    1.00E+00  0.00 2.30E+00
+ 1515 bNH3      IONRAD              bH*       bNH2*                                   5.00E-01  0.00 3.70E+00
+ 1516 bNH3      IONRAD              bNH*      bH2*                                    5.00E-01  0.00 3.70E+00
+ 1517 bNH3      IONRAD              bH        bNH2                                    1.00E+00  0.00 2.72E+00
+ 1518 bNH3      IONRAD              bNH3*                                             1.00E+00  0.00 2.72E+00
+ 1523 bCH4      IONRAD              bH*       bCH3*                                   5.00E-01  0.00 3.70E+00
+ 1524 bCH4      IONRAD              bH2       bCH2*                                   5.00E-01  0.00 3.70E+00
+ 1525 bCH4      IONRAD              bH        bCH3                                    1.00E+00  0.00 1.50E+00
+ 1526 bCH4      IONRAD              bCH4*                                             1.00E+00  0.00 1.50E+00
+ 1531 bH2CO     IONRAD              bH*       bHCO*                                   1.00E+00  0.00 3.70E+00
+ 1532 bH2CO     IONRAD              bH        bHCO                                    1.00E+00  0.00 2.91E+00
+ 1533 bH2CO     IONRAD              bH2CO*                                            1.00E+00  0.00 2.91E+00
+ 1537 bCH3OH    IONRAD              bOH*      bCH3*                                   3.33E-01  0.00 3.70E+00
+ 1538 bCH3OH    IONRAD              bH*       bCH3O*                                  3.33E-01  0.00 3.70E+00
+ 1539 bCH3OH    IONRAD              bH*       bCH2OH*                                 3.33E-01  0.00 3.70E+00
+ 1540 bCH3OH    IONRAD              bOH       bCH3                                    3.33E-01  0.00 1.57E+00
+ 1541 bCH3OH    IONRAD              bH        bCH3O                                   3.33E-01  0.00 1.57E+00
+ 1542 bCH3OH    IONRAD              bH        bCH2OH                                  3.33E-01  0.00 1.57E+00
+ 1543 bCH3OH    IONRAD              bCH3OH*                                           1.00E+00  0.00 1.57E+00
+ 1554 bH2S      IONRAD              bS*       bH*       bH*                           5.00E-01  0.00 3.70E+00
+ 1554 bH2S      IONRAD              bHS*      bH*                                     5.00E-01  0.00 3.70E+00
+ 1554 bH2S      IONRAD              bS        bH        bH                            5.00E-01  0.00 2.56E+00
+ 1554 bH2S      IONRAD              bHS       bH                                      5.00E-01  0.00 2.56E+00
+ 1554 bH2S      IONRAD              bH2S*                                             1.00E+00  0.00 2.56E+00
+ 1554 bH2S2     IONRAD              bH2*      bS2*                                    3.33E-01  0.00 3.70E+00
+ 1554 bH2S2     IONRAD              bHS*      bHS*                                    3.33E-01  0.00 3.70E+00
+ 1554 bH2S2     IONRAD              bS2H*     bH*                                     3.33E-01  0.00 3.70E+00
+ 1554 bH2S2     IONRAD              bH2       bS2                                     3.33E-01  0.00 2.74E+00
+ 1554 bH2S2     IONRAD              bHS       bHS                                     3.33E-01  0.00 2.74E+00
+ 1554 bH2S2     IONRAD              bS2H      bH                                      3.33E-01  0.00 2.74E+00
+ 1554 bH2S2     IONRAD              bH2S2*                                            1.00E+00  0.00 2.74E+00
+ 1554 bSO2      IONRAD              bSO*      bO*                                     5.00E-01  0.00 3.70E+00
+ 1554 bSO2      IONRAD              bS*       bO2*                                    5.00E-01  0.00 3.70E+00
+ 1554 bSO2      IONRAD              bSO       bO                                      5.00E-01  0.00 1.91E+00
+ 1554 bSO2      IONRAD              bS        bO2                                     5.00E-01  0.00 1.91E+00
+ 1554 bSO2      IONRAD              bSO2*                                             1.00E+00  0.00 1.91E+00
+ 1491 bHS       IONRAD              bH*       bS*                                     1.00E+00  0.00 3.70E+00
+ 1491 bHS       IONRAD              bH        bS                                      1.00E+00  0.00 2.51E+00
+ 1491 bHS       IONRAD              bHS*                                              1.00E+00  0.00 2.51E+00
+ 1554 bOCS      IONRAD              bCS*      bO*                                     5.00E-01  0.00 3.70E+00
+ 1554 bOCS      IONRAD              bS*       bCO*                                    5.00E-01  0.00 3.70E+00
+ 1554 bOCS      IONRAD              bCS       bO                                      5.00E-01  0.00 2.56E+00
+ 1554 bOCS      IONRAD              bS        bCO                                     5.00E-01  0.00 2.56E+00
+ 1554 bOCS      IONRAD              bOCS*                                             1.00E+00  0.00 2.56E+00
+ 1491 bS2H      IONRAD              bH*       bS2*                                    1.00E+00  0.00 3.70E+00
+ 1491 bS2H      IONRAD              bH        bS2                                     1.00E+00  0.00 6.40E+00
+ 1491 bS2H      IONRAD              bS2H*                                             1.00E+00  0.00 6.40E+00
