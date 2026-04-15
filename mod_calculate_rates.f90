@@ -306,6 +306,42 @@ DO i = 1, nreactions
                   akbar=DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
                 ENDIF
                 IF ( akbar .GT. 1.0 ) akbar = 1.0
+              ! Special case for H + S8 -> HS8
+              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gS8') .OR. &
+                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gS8')) THEN
+                alpha = 1.2916E10
+                beta  = 1.8606
+                gamma = 1117.27
+                T0    = 103.83
+                tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
+
+                IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
+                ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
+                ELSE
+                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
+                  akbar=DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
+                ENDIF
+                IF ( akbar .GT. 1.0 ) akbar = 1.0
+              ! Special case for H + HS8 -> H2S + S7
+              ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gHS8') .OR. &
+                (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gHS8')) THEN
+                alpha = 3.0209E9
+                beta  = 0.6763
+                gamma = 426.38
+                T0    = 70.03
+                tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
+
+                IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 1) ) THEN
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
+                ELSE IF ( (hop_act_competition .EQ. 1) .AND. (shingledecker_tunn .EQ. 0) ) THEN
+                  akbar = tunn/(tunn+Rdiff0*(nsites_surf)+Rdiff1*(nsites_surf))
+                ELSE
+                  amur = s(r(i)%ir1)%weight*s(r(i)%ir2)%weight/(s(r(i)%ir1)%weight+s(r(i)%ir2)%weight)*aMp
+                  akbar=DEXP(-4d0*PI/hp*barrier_tunneling_w*DSQRT(2d0*amur*r(i)%gamma*ak_B))
+                ENDIF
+                IF ( akbar .GT. 1.0 ) akbar = 1.0
               ! Special case for H + CS -> HCS
               ELSE IF ((s(r(i)%ir1)%name=='gH' .AND. s(r(i)%ir2)%name=='gCS') .OR. &
                 (s(r(i)%ir2)%name=='gH' .AND. s(r(i)%ir1)%name=='gCS')) THEN
@@ -519,6 +555,30 @@ DO i = 1, nreactions
                 beta  = 0.475667
                 gamma = 1399.51
                 T0    = 180
+                tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
+                akbar= DEXP(-r(i)%gamma/Tdust)
+                k_react = tunn
+                akbar = k_react/(anu0+anu1)
+                IF ( akbar .GT. 1.0 ) akbar = 1.0
+              ! Special case for H + S8 -> HS8
+              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir2)%name=='bS8') .OR. &
+                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir1)%name=='bS8')) THEN
+                alpha = 1.2916E10
+                beta  = 1.8606
+                gamma = 1117.27
+                T0    = 103.83
+                tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
+                akbar= DEXP(-r(i)%gamma/Tdust)
+                k_react = tunn
+                akbar = k_react/(anu0+anu1)
+                IF ( akbar .GT. 1.0 ) akbar = 1.0
+              ! Special case for H + HS8 -> H2S + S7
+              ELSE IF ((s(r(i)%ir1)%name=='bH' .AND. s(r(i)%ir2)%name=='bHS8') .OR. &
+                (s(r(i)%ir2)%name=='bH' .AND. s(r(i)%ir1)%name=='bHS8')) THEN
+                alpha = 3.0209E9
+                beta  = 0.6763
+                gamma = 426.38
+                T0    = 70.03
                 tunn  = alpha*((Tdust/300.0)**beta)*DEXP(-1*gamma*(Tdust + T0)/((Tdust**2) + (T0**2)))
                 akbar= DEXP(-r(i)%gamma/Tdust)
                 k_react = tunn
